@@ -33,17 +33,17 @@ To prevent parallel-meta v3.3.2 from deleting intermediate read mapping files, d
 
 **This project includes the following scripts:**
 
-kraken_corrector.pl	    - Converts the kraken table into a matrix with the appropriate format, requires lineage_ete_id.py in the current directory
-metaxa_corrector.pl	    - Cleans the metaxa matrix
-qiime_corrector.pl	    - Cleans the qiime matrix
-metaphlan_corrector.pl  - Cleans the metaphlan matrix, requires lineage_ete.py in the current directory 
-mocat_corrector.pl      - Cleans the metaphlan matrix, requires lineage_ete.py in the current directory 
-taxonomy2lineage.sh     - Converts taxonomy.txt to abundance matrix for parallel v2.4.1
-classif2lineage.sh      - Converts classification.txt to abundance matrix for parallel 3
-matrix_integrator.pl    - Integrates all matrices that are in the same format
-rmv_inter_levels.pl     - Standardize taxonomic levels, requires lineage_ete.py and translator_ete.py in current directory
-taxa_levels.pl          - Separates the integrated clean matrix in taxa_levels
-count2percent.pl        - Converts raw counts matrix to relative total abundance as a percentage
-patch_parallel241.txt   - Patch for Parallel-meta v2.4.1
-patch_parallel332.txt   - Patch for Parallel-meta v3.3.2
+- kraken_corrector.pl	    - Converts the kraken table into a matrix with the appropriate format, requires lineage_ete_id.py in the current directory
+- metaxa_corrector.pl	    - Cleans the metaxa matrix
+- qiime_corrector.pl	    - Cleans the qiime matrix
+- metaphlan_corrector.pl  - Cleans the metaphlan matrix, requires lineage_ete.py in the current directory 
+- mocat_corrector.pl      - Cleans the metaphlan matrix, requires lineage_ete.py in the current directory 
+- taxonomy2lineage.sh     - Converts taxonomy.txt to abundance matrix for parallel v2.4.1
+- classif2lineage.sh      - Converts classification.txt to abundance matrix for parallel 3
+- matrix_integrator.pl    - Integrates all matrices that are in the same format
+- rmv_inter_levels.pl     - Standardize taxonomic levels, requires lineage_ete.py and translator_ete.py in current directory
+- taxa_levels.pl          - Separates the integrated clean matrix in taxa_levels
+- count2percent.pl        - Converts raw counts matrix to relative total abundance as a percentage
+- patch_parallel241.txt   - Patch for Parallel-meta v2.4.1
+- patch_parallel332.txt   - Patch for Parallel-meta v3.3.2
 
