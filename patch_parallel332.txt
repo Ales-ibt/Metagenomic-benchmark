@@ -1,0 +1,14 @@
+diff -Naur src/frame.cpp src_NEW/frame.cpp
+--- src/frame.cpp	2017-03-30 18:15:02.930423820 -0600
++++ src_NEW/frame.cpp	2017-03-30 18:10:52.628138200 -0600
+@@ -97,8 +97,8 @@
+        system(command.c_str());   
+        }
+     //Remove the tmp 
+-    command = "rm -rf " + para.Out_path + "/tmp";
+-    system(command.c_str());
++    //command = "rm -rf " + para.Out_path + "/tmp";
++    //system(command.c_str());
+          
+     }
+ int main(int argc, char * argv[]){

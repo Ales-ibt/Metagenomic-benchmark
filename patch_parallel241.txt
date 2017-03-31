@@ -1,0 +1,228 @@
+diff -Naur src/ExtractRNA.cpp src_NEW/ExtractRNA.cpp
+--- src/ExtractRNA.cpp	2017-03-30 17:53:51.664221092 -0600
++++ src_NEW/ExtractRNA.cpp	2017-03-30 17:52:42.502997243 -0600
+@@ -13,28 +13,18 @@
+ #include<unistd.h>
+ #include<sys/types.h>
+ 
+-#include "hash.h"
+-
+-#define MAX 100000000
++#define MAX 1000000000
+ 
+ using namespace std;
+ 
+ string Get_hash_label(string buffer, int p){
+-    /*
+     int pos = buffer.find(' ', p);
+     if (pos != (string::npos)) return buffer.substr(p, pos - p);
+     return buffer;
+-    */
+-    stringstream strin(buffer);
+-    string res;
+-    for (int i = 0; i < p; i ++){
+-        strin >> res;
+-    }
+-    return res;
+ }
+ 
+ 
+-unsigned int Read_file_hash(const char * infilename, vector <string> & labels, vector <string> & seqs, hash_map <string, unsigned int, std_string_hash> & ID_seqs ){
++unsigned int Read_file_hash(const char * infilename, string * labels, string * seqs, map<string, unsigned int> * ID_seqs ){
+ 	ifstream infile(infilename, ifstream::in);
+     if (!infile){
+                  cerr << "Open infile error : " <<infilename << endl;
+@@ -46,17 +36,16 @@
+ 	string seq_temp = "";
+ 
+ 	while (getline(infile, buffer)){ 
+-                //if (buffer[buffer.size()-1] == '\r') buffer = buffer.substr(0, buffer.size()-1);
++                if (buffer[buffer.size()-1] == '\r') buffer = buffer.substr(0, buffer.size()-1);          
+ 		if (buffer[0] == '>'){
+ 
+-			labels.push_back(buffer);
++			labels[total_seq_count] = buffer;
+ 
+-			//(*ID_seqs)[Get_hash_label(buffer, 0)] = total_seq_count;
+-            ID_seqs[Get_hash_label(buffer, 1)] = total_seq_count;
++			(*ID_seqs)[Get_hash_label(buffer, 0)] = total_seq_count;
+ 			            
+             if (total_seq_count > 0){
+ 
+-			             seqs.push_back(seq_temp);                 
++			             seqs[total_seq_count-1] =  seq_temp;                 
+                  }
+                     
+             seq_temp = "";
+@@ -71,13 +60,13 @@
+ 	}
+ 
+ 	
+-	seqs.push_back(seq_temp);
++	seqs[total_seq_count-1] = seq_temp;
+ 	infile.close();
+ 	infile.clear();
+ 	return total_seq_count;
+ }
+ 
+-unsigned int Hmm_parsing(const char * infilename, const char * outfilename, vector <string> * seqs, hash_map<string, unsigned int, std_string_hash> * ID_seqs, string label_pref, int length_filter){
++unsigned int Hmm_parsing(const char * infilename, const char * outfilename, string * seqs, map<string, unsigned int> * ID_seqs, string label_pref, int length_filter){
+ 
+ 	ifstream infile(infilename, ifstream::in);
+     if (!infile){
+@@ -100,9 +89,8 @@
+ 			
+ 			//get the hash_label
+ 			
+-			//string hash_label = Get_hash_label(buffer, 3);
+-            string hash_label = Get_hash_label(buffer, 2);
+-			//cout << hash_label<< "\t"; //debug
++			string hash_label = Get_hash_label(buffer, 3);
++			//cout << hash_label<< endl;
+ 			
+ 			unsigned int ID = (*ID_seqs)[">" + hash_label];
+ 			//cout << ID <<endl;
+@@ -131,8 +119,7 @@
+ 			    else outfile <<">dup" << buffer[3] << label_pref << hash_label << endl;
+ 			//printf out the aligned seqs
+ 			                  
+-               string aligned_seq = ((*seqs)[ID]).substr(begin-1, end - begin);
+-               //cout << begin-1 << "\t" << end-begin << endl; //debug
++               string aligned_seq = (seqs[ID]).substr(begin-1, end - begin);
+                outfile << aligned_seq << endl;
+                
+                total_seq_count ++;
+@@ -157,7 +144,7 @@
+ 
+ }
+ 
+-int Write_file(const char * outfilename, unsigned int seq_count, vector <string> * labels, vector <string> * seqs){
++int Write_file(const char * outfilename, unsigned int seq_count, string * labels, string * seqs){
+     
+     ofstream outfile(outfilename, ofstream::out);
+     if (!outfile){
+@@ -166,8 +153,8 @@
+                   }
+     
+     for (unsigned int i = 0; i < seq_count; i++){
+-        outfile << (*labels)[i] << endl;
+-        outfile << (*seqs)[i] << endl;
++        outfile << labels[i] << endl;
++        outfile << seqs[i] << endl;
+         }
+     
+     outfile.close();
+@@ -195,7 +182,7 @@
+     return 0;
+ }
+ 
+-int Seq_reverse(unsigned int seq_count, vector <string> & seqs){
++int Seq_reverse(unsigned int seq_count, string * seqs){
+     
+     char complement_table_A[26];
+     char complement_table_a[26];
+@@ -249,18 +236,15 @@
+ unsigned int ExtractRNA(int boundary, string infilename, string outpath, int length_filter, string this_path){
+     
+     pid_t cld_pid;
+-    int * pmap = (int *)mmap(NULL, sizeof(int), PROT_READ|PROT_WRITE, MAP_SHARED|MAP_ANON,-1,0);
++    int * pmap = (int *)mmap(NULL, sizeof(int), PROT_READ|PROT_WRITE, MAP_SHARED|MAP_ANONYMOUS,-1,0);
+          
+     if ((cld_pid= fork() )== 0){
+ 
+-    //string *labels = new string [MAX];
++    string *labels = new string [MAX];
+   
+-    //string *seqs = new string [MAX];
+-    
+-    vector <string> labels;
+-    vector <string> seqs;
++    string *seqs = new string [MAX];
+   
+-    hash_map<string, unsigned int, std_string_hash> ID_seqs;
++    map<string, unsigned int> ID_seqs;
+ 
+     //unsigned int seq_count;
+     unsigned int rna_count1;
+@@ -268,10 +252,7 @@
+     
+     char command[3000];
+     
+-    string exefilename = "hmmsearch";
+-    exefilename = this_path + "/HMMER/bin/" + exefilename;
+-    
+-    string modelfilename;    
++    string modelfilename;
+     if (boundary == 0) modelfilename =  this_path + "/models/bac_ssu.hmm" ;
+     else modelfilename = this_path + "/models/euk_ssu.hmm";
+     
+@@ -288,15 +269,15 @@
+     
+     cout << "rRNA Extraction Starts" << endl;
+     
+-    sprintf(command, "%s -E 1e-05 %s \"%s\" > %s",exefilename.c_str(), modelfilename.c_str(), infilename.c_str(), hmmout1.c_str());
++    sprintf(command, "hmmsearch -E 1e-05 %s \"%s\" > %s", modelfilename.c_str(), infilename.c_str(), hmmout1.c_str());
+     system(command);
+  
+     //Extract Foward
+-    unsigned int seq_count = Read_file_hash(infilename.c_str(), labels, seqs, ID_seqs );
++    unsigned int seq_count = Read_file_hash(infilename.c_str(), labels, seqs, &ID_seqs );
+     cout << "There are " << seq_count << " sequences in total" << endl << endl;
+     
+     //cout <<"Start Parsing\n";
+-    rna_count1 = Hmm_parsing(hmmout1.c_str(), fowardrna.c_str(), &seqs, &ID_seqs, label_pref1, length_filter);
++    rna_count1 = Hmm_parsing(hmmout1.c_str(), fowardrna.c_str(), seqs, &ID_seqs, label_pref1, length_filter);
+     //cout <<"Parsing Finished\n";
+     
+     
+@@ -305,13 +286,13 @@
+     Seq_reverse(seq_count, seqs);
+     //cout <<"Reverse finished\n";
+     
+-    Write_file(reversefa.c_str(), seq_count, &labels, &seqs);
++    Write_file(reversefa.c_str(), seq_count, labels, seqs);
+     
+-    sprintf(command, "%s -E 1e-05 %s %s > %s",exefilename.c_str(), modelfilename.c_str(), reversefa.c_str(), hmmout2.c_str());
++    sprintf(command, "hmmsearch -E 1e-05 %s %s > %s", modelfilename.c_str(), reversefa.c_str(), hmmout2.c_str());
+     system(command);
+     
+     //cout <<"Start Parsing\n";
+-    rna_count2 = Hmm_parsing(hmmout2.c_str(), reverserna.c_str(), &seqs, &ID_seqs, label_pref2, length_filter);
++    rna_count2 = Hmm_parsing(hmmout2.c_str(), reverserna.c_str(), seqs, &ID_seqs, label_pref2, length_filter);
+     //cout <<"Parsing Finished\n";
+     //Cat 
+     sprintf(command, "cat %s/tmp/*rna >> %s/meta.rna", outpath.c_str(), outpath.c_str());
+@@ -328,8 +309,8 @@
+     
+     ID_seqs.clear();
+         
+-    //delete [] labels;
+-    //delete [] seqs;    
++    delete [] labels;
++    delete [] seqs;    
+     
+     pmap[0] = seq_count;
+     
+diff -Naur src/Init.h src_NEW/Init.h
+--- src/Init.h	2017-03-30 17:53:51.664221092 -0600
++++ src_NEW/Init.h	2017-03-30 17:52:42.502997243 -0600
+@@ -51,6 +51,7 @@
+     cout << "     RDP (R or r)" << endl;
+     cout << "     Sliva (S or s)" << endl;
+     cout << "     Oral_Core (O or o)" << endl;
++    cout << "     Metaxa_db (X or x)" << endl;
+ 	cout << "  -e float value" << endl;
+ 	cout << "     Expectation value of rRNA mapping, default is 1e-30." << endl;
+ 	cout << "  -l integer value" << endl;
+@@ -246,7 +247,10 @@
+                                                              
+                                                              case 'O' : 
+                                                              case 'o' : database_path = this_path + "/databases/Oral_Core"; phylogenetic = 1; break;    
+-                                                             
++                           
++                                                             case 'X' :
++                                                             case 'x' : database_path = this_path + "/databases/Metaxa"; phylogenetic = 1; break;
++                                  
+                                                              default : cout << "Warning, using the default database" << endl; break; 
+                                                              }
+                                        break;                                                                                                                                                  
