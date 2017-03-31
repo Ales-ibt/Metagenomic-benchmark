@@ -1,0 +1,100 @@
+Archaea;Crenarchaeota;Thermoprotei;Desulfurococcales;Desulfurococcaceae;Ignicoccus;Ignicoccus hospitalis	15
+Archaea;Crenarchaeota;Thermoprotei;Desulfurococcales;Desulfurococcaceae;Ignicoccus;Ignicoccus hospitalis KIN4/I	3
+Archaea;Crenarchaeota;Thermoprotei;Desulfurococcales;Desulfurococcaceae;Ignicoccus;Unclassified Ignicoccus	18
+Archaea;Crenarchaeota;Thermoprotei;Desulfurococcales;Desulfurococcaceae;Unclassified Desulfurococcaceae;	61
+Archaea;Crenarchaeota;Thermoprotei;Desulfurococcales;Unclassified Desulfurococcales;;	31
+Archaea;Crenarchaeota;Thermoprotei;Sulfolobales;Sulfolobaceae;Stygiolobus;Stygiolobus azoricus	1
+Archaea;Crenarchaeota;Thermoprotei;Sulfolobales;Sulfolobaceae;Sulfolobus;Sulfolobus tokodaii	1
+Archaea;Crenarchaeota;Thermoprotei;Sulfolobales;Sulfolobaceae;Sulfolobus;Unclassified Sulfolobus	33
+Archaea;Crenarchaeota;Thermoprotei;Sulfolobales;Sulfolobaceae;Unclassified Sulfolobaceae;	540
+Archaea;Crenarchaeota;Thermoprotei;Thermoproteales;Thermoproteaceae;Pyrobaculum;Pyrobaculum aerophilum	5
+Archaea;Crenarchaeota;Thermoprotei;Thermoproteales;Thermoproteaceae;Pyrobaculum;Pyrobaculum aerophilum str. IM2	1
+Archaea;Crenarchaeota;Thermoprotei;Thermoproteales;Thermoproteaceae;Pyrobaculum;Pyrobaculum calidifontis JCM 11548	8
+Archaea;Crenarchaeota;Thermoprotei;Thermoproteales;Thermoproteaceae;Pyrobaculum;Pyrobaculum oguniense	1
+Archaea;Crenarchaeota;Thermoprotei;Thermoproteales;Thermoproteaceae;Pyrobaculum;Pyrobaculum oguniense TE7	4
+Archaea;Crenarchaeota;Thermoprotei;Thermoproteales;Thermoproteaceae;Pyrobaculum;Unclassified Pyrobaculum	716
+Archaea;Crenarchaeota;Thermoprotei;Thermoproteales;Thermoproteaceae;Unclassified Thermoproteaceae;	523
+Archaea;Euryarchaeota;Archaeoglobi;Archaeoglobales;Archaeoglobaceae;Archaeoglobus;Archaeoglobus fulgidus	38
+Archaea;Euryarchaeota;Archaeoglobi;Archaeoglobales;Archaeoglobaceae;Archaeoglobus;Unclassified Archaeoglobus	229
+Archaea;Euryarchaeota;Archaeoglobi;Archaeoglobales;Archaeoglobaceae;Unclassified Archaeoglobaceae;	394
+Archaea;Euryarchaeota;Halobacteria;Halobacteriales;Halobacteriaceae;Haloferax;Haloferax alexandrinus	3
+Archaea;Euryarchaeota;Halobacteria;Halobacteriales;Halobacteriaceae;Haloferax;Haloferax sp. Bej51	3
+Archaea;Euryarchaeota;Halobacteria;Halobacteriales;Halobacteriaceae;Haloferax;Haloferax sp. BejS3	3
+Archaea;Euryarchaeota;Halobacteria;Halobacteriales;Halobacteriaceae;Haloferax;Haloferax sp. RS77	4
+Archaea;Euryarchaeota;Halobacteria;Halobacteriales;Halobacteriaceae;Haloferax;Haloferax volcanii	2
+Archaea;Euryarchaeota;Halobacteria;Halobacteriales;Halobacteriaceae;Haloferax;Unclassified Haloferax	540
+Archaea;Euryarchaeota;Halobacteria;Halobacteriales;Halobacteriaceae;Unclassified Halobacteriaceae;	106
+Archaea;Euryarchaeota;Methanococci;Methanococcales;Methanocaldococcaceae;Methanocaldococcus;Methanocaldococcus jannaschii	1
+Archaea;Euryarchaeota;Methanococci;Methanococcales;Methanocaldococcaceae;Methanocaldococcus;Methanocaldococcus jannaschii DSM 2661	8
+Archaea;Euryarchaeota;Methanococci;Methanococcales;Methanocaldococcaceae;Methanocaldococcus;Unclassified Methanocaldococcus	916
+Archaea;Euryarchaeota;Methanococci;Methanococcales;Methanocaldococcaceae;Unclassified Methanocaldococcaceae;	97
+Archaea;Euryarchaeota;Methanococci;Methanococcales;Methanococcaceae;Methanococcus;Methanococcus maripaludis	156
+Archaea;Euryarchaeota;Methanococci;Methanococcales;Methanococcaceae;Methanococcus;Methanococcus maripaludis C6	1
+Archaea;Euryarchaeota;Methanococci;Methanococcales;Methanococcaceae;Methanococcus;Unclassified Methanococcus	1932
+Archaea;Euryarchaeota;Methanococci;Methanococcales;Methanococcaceae;Unclassified Methanococcaceae;	182
+Archaea;Euryarchaeota;Methanomicrobia;Methanosarcinales;Methanosarcinaceae;Methanosarcina;Methanosarcina acetivorans	8
+Archaea;Euryarchaeota;Methanomicrobia;Methanosarcinales;Methanosarcinaceae;Methanosarcina;Unclassified Methanosarcina	333
+Archaea;Euryarchaeota;Methanomicrobia;Methanosarcinales;Methanosarcinaceae;Unclassified Methanosarcinaceae;	16
+Archaea;Euryarchaeota;Methanopyri;Methanopyrales;Methanopyraceae;Methanopyrus;Methanopyrus kandleri	193
+Archaea;Euryarchaeota;Methanopyri;Methanopyrales;Methanopyraceae;Methanopyrus;Unclassified Methanopyrus	66
+Archaea;Euryarchaeota;Methanopyri;Methanopyrales;Methanopyraceae;Unclassified Methanopyraceae;	14
+Archaea;Euryarchaeota;Methanopyri;Methanopyrales;Unclassified Methanopyrales;;	31
+Archaea;Euryarchaeota;Methanopyri;Unclassified Methanopyri;;;	34
+Archaea;Euryarchaeota;Thermococci;Thermococcales;Thermococcaceae;Pyrococcus;Pyrococcus abyssi GE5	6
+Archaea;Euryarchaeota;Thermococci;Thermococcales;Thermococcaceae;Pyrococcus;Unclassified Pyrococcus	870
+Archaea;Euryarchaeota;Thermococci;Thermococcales;Thermococcaceae;Thermococcus;Unclassified Thermococcus	32
+Archaea;Euryarchaeota;Thermococci;Thermococcales;Thermococcaceae;Unclassified Thermococcaceae;	262
+Archaea;Euryarchaeota;Thermoplasmata;Thermoplasmatales;Deep Sea Hydrothermal Vent Gp 2;Unclassified Deep Sea Hydrothermal Vent Gp 2;	426
+Archaea;Euryarchaeota;Thermoplasmata;Thermoplasmatales;Unclassified Thermoplasmatales;;	228
+Archaea;Euryarchaeota;Thermoplasmata;Unclassified Thermoplasmata;;;	198
+Archaea;Euryarchaeota;Unclassified Euryarchaeota;;;;	122
+Archaea;Nanoarchaeota;Class Incertae Sedis;Order Incertae Sedis;Family Incertae Sedis;Nanoarchaeum;Nanoarchaeum equitans	5644
+Archaea;Nanoarchaeota;Class Incertae Sedis;Order Incertae Sedis;Family Incertae Sedis;Nanoarchaeum;Unclassified Nanoarchaeum	22
+Archaea;Nanoarchaeota;Class Incertae Sedis;Order Incertae Sedis;Family Incertae Sedis;Unclassified Family Incertae Sedis;	1
+Archaea;Unclassified Archaea;;;;;	1212
+Bacteria;Acidobacteria;Acidobacteria;Acidobacteriales;Acidobacteriaceae;Acidicapsa;Acidicapsa borealis	1
+Bacteria;Acidobacteria;Acidobacteria;Acidobacteriales;Acidobacteriaceae;Acidobacterium;Acidobacterium capsulatum	172
+Bacteria;Acidobacteria;Acidobacteria;Acidobacteriales;Acidobacteriaceae;Acidobacterium;Unclassified Acidobacterium	122
+Bacteria;Acidobacteria;Acidobacteria;Acidobacteriales;Acidobacteriaceae;Terriglobus;Acidobacteria bacterium DRP-35	2
+Bacteria;Acidobacteria;Acidobacteria;Acidobacteriales;Acidobacteriaceae;Unclassified Acidobacteriaceae;	533
+Bacteria;Acidobacteria;Acidobacteria;Acidobacteriales;Unclassified Acidobacteriales;;	1
+Bacteria;Acidobacteria;Acidobacteria;Unclassified Acidobacteria;;;	6
+Bacteria;Acidobacteria;Unclassified Acidobacteria;;;;	9
+Bacteria;Actinobacteria;Actinobacteria;Corynebacteriales;Nocardiaceae;Nocardia;Unclassified Nocardia	1
+Bacteria;Actinobacteria;Actinobacteria;Corynebacteriales;Nocardiaceae;Unclassified Nocardiaceae;	1
+Bacteria;Actinobacteria;Actinobacteria;Corynebacteriales;Unclassified Corynebacteriales;;	5
+Bacteria;Actinobacteria;Actinobacteria;Kineosporiales;Kineosporiaceae;Unclassified Kineosporiaceae;	2
+Bacteria;Actinobacteria;Actinobacteria;Micrococcales;Microbacteriaceae;Microbacterium;Unclassified Microbacterium	1
+Bacteria;Actinobacteria;Actinobacteria;Micrococcales;Microbacteriaceae;Unclassified Microbacteriaceae;	1
+Bacteria;Actinobacteria;Actinobacteria;Micrococcales;Unclassified Micrococcales;;	5
+Bacteria;Actinobacteria;Actinobacteria;Micromonosporales;Micromonosporaceae;Asanoa;Asanoa ferruginea	2
+Bacteria;Actinobacteria;Actinobacteria;Micromonosporales;Micromonosporaceae;Micromonospora;Frankia sp.	1
+Bacteria;Actinobacteria;Actinobacteria;Micromonosporales;Micromonosporaceae;Micromonospora;Micromonospora floridensis	5
+Bacteria;Actinobacteria;Actinobacteria;Micromonosporales;Micromonosporaceae;Micromonospora;Micromonospora sagamiensis	1
+Bacteria;Actinobacteria;Actinobacteria;Micromonosporales;Micromonosporaceae;Micromonospora;Micromonospora sp. TMS 1-2	1
+Bacteria;Actinobacteria;Actinobacteria;Micromonosporales;Micromonosporaceae;Micromonospora;Unclassified Micromonospora	16
+Bacteria;Actinobacteria;Actinobacteria;Micromonosporales;Micromonosporaceae;Salinispora;Salinispora arenicola	1
+Bacteria;Actinobacteria;Actinobacteria;Micromonosporales;Micromonosporaceae;Salinispora;Salinispora arenicola CNS-205	13
+Bacteria;Actinobacteria;Actinobacteria;Micromonosporales;Micromonosporaceae;Salinispora;Salinispora tropica	2
+Bacteria;Actinobacteria;Actinobacteria;Micromonosporales;Micromonosporaceae;Salinispora;Unclassified Salinispora	797
+Bacteria;Actinobacteria;Actinobacteria;Micromonosporales;Micromonosporaceae;Unclassified Micromonosporaceae;	700
+Bacteria;Actinobacteria;Actinobacteria;Micromonosporales;Micromonosporaceae;Verrucosispora;Verrucosispora gifhornensis	52
+Bacteria;Actinobacteria;Actinobacteria;Micromonosporales;Unclassified Micromonosporales;;	25
+Bacteria;Actinobacteria;Actinobacteria;Propionibacteriales;Nocardioidaceae;Nocardioides;Unclassified Nocardioides	32
+Bacteria;Actinobacteria;Actinobacteria;Propionibacteriales;Nocardioidaceae;Unclassified Nocardioidaceae;	2
+Bacteria;Actinobacteria;Actinobacteria;Propionibacteriales;Propionibacteriaceae;Propionibacterium;Propionibacterium acnes	1
+Bacteria;Actinobacteria;Actinobacteria;Propionibacteriales;Unclassified Propionibacteriales;;	29
+Bacteria;Actinobacteria;Actinobacteria;Pseudonocardiales;Pseudonocardiaceae;Pseudonocardia;Pseudonocardia petroleophila	1
+Bacteria;Actinobacteria;Actinobacteria;Pseudonocardiales;Pseudonocardiaceae;Unclassified Pseudonocardiaceae;	19
+Bacteria;Actinobacteria;Actinobacteria;Streptomycetales;Streptomycetaceae;Streptomyces;Unclassified Streptomyces	3
+Bacteria;Actinobacteria;Actinobacteria;Streptosporangiales;Streptosporangiaceae;Unclassified Streptosporangiaceae;	1
+Bacteria;Actinobacteria;Actinobacteria;Streptosporangiales;Unclassified Streptosporangiales;;	2
+Bacteria;Actinobacteria;Actinobacteria;Unclassified Actinobacteria;;;	457
+Bacteria;Aquificae;Aquificae;Aquificales;Aquificaceae;Hydrogenobaculum;Hydrogenobaculum sp. Y04AAS1	140
+Bacteria;Aquificae;Aquificae;Aquificales;Aquificaceae;Hydrogenobaculum;Unclassified Hydrogenobaculum	1271
+Bacteria;Aquificae;Aquificae;Aquificales;Aquificaceae;Unclassified Aquificaceae;	207
+Bacteria;Aquificae;Aquificae;Aquificales;Hydrogenothermaceae;Hydrogenothermus;Persephonella sp. OY	1
+Bacteria;Aquificae;Aquificae;Aquificales;Hydrogenothermaceae;Persephonella;Persephonella sp. CIR297H	150
+Bacteria;Aquificae;Aquificae;Aquificales;Hydrogenothermaceae;Persephonella;Persephonella sp. MAR9703	4
+Bacteria;Aquificae;Aquificae;Aquificales;Hydrogenothermaceae;Persephonella;Unclassified Persephonella	382
+Bacteria;Aquificae;Aquificae;Aquificales;Hydrogenothermaceae;Sulfurihydrogenibium;Sulfurihydrogenibium sp. YO3AOP1	799

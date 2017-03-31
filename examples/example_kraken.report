@@ -1,0 +1,100 @@
+ 18.62	20411619	20411619	U	0	unclassified
+ 81.38	89217877	5258	-	1	root
+ 81.22	89042500	1302	-	131567	  cellular organisms
+ 67.09	73548228	17847	D	2	    Bacteria
+ 13.10	14363356	14251	P	1224	      Proteobacteria
+  6.06	6644869	6419	C	28216	        Betaproteobacteria
+  3.17	3471005	0	O	32003	          Nitrosomonadales
+  3.17	3471005	290	F	206379	            Nitrosomonadaceae
+  3.17	3470714	1189	G	914	              Nitrosomonas
+  3.16	3469507	0	S	915	                Nitrosomonas europaea
+  3.16	3469507	3469507	-	228410	                  Nitrosomonas europaea ATCC 19718
+  0.00	17	0	S	916	                Nitrosomonas eutropha
+  0.00	17	17	-	335283	                  Nitrosomonas eutropha C91
+  0.00	1	1	S	153948	                Nitrosomonas sp. AL212
+  0.00	1	0	G	35798	              Nitrosospira
+  0.00	1	0	S	1231	                Nitrosospira multiformis
+  0.00	1	1	-	323848	                  Nitrosospira multiformis ATCC 25196
+  2.89	3162923	12843	O	80840	          Burkholderiales
+  1.23	1350690	0	-	119065	            unclassified Burkholderiales
+  1.23	1350690	893	-	224471	              Burkholderiales Genera incertae sedis
+  1.23	1349016	0	G	88	                Leptothrix
+  1.23	1349016	0	S	34029	                  Leptothrix cholodnii
+  1.23	1349016	1349016	-	395495	                    Leptothrix cholodnii SP-6
+  0.00	379	251	G	32012	                Thiomonas
+  0.00	69	0	S	926	                  Thiomonas intermedia
+  0.00	69	69	-	75379	                    Thiomonas intermedia K12
+  0.00	59	59	S	426114	                  Thiomonas arsenitoxydans
+  0.00	210	0	G	28067	                Rubrivivax
+  0.00	210	0	S	28068	                  Rubrivivax gelatinosus
+  0.00	210	210	-	983917	                    Rubrivivax gelatinosus IL144
+  0.00	192	0	G	316612	                Methylibium
+  0.00	192	0	S	105560	                  Methylibium petroleiphilum
+  0.00	192	192	-	420662	                    Methylibium petroleiphilum PM1
+  0.86	947119	781	F	119060	            Burkholderiaceae
+  0.86	942653	10165	G	32008	              Burkholderia
+  0.85	928642	0	S	36873	                Burkholderia xenovorans
+  0.85	928642	928642	-	266265	                  Burkholderia xenovorans LB400
+  0.00	1618	171	-	87882	                Burkholderia cepacia complex
+  0.00	618	167	S	95486	                  Burkholderia cenocepacia
+  0.00	258	258	-	216591	                    Burkholderia cenocepacia J2315
+  0.00	134	134	-	406425	                    Burkholderia cenocepacia MC0-3
+  0.00	59	59	-	331272	                    Burkholderia cenocepacia HI2424
+  0.00	273	0	S	87883	                  Burkholderia multivorans
+  0.00	273	273	-	395019	                    Burkholderia multivorans ATCC 17616
+  0.00	238	0	S	292	                  Burkholderia cepacia
+  0.00	238	238	-	1009846	                    Burkholderia cepacia GG4
+  0.00	198	198	S	482957	                  Burkholderia lata
+  0.00	106	3	S	152480	                  Burkholderia ambifaria
+  0.00	66	66	-	398577	                    Burkholderia ambifaria MC40-6
+  0.00	37	37	-	339670	                    Burkholderia ambifaria AMMD
+  0.00	14	0	S	60552	                  Burkholderia vietnamiensis
+  0.00	14	14	-	269482	                    Burkholderia vietnamiensis G4
+  0.00	740	220	-	111527	                pseudomallei group
+  0.00	346	99	S	13373	                  Burkholderia mallei
+  0.00	213	213	-	320389	                    Burkholderia mallei NCTC 10247
+  0.00	33	33	-	412022	                    Burkholderia mallei NCTC 10229
+  0.00	1	1	-	243160	                    Burkholderia mallei ATCC 23344
+  0.00	155	58	S	57975	                  Burkholderia thailandensis
+  0.00	93	93	-	271848	                    Burkholderia thailandensis E264
+  0.00	4	4	-	1249661	                    Burkholderia thailandensis MSMB121
+  0.00	19	6	S	28450	                  Burkholderia pseudomallei
+  0.00	6	6	-	272560	                    Burkholderia pseudomallei K96243
+  0.00	4	4	-	1335307	                    Burkholderia pseudomallei MSHR305
+  0.00	1	1	-	320373	                    Burkholderia pseudomallei 668
+  0.00	1	1	-	884204	                    Burkholderia pseudomallei 1026b
+  0.00	1	1	-	1241583	                    Burkholderia pseudomallei NCTC 13179
+  0.00	412	0	S	28095	                Burkholderia gladioli
+  0.00	412	412	-	999541	                  Burkholderia gladioli BSR3
+  0.00	341	0	S	261302	                Burkholderia phytofirmans
+  0.00	341	341	-	398527	                  Burkholderia phytofirmans PsJN
+  0.00	184	0	S	412963	                Burkholderia rhizoxinica
+  0.00	184	184	-	882378	                  Burkholderia rhizoxinica HKI 454
+  0.00	159	159	S	640512	                Burkholderia sp. CCGE1003
+  0.00	109	109	S	1097668	                Burkholderia sp. YI23
+  0.00	91	91	S	640511	                Burkholderia sp. CCGE1002
+  0.00	66	0	S	148447	                Burkholderia phymatum
+  0.00	66	66	-	391038	                  Burkholderia phymatum STM815
+  0.00	55	0	S	252970	                Burkholderia phenoliruptrix
+  0.00	55	55	-	1229205	                  Burkholderia phenoliruptrix BR3459a
+  0.00	33	0	S	337	                Burkholderia glumae
+  0.00	33	33	-	626418	                  Burkholderia glumae BGR1
+  0.00	32	32	S	640510	                Burkholderia sp. CCGE1001
+  0.00	6	6	S	758793	                Burkholderia sp. RPE64
+  0.00	1836	176	G	106589	              Cupriavidus
+  0.00	602	19	S	106590	                Cupriavidus necator
+  0.00	302	302	-	1042878	                  Cupriavidus necator N-1
+  0.00	281	281	-	381666	                  Ralstonia eutropha H16
+  0.00	497	0	S	119219	                Cupriavidus metallidurans
+  0.00	497	497	-	266264	                  Cupriavidus metallidurans CH34
+  0.00	386	0	S	248026	                Cupriavidus pinatubonensis
+  0.00	386	386	-	264198	                  Ralstonia eutropha JMP134
+  0.00	175	0	S	164546	                Cupriavidus taiwanensis
+  0.00	175	175	-	977880	                  Cupriavidus taiwanensis LMG 19424
+  0.00	1396	16	G	48736	              Ralstonia
+  0.00	755	385	S	305	                Ralstonia solanacearum
+  0.00	251	251	-	859657	                  Ralstonia solanacearum PSI07
+  0.00	62	62	-	267608	                  Ralstonia solanacearum GMI1000
+  0.00	34	34	-	859655	                  Ralstonia solanacearum CMR15
+  0.00	22	22	-	1031711	                  Ralstonia solanacearum Po82
+  0.00	1	1	-	859656	                  Ralstonia solanacearum CFBP2957
