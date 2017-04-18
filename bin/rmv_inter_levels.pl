@@ -47,6 +47,10 @@ while (<FILE>) {
 	        $linaje=~s/;Unclassified//g;
 		my$numbers=join('+', @line);
 		$chloroplast{$linaje}=$numbers;
+       
+        }elsif ($linaje eq 'Unclassified'){
+                $non_class=$_;
+
 	}else{
 		if ($linaje =~ m/;/){
 			my@taxa=split(';', $linaje);
@@ -137,6 +141,9 @@ foreach my$llave_chlo (sort keys %chloroplast){
 	$content=~s/\+/\t/g;
 	print OUT "$llave_chlo\t$content\n";
 }
+
+print OUT "$non_class\n";
+
 close(OUT);
 close(RARE);
 print "Total number of entries in the original matrix: $cont_total\n";
@@ -176,7 +183,7 @@ sub ETE {
 			my(@tax)=split(';', $guide);
 
 			foreach my $taxidx (0..$#tax) {
-	        		unless ($tax[$taxidx] =~ /no_rank/ or $tax[$taxidx] =~ /species_subgroup/ or $tax[$taxidx] =~ /species_group/ or $tax[$taxidx] =~ /subfamily/ or $tax[$taxidx] =~ /suborder/ or $tax[$taxidx] =~ /subclass/ or $tax[$taxidx] =~ /subgenus/ or $tax[$taxidx] =~ /tribe/ or $tax[$taxidx] =~ /subphylum/ or $tax[$taxidx] =~ /u\'kingdom/ or $tax[$taxidx] =~ /varietas/ or $tax[$taxidx] =~ /subkingdom/) {    
+				unless ($tax[$taxidx] =~ /no_rank/ or $tax[$taxidx] =~ /species_subgroup/ or $tax[$taxidx] =~ /species_group/ or $tax[$taxidx] =~ /subfamily/ or $tax[$taxidx] =~ /superfamily/ or $tax[$taxidx] =~ /suborder/ or $tax[$taxidx] =~ /subclass/ or $tax[$taxidx] =~ /superclass/ or $tax[$taxidx] =~ /infraclass/ or $tax[$taxidx] =~ /subgenus/ or $tax[$taxidx] =~ /tribe/ or $tax[$taxidx] =~ /subphylum/ or $tax[$taxidx] =~ /u\'kingdom/ or $tax[$taxidx] eq 'kingdom' or $tax[$taxidx] =~ /varietas/ or $tax[$taxidx] =~ /subkingdom/) {
 					my $query=$tax[$taxidx];
 					my $index = $ranksarray{$query};
 	        	        	$ranks[$index] = $ids[$taxidx];
