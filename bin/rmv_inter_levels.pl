@@ -2,7 +2,7 @@
 use strict;
 use warnings;
 
-######## PROGRAM THAT ELIMINATES THE INTERIM TAXONOMIC LEVELS OF THE NCBI TAXONOMY #######
+######## PROGRAM THAT ELIMINATES THE INTERIM TAXONOMIC LEVELS FROM THE NCBI TAXONOMY #######
 ######## Alejandra Escobar-Zepeda, UUSMB, IBt, UNAM
 ######## 12/Enero/2017
 
@@ -37,8 +37,8 @@ while (<FILE>) {
 	$linaje=~s/\"//g;
 	$linaje=~s/\'//g;
 	$linaje=~s/\,//g;
-	$linaje=~s/\[//g  if ($linaje !~ /Bacillus/ or $linaje !~ /Clostridium/);
-	$linaje=~s/\]//g  if ($linaje !~ /Bacillus/ or $linaje !~ /Clostridium/);
+	$linaje=~s/\[//g if ($linaje !~ /Bacillus/ or $linaje !~ /Clostridium/ or $linaje !~ /Eubacterium/ or $linaje !~ /Cellvibrio/  or $linaje !~ /Ruminococcus/ or $linaje !~ /Bacteroides/ or $linaje !~ /parainfluenzae/);
+	$linaje=~s/\]//g if ($linaje !~ /Bacillus/ or $linaje !~ /Clostridium/ or $linaje !~ /Eubacterium/ or $linaje !~ /Cellvibrio/  or $linaje !~ /Ruminococcus/ or $linaje !~ /Bacteroides/ or $linaje !~ /parainfluenzae/);
         $linaje=~s/ /_/g;
         $linaje=~s/[;]+/;/g;
         $linaje=~s/;$//;
