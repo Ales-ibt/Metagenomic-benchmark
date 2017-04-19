@@ -50,27 +50,11 @@ close(MATCOUNT);
 ### Subrutina que parsea
 sub PARSE {
 	my $file=shift;
-	my @new_array=();
 	open (FILE, $file) or die ("I can not open the file $file\n") ;
-#	<FILE>;
 	while (<FILE>) {
 		chomp;
 		my($taxo, $abundance)=split('\t', $_);
-		my@lineage=split(/;/, $taxo);
-		foreach my$each_name (@lineage){
-			if ($each_name !~ /epsilon_subdivisions/ and $each_name !~ /[Gg]roup/  and $each_name !~ /unclassified/ and $each_name !~ /[Ii]ncertae_[Ss]edis/ ) {
-				push(@new_array, $each_name);
-			}
-		}
-		if (scalar@new_array == 6) {
-			my$sp=join("_", $new_array[-1], "sp\.");
-			push(@new_array, $sp);
-			$taxo=join(";", @new_array);
-		}else{
-			$taxo=join(";", @new_array);
-		}
 		$each_matrix{$taxo}{$file}=$abundance;
-		@new_array=();
 	}
 	close(FILE);
 }
