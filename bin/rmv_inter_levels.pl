@@ -37,8 +37,8 @@ while (<FILE>) {
 	$linaje=~s/\"//g;
 	$linaje=~s/\'//g;
 	$linaje=~s/\,//g;
-	$linaje=~s/\[//g;
-	$linaje=~s/\]//g;
+#	$linaje=~s/\[//g;
+#	$linaje=~s/\]//g;
         $linaje=~s/ /_/g;
         $linaje=~s/[;]+/;/g;
         $linaje=~s/;$//;
