@@ -37,8 +37,8 @@ while (<FILE>) {
 	$linaje=~s/\"//g;
 	$linaje=~s/\'//g;
 	$linaje=~s/\,//g;
-#	$linaje=~s/\[//g;
-#	$linaje=~s/\]//g;
+	$linaje=~s/\[//g  if ($linaje !~ /Bacillus/ or $linaje !~ /Clostridium/);
+	$linaje=~s/\]//g  if ($linaje !~ /Bacillus/ or $linaje !~ /Clostridium/);
         $linaje=~s/ /_/g;
         $linaje=~s/[;]+/;/g;
         $linaje=~s/;$//;
