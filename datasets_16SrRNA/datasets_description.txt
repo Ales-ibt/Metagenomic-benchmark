@@ -13,9 +13,16 @@ $ flash -t 8 -o flash_out file_R1.fastq file_R2.fastq
 
 $ shuffled_fasta.pl subset_flash_out.extendedFrags.fasta 10 2
 
-### Complete libraries in fasta format contains the rebuilt amplicon sequences and their respective shuffled sequences. The md5sum code fo each file:
+### Complete libraries in fasta format contains the rebuilt amplicon sequences and their respective shuffled sequences. Files were splitted and compressed in order to upload them to this repository. The md5sum code for each file are:
 
-ba34af194c9424f7c44cecf9705c64c8  v3v4_lib1.fasta.gz
-ee1ad1bedd85ea22c5542a3f5ef8f198  v3v4_lib2.fasta.gz
-467a62573805d0651433d1a72469243f  v3v4_lib3.fasta.gz
+0b62c0b2d132d600eb91ba9da205c834  v3v4_lib1.1.fasta.gz
+0b0c9a2458f6535b9c3bbe687bb9ecf6  v3v4_lib1.2.fasta.gz
+986e483b35a2d4539e7e1e0052a1a5f6  v3v4_lib1.3.fasta.gz
+c6f3a02abcb0dd174940d1c9056d207a  v3v4_lib2.1.fasta.gz
+ab6745b954a4bcbf255a2576f4a76a78  v3v4_lib2.2.fasta.gz
+994771d9458bca4af6a3ea0019aa0419  v3v4_lib2.3.fasta.gz
+67e9739168aa70e486406b9605708d1b  v3v4_lib3.1.fasta.gz
+3690234f0bb2a9a99b379fc93d6cba53  v3v4_lib3.2.fasta.gz
+53cc1c0a746d8aa716d7d6f1f4db1a63  v3v4_lib3.3.fasta.gz
+
 
