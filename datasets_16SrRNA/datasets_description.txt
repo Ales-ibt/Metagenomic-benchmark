@@ -1,9 +1,16 @@
-### These datasets were used in the evaluation of bioinformatic tools published on "Analysis of sequencing strategies and tools for taxonomic annotation: Defining standards for progressive metagenomics", 2018.
-### Libraries were generated using the Grinder v0.5.4 software (Angly et al., 2012) by the following command:
+
+### Datasets in this directory were used in the evaluation of bioinformatic tools published on "Analysis of sequencing strategies and tools for taxonomic annotation: Defining standards for progressive metagenomics", 2018.
+
+### Three 16S rRNA libraries with 1,500,000 total paired-end reads were generated using the Grinder v0.5.4 software (Angly et al., 2012). The reference file corresponds to 2,853 16S ribosomal sequences extracted from 843 bacterial genomes used by Lindgreen et al. (2016). Libraries share the 90% of microbial diversity so they are not identical. Primer sequences used for in-silico V3-V4 variable regions amplification were reported by Klindworth et al. (2013), and their sequences are: S-D-Bact-0341-b-S-17 (CCTACGGGNGGCWGCAG) and S-D-Bact-0785-a-A-21 (GACTACHVGGGTWTCTAAT). The command used was the following:
+
 $ grinder -reference_file all_16S.fasta -total_reads 1500000 -read_dist 300 -mate_orientation FR -forward_reverse 16Sprimers.fna -qual_levels 30 30 -fastq_output 1 -abundance_model linear -insert_dist 450 -num_libraries 3 -shared_perc 90
 
-### The reference file corresponds to 2,853 16S ribosomal sequences extracted from 843 bacterial genomes used by Lindgreen et al. (2016). Libraries share the 90% of microbial diversity as they are not identical. All of them had 1,500,000 total paired-end reads.
-### Primer sequences used for in-silico V3-V4 variable regions amplification were reported by Klindworth et al. (2013), and their sequences are: S-D-Bact-0341-b-S-17 (CCTACGGGNGGCWGCAG) and S-D-Bact-0785-a-A-21 (GACTACHVGGGTWTCTAAT)
-### The amplicon can be rebuilt from raw reads using Flash v1.2.11 (Magoč & Salzberg, 2011). The comand used is the following:
+### The amplicon sequences were rebuilt from raw reads using Flash v1.2.11 (Magoč & Salzberg, 2011). This step yielded a total of 750,000 rebuilt amplicon sequences. The comand used was the following:
+
 $ flash -t 8 -o flash_out file_R1.fastq file_R2.fastq
 
+### Additionally, a shuffled dataset of 37,500 sequences were generated from each amplicon library in order to used it as false positive control. The script used is available in this repository. We used a k-mer size of 10 and a step of 2. The command was the following:
+
+$ shuffled_fasta.pl subset_flash_out.extendedFrags.fasta 10 2
+
+### Complete libraries in fasta format contains the rebuilt amplicon sequences and their respective shuffled sequences.
