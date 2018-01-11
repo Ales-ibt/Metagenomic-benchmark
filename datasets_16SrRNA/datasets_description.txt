@@ -1,0 +1,9 @@
+### These datasets were used in the evaluation of bioinformatic tools published on "Analysis of sequencing strategies and tools for taxonomic annotation: Defining standards for progressive metagenomics", 2018.
+### Libraries were generated using the Grinder v0.5.4 software (Angly et al., 2012) by the following command:
+$ grinder -reference_file all_16S.fasta -total_reads 1500000 -read_dist 300 -mate_orientation FR -forward_reverse 16Sprimers.fna -qual_levels 30 30 -fastq_output 1 -abundance_model linear -insert_dist 450 -num_libraries 3 -shared_perc 90
+
+### The reference file corresponds to 2,853 16S ribosomal sequences extracted from 843 bacterial genomes used by Lindgreen et al. (2016). Libraries share the 90% of microbial diversity as they are not identical. All of them had 1,500,000 total paired-end reads.
+### Primer sequences used for in-silico V3-V4 variable regions amplification were reported by Klindworth et al. (2013), and their sequences are: S-D-Bact-0341-b-S-17 (CCTACGGGNGGCWGCAG) and S-D-Bact-0785-a-A-21 (GACTACHVGGGTWTCTAAT)
+### The amplicon can be rebuilt from raw reads using Flash v1.2.11 (Magoč & Salzberg, 2011). The comand used is the following:
+$ flash -t 8 -o flash_out file_R1.fastq file_R2.fastq
+
