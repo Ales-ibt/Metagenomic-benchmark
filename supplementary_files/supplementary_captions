@@ -1,1 +1,15 @@
-##
+## Figure captions for supplementary CVE plots
+S1_CVE_16S_phylum.png	Coverage versus Error Per Query plot of BLAST-independent and BLAST-alignment based methods on 16S rRNA amplicon data at phylum level
+S2_CVE_16S_class.png	Coverage versus Error Per Query plot of BLAST-independent and BLAST-alignment based methods on 16S rRNA amplicon data at class level
+S3_CVE_16S_order.png	Coverage versus Error Per Query plot of BLAST-independent and BLAST-alignment based methods on 16S rRNA amplicon data at order level
+S4_CVE_16S_family.png	Coverage versus Error Per Query plot of BLAST-independent and BLAST-alignment based methods on 16S rRNA amplicon data at family level
+S5_CVE_16S_genus.png	Coverage versus Error Per Query plot of BLAST-independent and BLAST-alignment based methods on 16S rRNA amplicon data at genus level
+S6_CVE_16S_species.png	Coverage versus Error Per Query plot of BLAST-independent and BLAST-alignment based methods on 16S rRNA amplicon data at species level
+S7_CVE_16S_subspecies.png	Coverage versus Error Per Query plot of BLAST-independent and BLAST-alignment based methods on 16S rRNA amplicon data at subspecies level
+S8_CVE_WMS_phylum.png	Coverage versus Error Per Query plot of BLAST-independent and BLAST-alignment based methods on whole metagenome shotgun data at phylum level
+S9_CVE_WMS_class.png	Coverage versus Error Per Query plot of BLAST-independent and BLAST-alignment based methods on whole metagenome shotgun data at class level
+S10_CVE_WMS_order.png	Coverage versus Error Per Query plot of BLAST-independent and BLAST-alignment based methods on whole metagenome shotgun data at order level
+S11_CVE_WMS_family.png	Coverage versus Error Per Query plot of BLAST-independent and BLAST-alignment based methods on whole metagenome shotgun data at family level
+S12_CVE_WMS_genus.png	Coverage versus Error Per Query plot of BLAST-independent and BLAST-alignment based methods on whole metagenome shotgun data at genus level
+S13_CVE_WMS_species.png	Coverage versus Error Per Query plot of BLAST-independent and BLAST-alignment based methods on whole metagenome shotgun data at species level
+S14_CVE_WMS_subspecies.png	Coverage versus Error Per Query plot of BLAST-independent and BLAST-alignment based methods on whole metagenome shotgun data at subspecies level
