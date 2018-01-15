@@ -77,6 +77,7 @@ Specifications about the software and used parameters are in the following table
 | CLARK v1.2.3.1 | classify_metagenome.sh -k 21 -P file_R1.fq file_R2.fq -R /PATH/clark.results -n 32 -m 0 |
 
 Results were reported and analyzed in the submitted paper:
+
 Escobar-Zepeda Alejandra, Godoy-Lozano E. Ernestina, Raggi Luciana, Segovia Lorenzo, Merino Enrique, Gutiérrez-Rios Rosa María, Juarez-Lopez Katy, Licea-Navarro Alexei F., Pardo-Lopez Liliana and Sanchez-Flores Alejandro. **Analysis of sequencing strategies and tools for taxonomic annotation: Defining standards for progressive metagenomics**. *submitted.* 2018.
 
 
