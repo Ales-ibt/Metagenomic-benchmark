@@ -1,11 +1,13 @@
 **Metagenomic-benchmark**
 
-The code deposited in this site contains the necessary scripts to integrate, standardise and generate taxonomic annotation matrices at the eight basic levels of taxonomic lineage: domain, phylum, class, order, family, genus, species and subspecies. These tools provide the possibility of comparing taxonomic annotation results obtained by different methods and databases. Currently, the available scripts are designed to correct results from the following taxonomic annotation tools:
+The code deposited in this site contains the necessary scripts to integrate, standardise and generate taxonomic annotation matrices at the eight basic levels of taxonomic lineage: domain, phylum, class, order, family, genus, species and subspecies. These tools provide the possibility of comparing taxonomic annotation results obtained from different methods and databases. The available scripts were designed to manage the results obtained from the following taxonomic annotation tools:
 
 - Kraken v0.10.5-beta
-- Metaphlan2 v2.2.0 
+- CLARK v1.2.3.1
+- MetaPhlAn2 v2.2.0 
 - MOCAT v1.3
-- Qiime v1.9.1
+- QIIME v1.9.1
+- SPINGO v1.3
 - Metaxa2 v2.1.1
 - Parallel-meta v2.4.1 and v3.3.2
 
@@ -41,22 +43,27 @@ To prevent parallel-meta v3.3.2 from deleting intermediate read mapping files, d
 *patch -p0 < patch_parallel332.txt*
 
 **This project includes the following scripts:**
-
-- kraken_corrector.pl	    - Converts the kraken table into a matrix with the appropriate format, requires lineage_ete_id.py in the current directory
-- metaxa_corrector.pl	    - Cleans the metaxa matrix
-- qiime_corrector.pl	    - Cleans the qiime matrix
-- metaphlan_corrector.pl  - Cleans the metaphlan matrix, requires lineage_ete.py in the current directory 
-- mocat_corrector.pl      - Cleans the metaphlan matrix, requires lineage_ete.py in the current directory 
-- taxonomy2lineage.sh     - Converts taxonomy.txt to abundance matrix for parallel v2.4.1
-- classif2lineage.sh      - Converts classification.txt to abundance matrix for parallel 3
-- matrix_integrator.pl    - Integrates all matrices that are in the same format
+- kraken_corrector.pl	    - Formats the kraken.report table into an abundance matrix
+- taxonomy2lineage.sh     - Converts taxonomy.txt output table into an abundance matrix for parallel-meta v2.4.1
+- classif2lineage.sh      - Converts classification.txt to abundance matrix for parallel-meta
+- spingo_cleaner.pl       - Reports the LCA from the AMBIGUOUS annotations
 - rmv_inter_levels.pl     - Standardize taxonomic levels, requires lineage_ete.py and translator_ete.py in current directory
-- taxa_levels.pl          - Separates the integrated clean matrix in taxa_levels
-- count2percent.pl        - Converts raw counts matrix to relative total abundance as a percentage
+- taxa_levels.pl          - Separates the abundance matrix in the eigth main taxonomic levels
+- count2percent.pl        - Normalize counts matrix into relative abundance
 - patch_parallel241.txt   - Patch for Parallel-meta v2.4.1
 - patch_parallel332.txt   - Patch for Parallel-meta v3.3.2
 
-Specifications about the software and used parameters are in the following table
+Ete3 scripts:
+- names2linaje.py
+- names2taxid.py
+- taxid2level.py
+- taxid2linaje.py
+- taxid2names.py
+- lineage_ete.py
+- translator_ete.py
+
+
+Specifications about the software and used parameters are in the following table:
 
 | Software | Parameters used |
 |----------|-----------------|
@@ -68,4 +75,9 @@ Specifications about the software and used parameters are in the following table
 | MOCAT v1.3 | MOCAT.pl -sf samples.txt -rtf <br/> MOCAT.pl -sf samples.txt -s mOTU.v1.padded -r reads.processed -identity 97 <br/> MOCAT.pl -sf samples.txt -f mOTU.v1.padded -r reads.processed -identity 97 <br/> MOCAT.pl -sf samples.txt -p mOTU.v1.padded -r reads.processed -identity 97 -mode mOTU -o Results <br/> MOCAT.pl -sf samples.txt -s RefMG.v1.padded -r mOTU.v1.padded -e -identity 97 <br/> MOCAT.pl -sf samples.txt -f RefMG.v1.padded -r mOTU.v1.padded -e -identity 97 <br/> MOCAT.pl -sf samples.txt -p RefMG.v1.padded -r mOTU.v1.padded -e -identity 97 -mode RefMG -previous_db_calc_tax_stats_file -o Results |
 | Kraken v0.10.5-beta | kraken --preload --db /Databases/Kraken/ --threads 16 --output kraken.out file.fastq <br/> kraken-report --db /Databases/Kraken/ kraken.out > kraken.report |
 | CLARK v1.2.3.1 | classify_metagenome.sh -k 21 -P file_R1.fq file_R2.fq -R /PATH/clark.results -n 32 -m 0 |
+
+Results were reported and analyzed in the submitted paper:
+Escobar-Zepeda Alejandra, Godoy-Lozano E. Ernestina, Raggi Luciana, Segovia Lorenzo, Merino Enrique, Gutiérrez-Rios Rosa María, Juarez-Lopez Katy, Licea-Navarro Alexei F., Pardo-Lopez Liliana and Sanchez-Flores Alejandro. **Analysis of sequencing strategies and tools for taxonomic annotation: Defining standards for progressive metagenomics**. *submitted.* 2018.
+
+
 
