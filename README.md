@@ -42,7 +42,7 @@ To prevent parallel-meta v3.3.2 from deleting intermediate read mapping files, d
 
 *patch -p0 < patch_parallel332.txt*
 
-**This project includes the following scripts:**
+**This project includes the following scripts in the bin directory:**
 - kraken_corrector.pl	    - Formats the kraken.report table into an abundance matrix
 - taxonomy2lineage.sh     - Converts taxonomy.txt output table into an abundance matrix for parallel-meta v2.4.1
 - classif2lineage.sh      - Converts classification.txt to abundance matrix for parallel-meta
