@@ -1,0 +1,10 @@
+read_100;FN392235_1	root;cellular_organisms;Bacteria_<prokaryotes>;Proteobacteria;Gammaproteobacteria;Enterobacteriales;Enterobacteriaceae;Erwinia	100	450	98.58
+read_101;CP001101_1	root;cellular_organisms;Bacteria_<prokaryotes>;environmental_samples_<Bacteria>;uncultured_bacterium;uncultured_bacterium	100	450	100
+read_102;CP002433_1	root;cellular_organisms;Bacteria_<prokaryotes>;Proteobacteria;Gammaproteobacteria;Enterobacteriales;Enterobacteriaceae;Pantoea	100	450	99.37
+read_10;CP002177_1	root;cellular_organisms;Bacteria_<prokaryotes>	100	450	99.64
+read_11;CP000155_1	root;cellular_organisms;Bacteria_<prokaryotes>;Proteobacteria;Gammaproteobacteria;Oceanospirillales;Hahellaceae;Hahella;Hahella_chejuensis;Hahella_chejuensis_KCTC_2396;Hahella_chejuensis_KCTC_2396	100	450	86.27
+read_12;CP002371_1	root;cellular_organisms;Bacteria_<prokaryotes>;Proteobacteria;Alphaproteobacteria;Rhizobiales;Rhizobiaceae;Candidatus_Liberibacter	100	442	99.36
+read_13;CP001796_1	root;cellular_organisms;Bacteria_<prokaryotes>;Proteobacteria;Gammaproteobacteria;Alteromonadales;Pseudoalteromonadaceae;Pseudoalteromonas;environmental_samples_<Pseudoalteromonas>;uncultured_Pseudoalteromonas_sp.;uncultured_Pseudoalteromonas_sp.	100	450	84.61
+read_14;CP001612_1	root;cellular_organisms;Bacteria_<prokaryotes>;Proteobacteria;Alphaproteobacteria;Rickettsiales;Rickettsiaceae;Rickettsieae;Rickettsia	100	440	100
+read_15;CP003280_1	root;cellular_organisms;Bacteria_<prokaryotes>	100	450	98.14
+read_16;CP002165_1	root;cellular_organisms;Bacteria_<prokaryotes>;Proteobacteria;Gammaproteobacteria;Xanthomonadales;Xanthomonadaceae;Xylella;Xylella_fastidiosa	100	450	100
