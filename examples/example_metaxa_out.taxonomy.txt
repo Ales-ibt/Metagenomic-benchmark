@@ -1,0 +1,10 @@
+AE000666-_Euryarchaeota_1181/1	Archaea;Euryarchaeota;Methanobacteria;Methanobacteriales;Methanobacteriaceae;Methanothermobacter	97.91	96	97.91
+AE000666-_Euryarchaeota_2637/1	Archaea;Euryarchaeota;Methanobacteria;Methanobacteriales;Methanobacteriaceae;Methanothermobacter	96	100	96.8
+AE000666-_Euryarchaeota_3359/1	Archaea;Euryarchaeota;Methanobacteria;Methanobacteriales;Methanobacteriaceae;Methanothermobacter	98	100	98
+AE003849-_Proteobacteria_5402/1	Bacteria;Proteobacteria;Gammaproteobacteria;Xanthomonadales;Xanthomonadaceae;Xylella;Xylella fastidiosa;	99	100	93.46
+AE003849-_Proteobacteria_8818/1	Bacteria;Proteobacteria;Gammaproteobacteria;Xanthomonadales;Xanthomonadaceae;Xylella;Xylella fastidiosa;	98	100	98.4
+AE004092-_Firmicutes_125/1	Bacteria;Firmicutes;Bacilli;Lactobacillales;Streptococcaceae;Streptococcus	98	100	98
+AE004092-_Firmicutes_2217/1	Bacteria;Firmicutes;Bacilli;Lactobacillales;Streptococcaceae;Streptococcus;Streptococcus pyogenes;	97.98	99	98.38
+AE004092-_Firmicutes_2453/1	Bacteria;Firmicutes;Bacilli;Lactobacillales;Streptococcaceae;Streptococcus	96.93	98	97.55
+AE004092-_Firmicutes_27/1	Bacteria;Firmicutes;Bacilli;Lactobacillales;Streptococcaceae;Streptococcus;Streptococcus pyogenes;	97	100	97.6
+AE004092-_Firmicutes_2795/1	Bacteria;Firmicutes;Bacilli;Lactobacillales;Streptococcaceae;Streptococcus	96.93	98	97.55
