@@ -2,15 +2,15 @@
 # Taxonomic annotation of Whole Metagenome Shotgun data #
 #########################################################
 
-##### This recipe is useful to reproduce the analysis made with the WMS paired-end sequences reported by Lindgreen et al. (2016) with the tested methods reported in "Analysis of sequencing strategies and tools for taxonomic annotation: Defining standards for progressive metagenomics" paper. Raw sequences were used as input for each tested software and the annotation output were formatted in order to obtain a relational table containing the sequence id, the taxid of their respective annotation and the score (reads_ranking.txt). An example of the intermediate results generated from each software are available in the examples directory of this repository. Below are described the commands used to run every program and to format the resulting annotation table into a reads.ranking.txt table, containing the sequence id, the taxid of their respective annotation and the score. From this table, we evaluate the software performance at every taxonomic level as is described in the performance_evaluation.txt recipe.
+##### This recipe is describes the analysis made using the WMS paired-end sequences reported by Lindgreen et al. (2016) in order to test the methods reported in the "Analysis of sequencing strategies and tools for taxonomic annotation: Defining standards for progressive metagenomics" paper. Eukariotic reads were filtered and raw sequences were used as input for each tested software. The annotation output were formatted in order to obtain a relational table containing the sequence id, the taxid of their respective annotation and the score (reads_ranking.txt table). Examples of the intermediate results generated from each software are available in the examples directory of this repository. Below are described the commands used to run every program and to format the resulting annotation table into the reads.ranking.txt table. From this table, we evaluated the software performance at every taxonomic level as is described in the performance_evaluation.txt recipe.
 
 **## 1.- Kraken v0.10.5-beta**
 # The concatenated fastq obtained from R1 and R2 was used as input for Kraken.
 
 $ kraken --preload --db /Databases/Kraken/ --threads 16 --output kraken.out file.fastq
-$ kraken-report --db /Databases/Kraken/ kraken.out > kraken.report
 
-# The kraken output classification file was used to generate the reads_ranking.txt table. Commands to modify those tables are the following:
+# The kraken output classification file was used to generate the reads_ranking.txt table.
+
 
 == TINA ==
 
@@ -19,7 +19,7 @@ $ kraken-report --db /Databases/Kraken/ kraken.out > kraken.report
 
 $ classify_metagenome.sh -k 21 -P file_R1.fastq file_R2.fastq -R /PATH/clark.results -n 32 -m 0
 
-
+# The clark.results.csv table was used to obtain the reads_ranking.txt table.
 
 
 **## 3.- MetaPhlAn2 v2.2.0**
