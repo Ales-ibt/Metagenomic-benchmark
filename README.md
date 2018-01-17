@@ -28,7 +28,7 @@ http://etetoolkit.org/download/
 Perl v5.x or higher
 Python v2.7.x
 
-**Patching Parallel-meta v2.4.1 and v3.3.2**
+**Patching Parallel-meta v2.4.1 **
 
 To modify the parallel-meta v2.4.1 in order to accept the Metaxa2 database do the following:
 
@@ -36,22 +36,10 @@ To modify the parallel-meta v2.4.1 in order to accept the Metaxa2 database do th
 
 *patch -p0 < patch_parallel241.txt*
 
-To prevent parallel-meta v3.3.2 from deleting intermediate read mapping files, do the following:
-
--Before compiling the software, copy the patch_parallel332.txt file to the parallel-meta v3.3.2 root directory and run the command:
-
-*patch -p0 < patch_parallel332.txt*
-
 **This project includes the following scripts in the bin directory:**
-- kraken_corrector.pl	    - Formats the kraken.report table into an abundance matrix
-- taxonomy2lineage.sh     - Converts taxonomy.txt output table into an abundance matrix for parallel-meta v2.4.1
-- classif2lineage.sh      - Converts classification.txt to abundance matrix for parallel-meta
-- spingo_cleaner.pl       - Reports the LCA from the AMBIGUOUS annotations
-- rmv_inter_levels.pl     - Standardize taxonomic levels, requires lineage_ete.py and translator_ete.py in current directory
-- taxa_levels.pl          - Separates the abundance matrix in the eigth main taxonomic levels
-- count2percent.pl        - Normalize counts matrix into relative abundance
 - patch_parallel241.txt   - Patch for Parallel-meta v2.4.1
-- patch_parallel332.txt   - Patch for Parallel-meta v3.3.2
+- count2percent.pl        - Normalize counts matrix into relative abundance
+- shuffled_fasta.pl       - Generates shuffled sequences from a reference fasta file
 
 Ete3 scripts:
 - names2linaje.py
@@ -62,8 +50,11 @@ Ete3 scripts:
 - lineage_ete.py
 - translator_ete.py
 
+Extra tables:
+- ncbi_plus_unicos.txt     - Relational table containing the reference lineage taxids at the eight main taxonomic levels (superkingdom, phylum, class, order, family, genus, species, subespecies) for all the genomes used to generate the in-silico sequences.
 
-Specifications about the software and used parameters are in the following table:
+
+Specifications about the software and parameters used are in the following table:
 
 | Software | Parameters used |
 |----------|-----------------|
@@ -76,7 +67,8 @@ Specifications about the software and used parameters are in the following table
 | Kraken v0.10.5-beta | kraken --preload --db /Databases/Kraken/ --threads 16 --output kraken.out file.fastq <br/> kraken-report --db /Databases/Kraken/ kraken.out > kraken.report |
 | CLARK v1.2.3.1 | classify_metagenome.sh -k 21 -P file_R1.fq file_R2.fq -R /PATH/clark.results -n 32 -m 0 |
 
-Results were reported and analyzed in the submitted paper:
+
+All results were reported and analyzed in the submitted paper:
 
 Escobar-Zepeda Alejandra, Godoy-Lozano E. Ernestina, Raggi Luciana, Segovia Lorenzo, Merino Enrique, Gutiérrez-Rios Rosa María, Juarez-Lopez Katy, Licea-Navarro Alexei F., Pardo-Lopez Liliana and Sanchez-Flores Alejandro. **Analysis of sequencing strategies and tools for taxonomic annotation: Defining standards for progressive metagenomics**. *submitted.* 2018.
 
