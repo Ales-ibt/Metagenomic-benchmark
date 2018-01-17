@@ -1,10 +1,10 @@
-AE000666-_Euryarchaeota_1181/1	Archaea;Euryarchaeota;Methanobacteria;Methanobacteriales;Methanobacteriaceae;Methanothermobacter	97.91	96	97.91
-AE000666-_Euryarchaeota_2637/1	Archaea;Euryarchaeota;Methanobacteria;Methanobacteriales;Methanobacteriaceae;Methanothermobacter	96	100	96.8
-AE000666-_Euryarchaeota_3359/1	Archaea;Euryarchaeota;Methanobacteria;Methanobacteriales;Methanobacteriaceae;Methanothermobacter	98	100	98
-AE003849-_Proteobacteria_5402/1	Bacteria;Proteobacteria;Gammaproteobacteria;Xanthomonadales;Xanthomonadaceae;Xylella;Xylella fastidiosa;	99	100	93.46
-AE003849-_Proteobacteria_8818/1	Bacteria;Proteobacteria;Gammaproteobacteria;Xanthomonadales;Xanthomonadaceae;Xylella;Xylella fastidiosa;	98	100	98.4
-AE004092-_Firmicutes_125/1	Bacteria;Firmicutes;Bacilli;Lactobacillales;Streptococcaceae;Streptococcus	98	100	98
-AE004092-_Firmicutes_2217/1	Bacteria;Firmicutes;Bacilli;Lactobacillales;Streptococcaceae;Streptococcus;Streptococcus pyogenes;	97.98	99	98.38
-AE004092-_Firmicutes_2453/1	Bacteria;Firmicutes;Bacilli;Lactobacillales;Streptococcaceae;Streptococcus	96.93	98	97.55
-AE004092-_Firmicutes_27/1	Bacteria;Firmicutes;Bacilli;Lactobacillales;Streptococcaceae;Streptococcus;Streptococcus pyogenes;	97	100	97.6
-AE004092-_Firmicutes_2795/1	Bacteria;Firmicutes;Bacilli;Lactobacillales;Streptococcaceae;Streptococcus	96.93	98	97.55
+read_100;FN392235_1	Bacteria;Proteobacteria;Gammaproteobacteria;Enterobacteriales;Enterobacteriaceae;Erwinia;Erwinia tasmaniensis;	99.11	450	99.28
+read_101;CP001101_1	Bacteria;Chlorobi;Chlorobia;Chlorobiales;Chlorobiaceae;Chlorobium;Chlorobium phaeobacteroides BS1;	100	450	100
+read_102;CP002433_1	Bacteria;Proteobacteria;Gammaproteobacteria;Enterobacteriales;Enterobacteriaceae	99.55	450	99.20
+read_10;CP002177_1	Bacteria;Proteobacteria;Gammaproteobacteria;Pseudomonadales;Moraxellaceae;Acinetobacter	99.77	450	99.77
+read_11;CP000155_1	Bacteria;Proteobacteria;Gammaproteobacteria;Oceanospirillales;Hahellaceae;Hahella;Hahella chejuensis KCTC 2396;	100	450	100
+read_12;CP002371_1	Bacteria;Proteobacteria;Alphaproteobacteria;Rhizobiales;Candidatus Liberibacter;Candidatus	100	442	97.67
+read_13;CP001796_1	Bacteria;Proteobacteria;Gammaproteobacteria;Alteromonadales;Pseudoalteromonadaceae;Pseudoalteromonas	100	450	100
+read_14;CP001612_1	Bacteria;Proteobacteria;Alphaproteobacteria;Rickettsiales;Rickettsiaceae;Rickettsia	100	440	100
+read_15;CP003280_1	Bacteria;Bacteroidetes;Flavobacteria;Flavobacteriales;Flavobacteriaceae;Aequorivita	98.44	450	97.56
+read_16;CP002165_1	Bacteria;Proteobacteria;Gammaproteobacteria;Xanthomonadales;Xanthomonadaceae;Xylella;Xylella fastidiosa;	100	450	100
