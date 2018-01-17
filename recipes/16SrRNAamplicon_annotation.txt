@@ -4,14 +4,14 @@
 
 ##### This recipe describes the analysis made using the in-silico 16S rRNA amplicon sequences available in the datasets_16SrRNA directory of this repository, in order to test the methods reported in the "Analysis of sequencing strategies and tools for taxonomic annotation: Defining standards for progressive metagenomics" paper. The annotation output tables were formatted in order to obtain a relational table containing the sequence id, the taxid of their respective annotation and the score (reads_ranking.txt table). Examples of the intermediate results generated from each software are available in the examples directory of this repository. Below are described the commands used to run every program and to convert the resulting annotation table into the reads.ranking.txt table. From the latter, we evaluated the software performance at every taxonomic level as is described in the performance_evaluation.txt recipe.
 
-**## 1.- Metaxa2 v2.2.1  **
+## 1.- Metaxa2 v2.2.1
 
 $ metaxa2 -1 file_R1.fq -2 file_R2.fq -o metaxa_out -f fastq --plus T --fasta F --cpu 32 -d /PATH/database.fasta
 
 # The output used to generate the reads_ranking.txt table was the metaxa_out.taxonomy.txt file
 
 
-**## 2.- Parallel-meta v2.4.1 (patched) **
+## 2.- Parallel-meta v2.4.1 (patched)
 # Parallel-meta includes the RDP (R), GreenGenes (G) and SILVA (S) databases in the v2.4.1 distribution. The patched included in the bin directory of this repository activates the Metaxa2 database option with the flag "X" in -d parameter.
 
 $ parallel-meta -b B -m file.fastq -d X|R|G|S -n 32
@@ -19,7 +19,7 @@ $ parallel-meta -b B -m file.fastq -d X|R|G|S -n 32
 # The output used to generate the reads_ranking.txt table was the classification.txt file.
 
 
-**## 3.- SPINGO v1.3 **
+## 3.- SPINGO v1.3
 
 $ spingo -p 32 -d /PATH/database.fasta -i *.fasta -a > result.txt
 
@@ -29,8 +29,7 @@ $ spingo_cleaner.pl spingo_result.txt
 
 
 
-
- **## 4.- QIIME v1.9.1 **
+## 4.- QIIME v1.9.1
 
 $ pick_otus.py -i file.fasta -o uclust_picked_otus --threads 16
 $ pick_rep_set.py -i uclust_picked_otus/file_otus.txt -f file.fasta -l rep_set/file_rep_set.log -o rep_set/file_otus_rep_set.fasta
