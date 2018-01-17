@@ -1,0 +1,20 @@
+##################################################
+# Taxonomic annotation of 16S rRNA amplicon data #
+##################################################
+
+##### Recipe to analize 16S rRNA paired-end amplicon sequences from V3V4 variable regions amplified using the Klindworth, et al (2013) primers S-D-Bact-0341-b-S-17 and S-D-Bact-0785-a-A-21. We start from the rebuilt amplicon that is the Flash v1.2.11 (Magoč & Salzberg, 2011) output file named flash_out.extendedFrags.fastq. The command used is:
+
+$ flash -t 8 -o flash_out file_R1.fastq file_R2.fastq
+
+### The extended fragments were used as input for each tested software and the annotation output were formatted in order to obtain a relational table containing the sequence id, the taxid of their respective annotation and the assignment score (reads_ranking.txt). Below are described the commands used in each case.
+
+## 1.- Metaxa2 v2.2.1
+$ metaxa2 -1 file_R1.fq -2 file_R2.fq -o metaxa_out -f fastq --plus T --fasta F --cpu 32 -d /PATH/database.fasta
+
+# In this case, the output used to generate the reads_ranking.txt table was the metaxa_out.taxonomy.txt file. An example of this output obtained from the annotation with each database are in the examples directory. Commands to modify those tables are the following:
+
+== TINA ==
+
+
+## 2.- Parallel-meta v2.4.1 (patched)
+
