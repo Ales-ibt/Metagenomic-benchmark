@@ -1,0 +1,10 @@
+read_101969;CP001796_1	Bacteria;Proteobacteria;Gammaproteobacteria	100	450	100
+read_101970;CP000083_1	Bacteria;Proteobacteria;Gammaproteobacteria;Alteromonadales;Colwelliaceae;Colwellia	100	450	100
+read_101971;CU633749_1	Bacteria;Proteobacteria;Betaproteobacteria;Burkholderiales;Burkholderiaceae;Cupriavidus	100	450	100
+read_101972;AP012222_1	Bacteria;Proteobacteria;Alphaproteobacteria;Sphingomonadales;Sphingomonadaceae;Sphingobium	100	440	100
+read_101973;CP002695_1	Bacteria;Proteobacteria;Betaproteobacteria;Burkholderiales;Alcaligenaceae;Bordetella	100	450	100
+read_101974;CP002897_1	Bacteria;Proteobacteria;Alphaproteobacteria;Rhodobacterales;Rhodobacteraceae	100	440	83.33
+read_101975;FP475956_1	Bacteria;Proteobacteria;Betaproteobacteria;Burkholderiales;Burkholderiales_incertae_sedis;Thiomonas	100	450	100
+read_101976;CP002634_1	Bacteria;Firmicutes;Bacilli;Bacillales	100	450	100
+read_101977;CP003787_1	Bacteria;Bacteroidetes;Flavobacteriia;Flavobacteriales;Flavobacteriaceae;Riemerella	100	450	100
+read_101978;CP001037_1	Bacteria;Cyanobacteria/Chloroplast;Cyanobacteria;Family I;GpI	100	443	100
