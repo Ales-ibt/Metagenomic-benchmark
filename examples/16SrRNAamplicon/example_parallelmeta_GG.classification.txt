@@ -1,0 +1,10 @@
+Sequence_id	Database_id	Percentage_identity	E-value	Classification
+read_1;CP001629_1	30927	94.469	0.0	Bacteria; Proteobacteria; Deltaproteobacteria; Desulfovibrionales; Desulfomicrobiaceae; Desulfomicrobium; Unclassified; otu_2849
+read_2;CP002059_1	53707	97.072	0.0	Bacteria; Cyanobacteria; Nostocales; Nostocaceae; Nostoc; Unclassified; otu_1231
+read_3;CP001275_1	1282	100	0.0	Bacteria; Thermotogae; Thermotogales; Thermotogaceae; Thermotoga; Unclassified; otu_3593
+read_4;AP008231_1	3299	99.097	0.0	Bacteria; Cyanobacteria; Unclassified; otu_1178
+read_5;AP008231_1	3299	99.097	0.0	Bacteria; Cyanobacteria; Unclassified; otu_1178
+read_6;AE017126_1	92037	97.738	0.0	Bacteria; Cyanobacteria; Prochlorales; Prochlorococcaceae; Prochlorococcus; Unclassified; otu_1291
+read_7;CP002627_1	14754	99.333	0.0	Bacteria; Firmicutes; Bacillales; Bacillaceae; Bacillus; Unclassified; otu_1368
+read_8;CP000487_1	63933	95.692	0.0	Bacteria; Proteobacteria; Epsilonproteobacteria; Campylobacterales; Campylobacteraceae; Campylobacter; Unclassified; otu_2948
+read_9;CP001834_1	108351	96.46	0.0	Bacteria; Firmicutes; Lactobacillales; Streptococcaceae; Lactococcus; Unclassified; otu_1942
