@@ -1,0 +1,10 @@
+Sequence_id	Database_id	Percentage_identity	E-value	Classification
+read_1;CP001629_1	CP001629.308767.310308.B	100	0.0	Bacteria; Proteobacteria; Deltaproteobacteria; Desulfovibrionales; Desulfomicrobiaceae; Desulfomicrobium; Desulfomicrobium baculatum DSM 4028;
+read_2;CP002059_1	CP002059.830919.832396.B	100	0.0	Bacteria; Cyanobacteria; Cyanobacteria; SubsectionIV; FamilyI; 'Nostoc; 'Nostoc azollae' 0708;
+read_3;CP001275_1	M34115.1.1528.B	100	0.0	Bacteria; Chloroflexi; Thermomicrobia; Thermomicrobiales; Thermomicrobiaceae; Thermomicrobium; Thermomicrobium roseum;
+read_4;AP008231_1	D88288.1.1358.B	100	0.0	Bacteria; Cyanobacteria; Cyanobacteria; SubsectionI; FamilyI; Synechococcus; Synechococcus sp.;
+read_5;AP008231_1	D88288.1.1358.B	100	0.0	Bacteria; Cyanobacteria; Cyanobacteria; SubsectionI; FamilyI; Synechococcus; Synechococcus sp.;
+read_6;AE017126_1	FJ497736.1.1365.B	98.643	0.0	Bacteria; Cyanobacteria; Cyanobacteria; SubsectionI; FamilyI; Synechococcus; Synechococcus sp. KORDI-53;
+read_7;CP002627_1	JQ023627.1.1462.B	100	0.0	Bacteria; Firmicutes; Bacilli; Bacillales; Bacillaceae; Bacillus; Bacillus licheniformis;
+read_8;CP000487_1	JN585921.1.1380.B	100	0.0	Bacteria; Proteobacteria; Epsilonproteobacteria; Campylobacterales; Campylobacteraceae; Campylobacter; Campylobacter fetus;
+read_9;CP001834_1	HQ721267.1.1474.B	100	0.0	Bacteria; Firmicutes; Bacilli; Lactobacillales; Streptococcaceae; Lactococcus; Lactococcus lactis;
