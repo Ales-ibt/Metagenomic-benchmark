@@ -1,0 +1,10 @@
+AE000666-_Euryarchaeota_1181/1	root;cellular_organisms;Archaea	97.91	96	97.91
+AE000666-_Euryarchaeota_2637/1	root;cellular_organisms;Archaea	96	100	96
+AE000666-_Euryarchaeota_3359/1	root;cellular_organisms;Archaea	98	100	98
+AE003849-_Proteobacteria_5402/1	root;cellular_organisms;Bacteria_<prokaryotes>;Proteobacteria;Gammaproteobacteria;Xanthomonadales;Xanthomonadaceae;Xylella;Xylella_fastidiosa;environmental_samples_<Xylella_fastidiosa>;uncultured_Xylella_fastidiosa;uncultured_Xylella_fastidiosa	99	100	99.2
+AE003849-_Proteobacteria_8818/1	root;cellular_organisms;Bacteria_<prokaryotes>;Proteobacteria;Gammaproteobacteria;Xanthomonadales;Xanthomonadaceae;Xylella	98	100	98
+AE004092-_Firmicutes_125/1	root;cellular_organisms;Bacteria_<prokaryotes>	98	100	98
+AE004092-_Firmicutes_2217/1	root;cellular_organisms;Bacteria_<prokaryotes>;Terrabacteria_group;Firmicutes;Bacilli;Lactobacillales;Streptococcaceae;Streptococcus;Streptococcus_pyogenes;Streptococcus_pyogenes	97.98	99	98.38
+AE004092-_Firmicutes_2453/1	root;cellular_organisms;Bacteria_<prokaryotes>;environmental_samples_<Bacteria>;uncultured_bacterium;uncultured_bacterium	97	100	97.50
+AE004092-_Firmicutes_27/1	root;cellular_organisms;Bacteria_<prokaryotes>;Terrabacteria_group;Firmicutes;Bacilli;Lactobacillales;Streptococcaceae;Streptococcus;Streptococcus_pyogenes;Streptococcus_pyogenes	97	100	97.6
+AE004092-_Firmicutes_2795/1	root;cellular_organisms;Bacteria_<prokaryotes>;Terrabacteria_group;Firmicutes;Bacilli	96.93	98	97.55
