@@ -1,0 +1,10 @@
+denovo448	Bacteria;Firmicutes;Clostridia;Clostridiales;Lachnospiraceae;Butyrivibrio	1.00	3
+denovo449	Bacteria;Proteobacteria;Alphaproteobacteria;Rhizobiales;Beijerinckiaceae;Beijerinckia	1.00	3
+denovo446	Bacteria;Proteobacteria;Deltaproteobacteria;Myxococcales;Cystobacterineae;suborder;Cystobacteraceae;Anaeromyxobacter	1.00	3
+denovo447	Bacteria;Cyanobacteria/Chloroplast;Cyanobacteria;Family X;GpX	1.00	3
+denovo444	Bacteria;Actinobacteria;Actinobacteria;Actinobacteridae;subclass;Actinomycetales;Corynebacterineae;suborder;Nocardiaceae;Nocardia	1.00	3
+denovo445	Bacteria;Proteobacteria;Betaproteobacteria;Nitrosomonadales;Nitrosomonadaceae;Nitrosospira	1.00	3
+denovo442	Bacteria;Proteobacteria;Gammaproteobacteria;Pseudomonadales;Moraxellaceae;Acinetobacter	1.00	3
+denovo443	Bacteria;Cyanobacteria/Chloroplast;Cyanobacteria;Family VII;GpVII	1.00	3
+denovo440	Bacteria;Proteobacteria;Gammaproteobacteria;Alteromonadales;Alteromonadaceae;Paraglaciecola	1.00	3
+denovo441	Bacteria;Firmicutes;Clostridia;Natranaerobiales;Natranaerobiaceae;Natranaerobius	1.00	3
