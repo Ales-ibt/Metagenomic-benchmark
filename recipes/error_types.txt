@@ -1,0 +1,14 @@
+## 
+
+$ taxid2level.py reads_ranking.txt
+
+## The output is level_taxid.out. This table contains the read id, the taxonomic level reached in the annotation and the taxid of such annotation. In the next step, we use this table plus the tabla_sort2.tab and the number of shuffled sequences include in the dataset.
+
+$ error_types_v4.pl level_taxid.out table_trueFalse.txt 846578
+
+## This step generates the types_error.out file, containing for each taxonomic level the number of True Negatives, True Positives, False Negatives and False Positives, sensitivity, specificity, accuracy and Matthews correlation coefficient at each taxonomic level.
+## Finally, the respective triplicates were integrated and specificity,sensitivity, accuracy and MCC were plotted using the following scripts:
+
+$
+
+$
