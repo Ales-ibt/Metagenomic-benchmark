@@ -1,0 +1,10 @@
+Sequence_id	Database_id	Percentage_identity	E-value	Classification
+1|CP002865-_Proteobacteria_8804/2	AF150796.1	100	2.52e-46	Bacteria; Proteobacteria; Gammaproteobacteria; Methylococcales; Methylococcaceae; Methylomonas; Unclassified;
+2|CP001819-_Actinobacteria_37433/1	AB162806.1	100	8.94e-46	Bacteria; Actinobacteria; Actinobacteria; Actinomycetales; Nocardiaceae; Nocardia; Unclassified;
+3|CP002865-_Proteobacteria_6154/1	AY328755.1	100	7.09e-47	Bacteria; Proteobacteria; Alphaproteobacteria; Unclassified; 
+4|AP012222-_Proteobacteria_8534/1	AY496953.1	100	8.94e-46	Bacteria; Proteobacteria; Gammaproteobacteria; Unclassified; 
+5|CP003720-_Actinobacteria_19186/2	EF079074.1	100	7.09e-47	Bacteria; Actinobacteria; Actinobacteria; Actinomycetales; Nocardiaceae; Rhodococcus; Unclassified;
+6|CP000117-_Cyanobacteria_46669/2	AB074502.1	100	8.94e-46	Bacteria; Cyanobacteria; Cyanobacteria; Family_I; GpI; Unclassified;
+7|CR954246-_Proteobacteria_8043/2	AY167295.1	100	7.09e-47	Bacteria; Proteobacteria; Gammaproteobacteria; Alteromonadales; Colwelliaceae; Colwellia; Unclassified;
+8|HE577054-_Firmicutes_14378/1	AF515611.1	100	7.09e-47	Bacteria; Firmicutes; Bacilli; Bacillales; Paenibacillaceae; Paenibacillus; Unclassified;
+9|CP002220-_Actinobacteria_7184/2	EF079074.1	98.99	3.30e-45	Bacteria; Actinobacteria; Actinobacteria; Actinomycetales; Nocardiaceae; Rhodococcus; Unclassified;
