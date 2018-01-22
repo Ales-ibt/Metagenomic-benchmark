@@ -1,6 +1,6 @@
 **Metagenomic-benchmark**
 
-The code deposited in this site contains the necessary scripts to integrate, standardise and generate taxonomic annotation matrices at the eight basic levels of taxonomic lineage: domain, phylum, class, order, family, genus, species and subspecies. These tools provide the possibility of comparing taxonomic annotation results obtained from different methods and databases. The available scripts were designed to manage the results obtained from the following taxonomic annotation tools:
+The code deposited in this site contains the necessary scripts to integrate, standardise and generate taxonomic annotation tables used for error type estimation at the eight basic levels of taxonomic lineage: domain, phylum, class, order, family, genus, species and subspecies. These tools provide the possibility of comparing taxonomic annotation results obtained from different methods and databases by CVE plots and calculating the specificity, sensitivity, accuracy and Matthews correlation coefficient. The available scripts were designed to manage the results obtained from the following taxonomic annotation tools:
 
 - Kraken v0.10.5-beta
 - CLARK v1.2.3.1
