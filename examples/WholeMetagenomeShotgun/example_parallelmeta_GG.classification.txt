@@ -1,0 +1,10 @@
+Sequence_id	Database_id	Percentage_identity	E-value	Classification
+1|CP002865-_Proteobacteria_8804/2	226402	100	8.37e-47	Bacteria; Unclassified; otu_205
+2|CP001819-_Actinobacteria_37433/1	202129	100	2.97e-46	Bacteria; Actinobacteria; Actinobacteridae; Actinomycetales; Micrococcineae; Intrasporangiaceae; Tetrasphaera; otu_379
+3|CP002865-_Proteobacteria_6154/1	228462	100	2.36e-47	Bacteria; Unclassified; otu_205
+4|AP012222-_Proteobacteria_8534/1	213779	100	2.97e-46	Bacteria; Proteobacteria; Gammaproteobacteria; Thiotrichales; Thiotrichaceae; Beggiatoa; Unclassified; otu_3419
+5|CP003720-_Actinobacteria_19186/2	132662	100	2.36e-47	Bacteria; Actinobacteria; Actinobacteridae; Actinomycetales; Streptomycineae; Streptomycetaceae; Streptomyces; Unclassified; otu_563
+6|CP000117-_Cyanobacteria_46669/2	195479	100	2.97e-46	Bacteria; Cyanobacteria; Nostocales; Nostocaceae; Anabaena; Unclassified; otu_1220
+7|CR954246-_Proteobacteria_8043/2	225963	100	2.36e-47	Bacteria; Unclassified; otu_205
+8|HE577054-_Firmicutes_14378/1	187176	98.99	1.10e-45	Bacteria; Firmicutes; Bacillales; Paenibacillaceae; Paenibacillus; Unclassified; otu_1444
+9|CP002220-_Actinobacteria_7184/2	199413	98.99	1.10e-45	Bacteria; Firmicutes; Clostridia; Clostridiales; Clostridiaceae; Clostridium; Unclassified; otu_1566
