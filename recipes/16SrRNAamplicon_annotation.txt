@@ -35,7 +35,15 @@ $ pick_otus.py -i file.fasta -o uclust_picked_otus --threads 16
 $ pick_rep_set.py -i uclust_picked_otus/file_otus.txt -f file.fasta -l rep_set/file_rep_set.log -o rep_set/file_otus_rep_set.fasta
 $ assign_taxonomy.py -i rep_set/file_otus_rep_set.fasta -o uclust_assigned_taxonomy -r db.fasta -t taxonomy.txt
 
-# 
+# The assign_taxonomy.py output contain the annotation for each OTU representative sequence. The reads_ranking.txt table was obtained from by the following treatment:
+
+==TINA==
+
+# We generated an intermediate table containing the annotation for each read using the OTUs table (pick_otus.py script output) and the reads_ranking.txt table.
+
+$ qiime_transfer.pl PATH/otus/uclust_picked_otus/flash_out.extendedFrags_otus.txt reads_ranking.txt
+
+# This step transform the reads_ranking.txt into a trans_reads_ranking.txt table
 
 
 
