@@ -4,33 +4,121 @@
 
 ##### This recipe describes the analysis made using the WMS paired-end sequences (Lindgreen et al. 2016) in order to test the methods reported in the "Analysis of sequencing strategies and tools for taxonomic annotation: Defining standards for progressive metagenomics" paper. Eukariotic reads were filtered and raw sequences were used as input for each tested software. The annotation output were formatted in order to obtain a relational table containing the sequence id, the taxid of their respective annotation and the score (reads_ranking.txt table). Examples of the intermediate results generated from each software are available in the examples directory of this repository. Below are described the commands used to run every program and to convert the resulting annotation table into the reads.ranking.txt table. From the latter table, we evaluated the software performance at every taxonomic level as is described in the performance_evaluation.txt recipe.
 
-## 1.- Kraken v0.10.5-beta
+#############################
+## 1.- Kraken v0.10.5-beta ##
+#############################
+
 # The concatenated fastq obtained from R1 and R2 was used as input for Kraken.
 
 $ kraken --preload --db /Databases/Kraken/ --threads 16 --output kraken.out file.fastq
 
 # The kraken output classification file was used to generate the reads_ranking.txt table.
+# Get reads_ranking.txt table
+$ grep -v '^U' kraken.out > kraken_mod.out
+$ Rscript 1.cuentas_kraken_mod.R kraken_mod.out
+$ cut -f2,3,6 kraken_conteo_kmer.out > reads_ranking.txt
 
+# Get linage from each read
+$ python 2.get_linage_rank.py
 
-== TINA ==
+# Order linage
+$ 3.order_lineage_method.pl taxid_ranking_linage.txt > lineaje_ordenada.tab
 
+# Add original Genome to table with linage
+$ Rscript 4.tabla_ordenada_conGenoma.R
 
-## 2.- CLARK v1.2.3.1
+# Get table with FALSE and POSITIVES results for each assigment
+$ Rscript 5.tabla_new.R
+
+# Substitute NA by 0 and sort table
+$ sed -i '1d' tabla_new.tab
+$ sed 's/\<NA\>/0/g' tabla_new.tab| sort -nr -k 10 > tabla_sort.tab
+
+# Clean intermediate levels
+$ 7.subtit_TF.pl tabla_sort.tab > tabla_sort2.tab
+
+# Remove intermediate tables
+$ rm kraken_mod.out kraken_conteo_kmer.out taxid_ranking_linage.txt lineaje_ordenada.tab tabla_conGenomas_para_CVE.tab tabla_new.tab tabla_sort.tab
+
+########################
+## 2.- CLARK v1.2.3.1 ##
+########################
 
 $ classify_metagenome.sh -k 21 -P file_R1.fastq file_R2.fastq -R /PATH/clark.results -n 32 -m 0
 
 # The clark.results.csv table was used to obtain the reads_ranking.txt table.
 
+# Get reads_ranking.txt table
+### cut Object_ID, 1st_assignment and confidence fields
+$ cut -d ',' clark.results.csv -f1,4,8| sed 's/,/\t/g' > reads.txt
+### cut first line (header)
+$ sed -i '1d' reads.txt
+### cut rows with NA in the assigment
+$ grep -v -w 'NA' reads.txt > reads_ranking.txt
 
-## 3.- MetaPhlAn2 v2.2.0
+# Get linage from each read
+$ python 2.get_linage_rank.py
+
+# Order linage
+$ 3.order_lineage_method.pl taxid_ranking_linage.txt > lineaje_ordenada.tab
+
+# Add original Genome to table with linage
+$ Rscript 4.tabla_ordenada_conGenoma.R
+
+# Get table with FALSE and POSITIVES results for each assigment
+$ Rscript 5.tabla_new.R
+
+# Substitute NA by 0 and sort table according with the best score
+$ sed -i '1d' tabla_new.tab
+$ sed 's/\<NA\>/0/g' tabla_new.tab| sort -nr -k 10 > tabla_sort.tab
+
+# Clean intermediate levels
+$ 7.subtit_TF.pl tabla_sort.tab > tabla_sort2.tab
+
+# Remove intermediate tables
+$ rm clark_reads.txt reads.txt taxid_ranking_linage.txt lineaje_ordenada.tab tabla_conGenomas_para_CVE.tab tabla_new.tab tabla_sort.tab
+
+###########################
+## 3.- MetaPhlAn2 v2.2.0 ##
+###########################
+
 # As reads length was 100bp, we stablished -min_alignment_len parameter in 95
 
 $ metaphlan2.py file_1.fq,file_2.fq --mpa_pkl mpa_v20_m200.pkl --bowtie2db mpa_v20_m200 --bt2_ps sensitive-local --bowtie2out file.bowtie2.bz2 --samout file.sam --nproc 32 --input_type fastq --min_alignment_len 95 > metaphlan_out.txt
 
 # The file.sam was used to obtain the reads_ranking.txt table.
+# Get reads_ranking.txt table
+## cut reads_id, assigment result and Aligment Score
+$ samtools view -b -S file.sam > file.bam
+$ samtools view file.bam | cut -f1,3,12 | sed 's/AS:i://;s/gi|//;s/|ref|*.*\t/\t/;s/|gb|*.*\t/\t/;s/|dbj|*.*\t/\t/' > metaphlan_AS_completa.txt
+$ 1.add_taxid_metaphlan.pl metaphlan_AS_completa.txt ### the script need the path of the taxid.txt table
+$ mv metaphlan_AS_completa.txt.withTAXID reads_ranking.txt
 
+# Get linage from each read
+$ python 2.get_linage_rank.py
 
-## 4.- MOCAT v1.3
+# Order linage
+$ 3.order_lineage_method.pl taxid_ranking_linage.txt > lineaje_ordenada.tab
+
+# Add original Genome to table with linage
+$ Rscript 4.tabla_ordenada_conGenoma.R
+
+# Get table with FALSE and POSITIVES results for each assigment
+$ Rscript 5.tabla_new.R
+
+# Substitute NA by 0 and sort table according with the best score
+$ sed -i '1d' tabla_new.tab
+$ sed 's/\<NA\>/0/g' tabla_new.tab| sort -nr -k 10 > tabla_sort.tab
+
+# Clean intermediate levels
+$ 7.subtit_TF.pl tabla_sort.tab > tabla_sort2.tab
+
+# Remove intermediate tables
+$ rm metaphlan_AS_completa.txt.notax  taxid_ranking_linage.txt lineaje_ordenada.tab tabla_conGenomas_para_CVE.tab tabla_new.tab tabla_sort.tab
+
+####################
+## 4.- MOCAT v1.3 ##
+####################
 
 $ MOCAT.pl -sf samples.txt -rtf
 $ MOCAT.pl -sf samples.txt -s mOTU.v1.padded -r reads.processed -identity 97
@@ -41,24 +129,131 @@ $ MOCAT.pl -sf samples.txt -f RefMG.v1.padded -r mOTU.v1.padded -e -identity 97
 $ MOCAT.pl -sf samples.txt -p RefMG.v1.padded -r mOTU.v1.padded -e -identity 97 -mode RefMG -previous_db_calc_tax_stats_file -o Results
 
 # As in the case of MetaPhlAn2, the mapping output was used to obtain the reads_ranking.txt table
+# Get reads_ranking.txt table
+## cut sample id, assignment and Aligment Score
+$ 0.soap2sam.pl -p reads.mapped.extracted.mOTU.v1.padded.on.RefMG.v1.padded.solexaqa.allbest.soap|cut -f1,3,6| sed 's/M$//' > mocat_reads.txt
+$ cut -f1 mocat_reads.txt > mocat1.txt
+$ cut -f2 mocat_reads.txt | cut -d '.' -f1 > mocat2.txt
+$ cut -f3 mocat_reads.txt  > mocat3.txt
+$ paste mocat1.txt mocat2.txt mocat3.txt> reads_ranking.txt
 
+# Get linage from each read
+$ python 2.get_linage_rank.py
 
-## 5.- Parallel-meta v2.4.1 (patched)
+# Order linage
+$ 3.order_lineage_method.pl taxid_ranking_linage.txt > lineaje_ordenada.tab
+
+# Add original Genome to table with linage
+$ Rscript 4.tabla_ordenada_conGenoma.R
+
+#Contruct table with FALSE and POSITIVES results for each assigment
+$ Rscript 5.tabla_new.R
+
+#Substitute NA by 0 and sort table according with the best score
+$ sed -i '1d' tabla_new.tab
+$ sed 's/\<NA\>/0/g' tabla_new.tab| sort -nr -k 10 > tabla_sort.tab
+
+# Clean intermediate levels
+$ 7.subtit_TF.pl tabla_sort.tab > tabla_sort2.tab
+
+# Remove intermediate tables
+$ rm mocat_reads.txt mocat1.txt mocat2.txt mocat3.txt taxid_ranking_linage.txt lineaje_ordenada.tab tabla_conGenomas_para_CVE.tab tabla_new.tab tabla_sort.tab
+
+########################################
+## 5.- Parallel-meta v2.4.1 (patched) ##
+########################################
+
 # Parallel-meta includes the RDP (R), GreenGenes (G) and SILVA (S) databases in the v2.4.1 distribution. The patched included in the bin directory of this repository activates the Metaxa2 database option with the flag "X" in -d parameter.
 
 $ parallel-meta -b B -m file.fastq -d X|R|G|S -n 32
 
 # The output used to generate the reads_ranking.txt table was the classification.txt file.
+# Get reads_ranking.txt table
+## cut reads_id, assigment result and E-value
+### GG database
+$ Rscript 0.get_table_parallel_gg.R
 
+### MTX database
+$ sed -e 's/^[a-zA-Z0-9]*|//g;s/rev|//g' classification.txt | cut -f1,4,5 | sed 's/;\+\t/\t/'| sed 's/;\+/;/'| sed 's/; /;/g' > classification_mod.txt
+$ sed -i '1d' classification_mod.txt
+$ Rscript 0.get_table_mtx_rdp_silva.R
 
+### SILVA database
+$ sed -e 's/^[a-zA-Z0-9]*|//g;s/rev|//g' classification.txt |  cut -f1,4,5 | sed 's/; Unclassified*.*//g; s/;\+\t/\t/;s/; /;/g'| sed 's/;\+/;/' > classification_mod.txt
+$ sed -i '1d' classification_mod.txt
+$ Rscript 0.get_table_mtx_rdp_silva.R
+
+### RDP database
+$ sed -e 's/^[a-zA-Z0-9]*|//g;s/rev|//g' classification.txt |  cut -f1,4,5 | sed 's/; Unclassified*.*//g; s/;\+\t/\t/;s/; /;/g'| sed 's/;\+/;/' > classification_mod.txt
+$ sed -i '1d' classification_mod.txt
+$ Rscript 0.get_table_mtx_rdp_silva.R
+
+# Get linage from each read
+$ python 2.get_linage_rank.py
+
+# Order linage
+$ 3.order_lineage_method.pl taxid_ranking_linage.txt > lineaje_ordenada.tab
+
+# Add original Genome to table with linage
+$ Rscript 4.tabla_ordenada_conGenoma.R
+
+# Get table with FALSE and POSITIVES results for each assigment
+$ Rscript 5.tabla_new.R
+
+# Substitute NA by 0 and sort table according with the best score
+$ sed -i '1d' tabla_new.tab
+$ sed 's/\<NA\>/0/g' tabla_new.tab| sort -nr -k 10 > tabla_sort.tab
+
+# Clean intermediate levels
+$ 7.subtit_TF.pl tabla_sort.tab > tabla_sort2.tab
+
+# Remove intermediate tables
+$ rm last.class_mod2.txt last.class_mod.txt otus_unicos_mod.txt otus_unicos_taxid_mod.txt otus_unicos.txt taxid_ranking_linage.txt lineaje_ordenada.tab tabla_conGenomas_para_CVE.tab tabla_new.tab tabla_sort.tab classification_mod.txt
+
+#############################
 ## 6.- Metaxa2 v2.2.1
+#############################
 
 $ metaxa2 -1 file_R1.fq -2 file_R2.fq -o metaxa_out -f fastq --plus T --fasta F --cpu 32 -d /PATH/database.fasta
 
 # The output used to generate the reads_ranking.txt table was the metaxa_out.taxonomy.txt file
 
+# Get reads_ranking.txt table
+## cut reads_id, assigment result and %identity
+### GG database
+$ cut -f1,2,5 metaxa_out.taxonomy.txt |sed 's/k__//;s/ p__//;s/ c__//;s/ o__//;s/ f__//;s/ g__//;s/ s__//; s/;\t/\t/'| sed 's/;\+\t/\t/'| sed 's/;\+/;/' > classification_mod.txt
+$ Rscript 0.get_table_metaxa_gg.R
 
+### MTX database
+$ cut -f1,2,5 metaxa_out.taxonomy.txt |sed 's/;\t/\t/'| sed 's/;\+\t/\t/'| sed 's/;\+/;/' > classification_mod.txt
+$ Rscript 0.get_table_metaxa_mtx_rdp.R
 
+### SILVA database
+$ cut -f1,2,5 metaxa_out.taxonomy.txt | sed 's/;\+\t/\t/'| sed 's/;\+/;/' > classification_mod.txt
+$ Rscript 0.get_table_metaxa_silva.R
 
+### RDP database
+$ cut -f1,2,5 metaxa_out.taxonomy.txt |sed 's/;\t/\t/'| sed 's/;\+\t/\t/'| sed 's/;\+/;/' > classification_mod.txt
+$ Rscript 0.get_table_metaxa_mtx_rdp.R
 
+# Get linage from each read
+$ python 2.get_linage_rank.py
 
+# Order linage
+$ 3.order_lineage_method.pl taxid_ranking_linage.txt > lineaje_ordenada.tab
+
+# Add original Genome to table with linage
+$ Rscript 4.tabla_ordenada_conGenoma.R
+
+# Get table with FALSE and POSITIVES results for each assigment
+$ Rscript 5.tabla_new.R
+
+# Substitute NA by 0 and sort table according with the best score
+$ sed -i '1d' tabla_new.tab
+$ sed 's/\<NA\>/0/g' tabla_new.tab| sort -nr -k 10 > tabla_sort.tab
+
+# Clean intermediate levels
+$ 7.subtit_TF.pl tabla_sort.tab > tabla_sort2.tab
+
+# Remove intermediate tables
+$ rm last.class_mod2.txt last.class_mod.txt otus_unicos_mod.txt otus_unicos_taxid_mod.txt otus_unicos.txt taxid_ranking_linage.txt lineaje_ordenada.tab tabla_conGenomas_para_CVE.tab tabla_new.tab tabla_sort.tab classification_mod.txt
