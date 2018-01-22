@@ -1,0 +1,10 @@
+denovo448	Bacteria; Firmicutes; Clostridia; Clostridiales; Lachnospiraceae; Butyrivibrio; Butyrivibrio proteoclasticus B316;	0.67	3
+denovo449	Bacteria; Proteobacteria; Alphaproteobacteria; Rhizobiales; Beijerinckiaceae; Beijerinckia; Beijerinckia indica subsp. indica ATCC 9039;	0.67	3
+denovo446	Bacteria; Proteobacteria; Deltaproteobacteria; Myxococcales; Cystobacteraceae; Anaeromyxobacter; Anaeromyxobacter dehalogenans 2CP-1;	0.67	3
+denovo447	Bacteria; Cyanobacteria; Cyanobacteria; SubsectionI; FamilyI; Synechococcus; Synechococcus sp. PCC 7002;	0.67	3
+denovo444	Bacteria; Actinobacteria; Actinobacteria; Corynebacteriales; Nocardiaceae; Nocardia	1.00	3
+denovo445	Bacteria; Proteobacteria; Betaproteobacteria; Nitrosomonadales; Nitrosomonadaceae; Nitrosospira	1.00	3
+denovo442	Bacteria; Proteobacteria; Gammaproteobacteria; Pseudomonadales; Moraxellaceae; Acinetobacter	1.00	3
+denovo443	Bacteria; Cyanobacteria; Cyanobacteria; SubsectionIII; FamilyI; Dactylococcopsis	1.00	3
+denovo440	Bacteria; Proteobacteria; Gammaproteobacteria; Alteromonadales; Alteromonadaceae; Glaciecola	1.00	3
+denovo441	Bacteria; Firmicutes; Clostridia; Natranaerobiales; Natranaerobiaceae; Natranaerobius; Natranaerobius thermophilus JW/NM-WN-LF;1.00	3
