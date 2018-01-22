@@ -1,0 +1,10 @@
+Sequence_id	Database_id	Percentage_identity	E-value	Classification
+read_1;CP001629_1	AB237686.1	100	0.0	Bacteria; Proteobacteria; Deltaproteobacteria; Desulfovibrionales; Desulfomicrobiaceae; Desulfomicrobium; Unclassified;
+read_2;CP002059_1	AJ630428.1	99.324	0.0	Bacteria; Cyanobacteria; Cyanobacteria; Family_I; GpI; Unclassified;
+read_3;CP001275_1	EF157190.1	87.444	1.99e-143	Bacteria; Chloroflexi; Thermomicrobia; Sphaerobacterales; Sphaerobacteraceae; Sphaerobacter; Unclassified;
+read_4;AP008231_1	AF132930.1	100	0.0	Bacteria; Cyanobacteria; Cyanobacteria; Family_II; GpIIb; Unclassified;
+read_5;AP008231_1	AF132930.1	100	0.0	Bacteria; Cyanobacteria; Cyanobacteria; Family_II; GpIIb; Unclassified;
+read_6;AE017126_1	AE017126.1	100	0.0	Bacteria; Cyanobacteria; Cyanobacteria; Family_II; GpIIa; Unclassified;
+read_7;CP002627_1	AF489591.1	100	0.0	Bacteria; Firmicutes; Bacilli; Bacillales; Bacillaceae; Bacillus; Unclassified;
+read_8;CP000487_1	AF219233.1	100	0.0	Bacteria; Proteobacteria; Epsilonproteobacteria; Campylobacterales; Campylobacteraceae; Campylobacter; Unclassified;
+read_9;CP001834_1	AJ488174.1	100	0.0	Bacteria; Firmicutes; Bacilli; Lactobacillales; Streptococcaceae; Lactococcus; Unclassified;
