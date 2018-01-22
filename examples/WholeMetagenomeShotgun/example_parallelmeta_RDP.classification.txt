@@ -1,0 +1,10 @@
+Sequence_id	Database_id	Percentage_identity	E-value	Classification
+1|CP002865-_Proteobacteria_8804/2	M73228_S000015400	100	1.41e-46	Bacteria; Proteobacteria; Alphaproteobacteria; Rhizobiales; Bartonellaceae; Bartonella; Unclassified;
+2|CP001819-_Actinobacteria_37433/1	EU878005_S001155766	100	5.00e-46	Bacteria; Actinobacteria; Actinobacteria; Actinomycetales; Intrasporangiaceae; Fodinibacter; Unclassified;
+3|CP002865-_Proteobacteria_6154/1	AF524863_S000431410	100	3.97e-47	Bacteria; Proteobacteria; Alphaproteobacteria; Rhodospirillales; Rhodospirillaceae; Telmatospirillum; Unclassified;
+4|AP012222-_Proteobacteria_8534/1	AB022428_S000382596	100	5.00e-46	Bacteria; Proteobacteria; Alphaproteobacteria; Sphingomonadales; Sphingomonadaceae; Sphingobium; Unclassified;
+5|CP003720-_Actinobacteria_19186/2	Z68099_S000008947	100	3.97e-47	Bacteria; Actinobacteria; Actinobacteria; Actinomycetales; Streptomycetaceae; Streptomyces; Unclassified;
+6|CP000117-_Cyanobacteria_46669/2	AB086179_S000495753	100	5.00e-46	Bacteria; Cyanobacteria; Cyanobacteria; Cyanobacteria_order_incertae_sedis; Chloroplast; Streptophyta; Unclassified;
+7|CR954246-_Proteobacteria_8043/2	AJ306890_S000019366	100	3.97e-47	Bacteria; Proteobacteria; Gammaproteobacteria; Oceanospirillales; Halomonadaceae; Cobetia; Unclassified;
+8|HE577054-_Firmicutes_14378/1	AJ320494_S000001742	100	3.97e-47	Bacteria; Firmicutes; Bacilli; Bacillales; Paenibacillaceae; Paenibacillus; Unclassified;
+9|CP002220-_Actinobacteria_7184/2	Z68099_S000008947	98.99	1.85e-45	Bacteria; Actinobacteria; Actinobacteria; Actinomycetales; Streptomycetaceae; Streptomyces; Unclassified;
