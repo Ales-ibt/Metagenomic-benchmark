@@ -1,0 +1,10 @@
+Sequence_id	Database_id	Percentage_identity	E-value	Classification
+1|CP002865-_Proteobacteria_8804/2	Z69039.1.1399.B	100	1.49e-45	Bacteria; Proteobacteria; Alphaproteobacteria; Rhizobiales; Bartonellaceae; Bartonella; Bartonella sp.;
+2|CP001819-_Actinobacteria_37433/1	Z82218.1.1318.B	100	5.30e-45	Bacteria; Actinobacteria; Actinobacteria; Corynebacteriales; Nocardiaceae; Nocardia; Nocardia asteroides;
+3|CP002865-_Proteobacteria_6154/1	JN942147.1.1382.B	100	4.21e-46	Bacteria; Proteobacteria; Alphaproteobacteria; Sphingomonadales; Erythrobacteraceae; Erythrobacter; Altererythrobacter sp. OB38-2;
+4|AP012222-_Proteobacteria_8534/1	X94099.1.1436.B	100	5.30e-45	Bacteria; Proteobacteria; Alphaproteobacteria; Sphingomonadales; Sphingomonadaceae; Sphingobium; Sphingomonas sp.;
+5|CP003720-_Actinobacteria_19186/2	Z68099.1.1484.B	100	4.21e-46	Bacteria; Actinobacteria; Actinobacteria; Streptomycetales; Streptomycetaceae; Streptomyces; Streptomyces macrosporus;
+6|CP000117-_Cyanobacteria_46669/2	X59559.1.1489.B	100	5.30e-45	Bacteria; Cyanobacteria; Cyanobacteria; SubsectionIV; FamilyI; Anabaena; Anabaena sp.;
+7|CR954246-_Proteobacteria_8043/2	Z96083.1.1497.B	100	4.21e-46	Bacteria; Proteobacteria; Gammaproteobacteria; Enterobacteriales; Enterobacteriaceae; Pantoea; Pantoea agglomerans;
+8|HE577054-_Firmicutes_14378/1	JN700208.1.1461.B	100	4.21e-46	Bacteria; Firmicutes; Bacilli; Bacillales; Paenibacillaceae; Paenibacillus; Paenibacillus polymyxa;
+9|CP002220-_Actinobacteria_7184/2	Z68099.1.1484.B	98.99	1.96e-44	Bacteria; Actinobacteria; Actinobacteria; Streptomycetales; Streptomycetaceae; Streptomyces; Streptomyces macrosporus;
