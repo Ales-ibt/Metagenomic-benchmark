@@ -43,7 +43,7 @@ $ assign_taxonomy.py -i rep_set/file_otus_rep_set.fasta -o uclust_assigned_taxon
 
 $ qiime_transfer.pl PATH/otus/uclust_picked_otus/flash_out.extendedFrags_otus.txt reads_ranking.txt
 
-# This step transform the reads_ranking.txt into a trans_reads_ranking.txt table
+# This step transforms the reads_ranking.txt into a trans_reads_ranking.txt table whit the following fileds: read id, annotation taxid and score
 
 
 
