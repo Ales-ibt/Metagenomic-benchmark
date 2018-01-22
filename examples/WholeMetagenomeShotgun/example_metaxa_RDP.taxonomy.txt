@@ -1,0 +1,10 @@
+AE000666-_Euryarchaeota_1181/1	Archaea;Euryarchaeota;Methanobacteria;Methanobacteriales;Methanobacteriaceae;Methanothermobacter	97.92	96	98.33
+AE000666-_Euryarchaeota_2637/1	Archaea;Euryarchaeota;Methanobacteria;Methanobacteriales;Methanobacteriaceae;Methanothermobacter	96	100	96.8
+AE000666-_Euryarchaeota_3359/1	Archaea;Euryarchaeota;Methanobacteria;Methanobacteriales;Methanobacteriaceae;Methanothermobacter	98	100	98.4
+AE003849-_Proteobacteria_5402/1	Bacteria;Proteobacteria;Gammaproteobacteria;Xanthomonadales;Xanthomonadaceae;Xylella	99	100	99.2
+AE003849-_Proteobacteria_8818/1	Bacteria;Proteobacteria;Gammaproteobacteria;Xanthomonadales;Xanthomonadaceae;Xylella	98	100	98.4
+AE004092-_Firmicutes_125/1	Bacteria;Firmicutes	98	100	98
+AE004092-_Firmicutes_2217/1	Bacteria;Firmicutes;Bacilli	97.98	99	97.98
+AE004092-_Firmicutes_2453/1	Bacteria;Firmicutes;Bacilli;Lactobacillales	97	100	96.90
+AE004092-_Firmicutes_27/1	Bacteria;Firmicutes	97	100	97
+AE004092-_Firmicutes_2795/1	Bacteria;Firmicutes;Bacilli;Lactobacillales	96.94	98	92.12
