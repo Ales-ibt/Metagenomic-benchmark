@@ -128,7 +128,7 @@ $ MOCAT.pl -sf samples.txt -s RefMG.v1.padded -r mOTU.v1.padded -e -identity 97
 $ MOCAT.pl -sf samples.txt -f RefMG.v1.padded -r mOTU.v1.padded -e -identity 97
 $ MOCAT.pl -sf samples.txt -p RefMG.v1.padded -r mOTU.v1.padded -e -identity 97 -mode RefMG -previous_db_calc_tax_stats_file -o Results
 
-# As in the case of MetaPhlAn2, the mapping output was used to obtain the reads_ranking.txt table
+# As in the case of MetaPhlAn2, the mapping output was used to obtain the reads_ranking.txt table. The MetaPhlAn2 output format is soap.
 # Get reads_ranking.txt table
 ## cut sample id, assignment and Aligment Score
 $ 0.soap2sam.pl -p reads.mapped.extracted.mOTU.v1.padded.on.RefMG.v1.padded.solexaqa.allbest.soap|cut -f1,3,6| sed 's/M$//' > mocat_reads.txt
