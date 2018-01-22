@@ -1,0 +1,10 @@
+AE000666-_Euryarchaeota_1181/1	k__Archaea; p__Euryarchaeota; c__Methanobacteria; o__Methanobacteriales; f__Methanobacteriaceae; g__Methanothermobacter; s__thermautotrophicus	97.91	96	98.33
+AE000666-_Euryarchaeota_2637/1	k__Archaea; p__Euryarchaeota; c__Methanobacteria; o__Methanobacteriales; f__Methanobacteriaceae	96	100	80.66
+AE000666-_Euryarchaeota_3359/1	k__Archaea; p__Euryarchaeota; c__Methanobacteria; o__Methanobacteriales; f__Methanobacteriaceae; g__Methanothermobacter; s__thermautotrophicus	98	100	98.4
+AE003849-_Proteobacteria_5402/1	k__Bacteria; p__Proteobacteria; c__Gammaproteobacteria; o__Xanthomonadales; f__Xanthomonadaceae; g__Xylella; s__	99	100	99.2
+AE003849-_Proteobacteria_8818/1	k__Bacteria; p__Proteobacteria; c__Gammaproteobacteria; o__Xanthomonadales; f__Xanthomonadaceae; g__Xylella; s__	98	100	98.4
+AE004092-_Firmicutes_125/1	k__Bacteria; p__Firmicutes; c__Bacilli; o__Lactobacillales; f__Streptococcaceae; g__Streptococcus; s__	98	100	98.4
+AE004092-_Firmicutes_2217/1	k__Bacteria; p__Firmicutes; c__Bacilli; o__Lactobacillales; f__Streptococcaceae; g__Streptococcus; s__	97.98	99	98.38
+AE004092-_Firmicutes_2453/1	k__Bacteria; p__Firmicutes; c__Bacilli; o__Lactobacillales; f__Streptococcaceae; g__Streptococcus; s__	97	100	100
+AE004092-_Firmicutes_27/1	k__Bacteria; p__Firmicutes; c__Bacilli; o__Lactobacillales; f__Streptococcaceae; g__Streptococcus; s__	97	100	97.6
+AE004092-_Firmicutes_2795/1	k__Bacteria; p__Firmicutes; c__Bacilli; o__Lactobacillales; f__Streptococcaceae; g__Streptococcus	96.93	98	97.55
