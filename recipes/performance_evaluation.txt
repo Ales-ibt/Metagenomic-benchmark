@@ -1,13 +1,12 @@
-## 
+## This recipe describes the processing the reads_ranking.txt table to obtain the True Negatives, True Positives, False Negatives and False Positives at each taxonomic level in order to calculate the sensitivity, specificity, accuracy, and Matthews correlation coefficient for every combination of taxonomic annotation tool and database. The first step is to obtain the relation between each taxonomic annotation and the taxonomic level reached:
 
 $ taxid2level.py reads_ranking.txt
 
-## The output is level_taxid.out. This table contains the read id, the taxonomic level reached in the annotation and the taxid of such annotation. In the next step, we use this table plus the tabla_sort2.tab and the number of shuffled sequences include in the dataset.
+## The output is level_taxid.out table, that contains the read id, the taxonomic level reached in the annotation and the taxid of such annotation. Then, we used this table plus the tabla_sort2.tab and the number of shuffled sequences include in the dataset to calculate the True Negatives, True Positives, False Negatives and False Positives, sensitivity, specificity, accuracy and Matthews correlation coefficient at each taxonomic level using the error_types_v4.pl script:
 
 $ error_types_v4.pl level_taxid.out table_trueFalse.txt 846578
 
-## This step generates the types_error.out file, containing for each taxonomic level the number of True Negatives, True Positives, False Negatives and False Positives, sensitivity, specificity, accuracy and Matthews correlation coefficient at each taxonomic level.
-## Finally, the respective triplicates were integrated and specificity,sensitivity, accuracy and MCC were plotted using the following scripts:
+## This step generates the types_error.out file. At this moment, we had a types_error.out file for each dataset. Finally, the respective triplicates were concatenated and specificity,sensitivity, accuracy and MCC were plotted using the following scripts:
 
 $
 
