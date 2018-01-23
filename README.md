@@ -30,7 +30,11 @@ Python v2.7.x
 
 **Patching Parallel-meta v2.4.1 **
 
-To modify the parallel-meta v2.4.1 in order to accept the Metaxa2 database do the following:
+We formatted the Metaxa2 database to be used by Parallel-meta software. This database version is available as a compressed directory Metaxa_db.tar.gz in the bin directory of this repository. Before compiling the Parallel-meta v2.4.1 program, download the Metaxa_db.tar.gz file and placed it into the parallel-meta/databases/ directory. Untar the file using:
+
+$ tar -xvf Metaxa_db.tar.gz
+
+This action will create the Metaxa directory with the database properly formatted inside the Parallel-meta databases path. To modify the parallel-meta v2.4.1 in order to accept the Metaxa2 database do the following:
 
 -Before compiling the software, copy the patch_parallel241.txt file to the parallel-meta v2.4.1 root directory and run the command:
 
