@@ -42,21 +42,31 @@ This action will create the Metaxa directory with the database properly formatte
 
 **This project includes the following scripts in the bin directory:**
 - patch_parallel241.txt   - Patch for Parallel-meta v2.4.1
-- count2percent.pl        - Normalize counts matrix into relative abundance
-- shuffled_fasta.pl       - Generates shuffled sequences from a reference fasta file
 
-Ete3 scripts:
-- names2linaje.py
-- names2taxid.py
-- taxid2level.py
-- taxid2linaje.py
-- taxid2names.py
-- lineage_ete.py
-- translator_ete.py
+  16SrRNAamplicon/
+      	names2taxid_spingo.py
+      	qiime_transfer.pl
+	      shuffled_fasta.pl
+	      spingo_cleaner_GG_MTX.pl
+	      spingo_cleaner_RDP.pl
+      	spingo_cleaner_SIL.pl
+	      taxid2level.py
+  
+  WholeMetagenomeShotgun/
+ 	      0.get_table_mtx_rdp_silva.R
+	      1.cuentas_kraken_mod.R
+	      2.get_linage_rank.py
+	      3.order_lineage_method.pl
+	      4.tabla_ordenada_conGenoma.R
+	      5.tabla_new.R
+	      7.subtit_TF.pl
+	      get_taxid_from_names.py
+	      taxid2level.py
+
 
 Extra tables:
 - ncbi_plus_unicos.txt     - Relational table containing the reference lineage taxids at the eight main taxonomic levels (superkingdom, phylum, class, order, family, genus, species, subespecies) for all the genomes used to generate the in-silico sequences.
-
+- taxid_dobles.txt       - NCBI redundant names list. We keept the bacterial taxids when ambiguity exists in prokariontic domain.
 
 Specifications about the software and parameters used are in the following table:
 
