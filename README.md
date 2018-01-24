@@ -9,7 +9,7 @@ The code deposited in this site contains the necessary scripts to integrate, sta
 - QIIME v1.9.1
 - SPINGO v1.3
 - Metaxa2 v2.1.1
-- Parallel-meta v2.4.1 and v3.3.2
+- Parallel-meta v2.4.1
 
 
 Taxonomic databases for 16S rRNA ampicon annotation:
