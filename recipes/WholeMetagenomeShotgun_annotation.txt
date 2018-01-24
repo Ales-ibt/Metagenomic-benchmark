@@ -28,7 +28,7 @@ $ 3.order_lineage_method.pl taxid_ranking_linage.txt > lineaje_ordenada.tab
 $ Rscript 4.tabla_ordenada_conGenoma.R
 
 # Get table with FALSE and POSITIVES results for each assigment
-$ Rscript 5.tabla_new.R
+$ Rscript 5.tabla_new.R ncbi_plus_unicos.txt
 
 # Substitute NA by 0 and sort table
 $ sed -i '1d' tabla_new.tab
@@ -66,7 +66,7 @@ $ 3.order_lineage_method.pl taxid_ranking_linage.txt > lineaje_ordenada.tab
 $ Rscript 4.tabla_ordenada_conGenoma.R
 
 # Get table with FALSE and POSITIVES results for each assigment
-$ Rscript 5.tabla_new.R
+$ Rscript 5.tabla_new.R ncbi_plus_unicos.txt
 
 # Substitute NA by 0 and sort table according with the best score
 $ sed -i '1d' tabla_new.tab
@@ -104,7 +104,7 @@ $ 3.order_lineage_method.pl taxid_ranking_linage.txt > lineaje_ordenada.tab
 $ Rscript 4.tabla_ordenada_conGenoma.R
 
 # Get table with FALSE and POSITIVES results for each assigment
-$ Rscript 5.tabla_new.R
+$ Rscript 5.tabla_new.R ncbi_plus_unicos.txt
 
 # Substitute NA by 0 and sort table according with the best score
 $ sed -i '1d' tabla_new.tab
@@ -147,7 +147,7 @@ $ 3.order_lineage_method.pl taxid_ranking_linage.txt > lineaje_ordenada.tab
 $ Rscript 4.tabla_ordenada_conGenoma.R
 
 #Contruct table with FALSE and POSITIVES results for each assigment
-$ Rscript 5.tabla_new.R
+$ Rscript 5.tabla_new.R ncbi_plus_unicos.txt
 
 #Substitute NA by 0 and sort table according with the best score
 $ sed -i '1d' tabla_new.tab
@@ -198,7 +198,7 @@ $ 3.order_lineage_method.pl taxid_ranking_linage.txt > lineaje_ordenada.tab
 $ Rscript 4.tabla_ordenada_conGenoma.R
 
 # Get table with FALSE and POSITIVES results for each assigment
-$ Rscript 5.tabla_new.R
+$ Rscript 5.tabla_new.R ncbi_plus_unicos.txt
 
 # Substitute NA by 0 and sort table according with the best score
 $ sed -i '1d' tabla_new.tab
@@ -226,7 +226,7 @@ $ Rscript 0.get_table_metaxa_gg.R
 
 ### MTX database
 $ cut -f1,2,5 metaxa_out.taxonomy.txt |sed 's/;\t/\t/'| sed 's/;\+\t/\t/'| sed 's/;\+/;/' > classification_mod.txt
-$ Rscript 0.get_table_metaxa_mtx_rdp.R
+$ Rscript 0.get_table_metaxa_mtx_rdp.R taxid_dobles.txt get_taxid_from_names_spingo.py
 
 ### SILVA database
 $ cut -f1,2,5 metaxa_out.taxonomy.txt | sed 's/;\+\t/\t/'| sed 's/;\+/;/' > classification_mod.txt
@@ -246,7 +246,7 @@ $ 3.order_lineage_method.pl taxid_ranking_linage.txt > lineaje_ordenada.tab
 $ Rscript 4.tabla_ordenada_conGenoma.R
 
 # Get table with FALSE and POSITIVES results for each assigment
-$ Rscript 5.tabla_new.R
+$ Rscript 5.tabla_new.R ncbi_plus_unicos.txt
 
 # Substitute NA by 0 and sort table according with the best score
 $ sed -i '1d' tabla_new.tab
