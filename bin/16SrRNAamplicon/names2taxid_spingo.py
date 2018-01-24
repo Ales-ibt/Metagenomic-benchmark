@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 ### Before running the program, check that ~/.ete exists
-from ete2 import NCBITaxa
+from ete3 import NCBITaxa
 ncbi = NCBITaxa()
 import sys
 
