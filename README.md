@@ -28,6 +28,7 @@ http://etetoolkit.org/download/
 Perl v5.x or higher
 Python v2.7.x
 
+
 **Patching Parallel-meta v2.4.1 **
 
 We formatted the Metaxa2 database to be used by Parallel-meta software. This database version is available as the compressed directory Metaxa_db.tar.gz in the following link: https://drive.google.com/open?id=1c2s1C9j9Hqoq13CirphJR3tMd4mbP8K7. Before compiling the Parallel-meta v2.4.1 program, download the Metaxa_db.tar.gz file and placed it into the parallel-meta/databases/ directory. Untar the file using:
