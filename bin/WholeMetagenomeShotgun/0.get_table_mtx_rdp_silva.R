@@ -23,8 +23,9 @@
 
 args = commandArgs(trailingOnly=TRUE)
 directory_table=args[1]
+directory_table2=args[2]
 
-##Sacar el nombre de la ultima clasificacion taxonomica
+## Get name from the last taxonomic annotation
 tabla_new<- read.delim("classification_mod.txt", header=F)
 colnames(tabla_new)<- c("reads_id","score","classification")
 tabla_new$last.class<- sapply(as.character(tabla_new$classification), function(x){strsplit(x, ";")[[1]][length(strsplit(x, ";")[[1]])]})
@@ -473,21 +474,18 @@ tabla_new$last.class[which(tabla_new$last.class=="OP10")] <- "Bacteria"
 tabla_new$last.class[which(tabla_new$last.class=="Subdivision3")] <- "Verrucomicrobia"
 tabla_new$last.class[which(tabla_new$last.class=="Subdivision5")] <- "Verrucomicrobia"
 tabla_new$last.class[which(tabla_new$last.class=="TM7")] <- "Bacteria"
-
 tabla_new$last.class[which(tabla_new$last.class=="Acidobacteria_Gp18")] <- "Acidobacteria"
 tabla_new$last.class[which(tabla_new$last.class=="Acidobacteria_Gp2")] <- "Acidobacteria"
 tabla_new$last.class[which(tabla_new$last.class=="Acidobacteria_Gp22")] <- "Acidobacteria"
 tabla_new$last.class[which(tabla_new$last.class=="Acidobacteria_Gp23")] <- "Acidobacteria"
 tabla_new$last.class[which(tabla_new$last.class=="Acidobacteria_Gp7")] <- "Acidobacteria"
 tabla_new$last.class[which(tabla_new$last.class=="Acidobacteria_Gp11")] <- "Acidobacteria"
-
 tabla_new$last.class[which(tabla_new$last.class=="BRC1_genera_incertae_sedis")] <- "Bacteria"
 tabla_new$last.class[which(tabla_new$last.class=="Burkholderiales_incertae_sedis")] <- "Burkholderiales"
 tabla_new$last.class[which(tabla_new$last.class=="Gp4")] <- "Acidobacteria"
 tabla_new$last.class[which(tabla_new$last.class=="Gp9")] <- "Acidobacteria"
 tabla_new$last.class[which(tabla_new$last.class=="Spartobacteria_genera_incertae_sedis")] <- "Spartobacteria"
 tabla_new$last.class[which(tabla_new$last.class=="Subdivision3_genera_incertae_sedis")] <- "Verrucomicrobia"
-
 tabla_new$last.class[which(tabla_new$last.class=="Gp2")] <- "Acidobacteria"
 tabla_new$last.class[which(tabla_new$last.class=="Gp22")] <- "Acidobacteria"
 tabla_new$last.class[which(tabla_new$last.class=="Gp5")] <- "Acidobacteria"
@@ -502,9 +500,7 @@ tabla_new$last.class[which(tabla_new$last.class=="Mycobacterium actinomycete P04
 tabla_new$last.class[which(tabla_new$last.class=="Mycobacterium synthetic construct")] <- "Mycobacterium"
 tabla_new$last.class[which(tabla_new$last.class=="Pantoea bacterium 1-5")] <- "bacterium 1-5"
 tabla_new$last.class[which(tabla_new$last.class=="Pseudovibrio bacterium 2D803")] <- "bacterium 2D803"
-
 tabla_new$last.class[which(tabla_new$last.class=="Clostridium IV")] <- "Clostridium"
-
 tabla_new$last.class[which(tabla_new$last.class=="Aminicenantes_genera_incertae_sedis")] <- "Candidatus Aminicenantes"
 tabla_new$last.class[which(tabla_new$last.class=="Archaea Outgroup")] <- "Bacteria"
 tabla_new$last.class[which(tabla_new$last.class=="Armatimonadetes_gp2")] <- "Armatimonadetes"
@@ -529,19 +525,16 @@ tabla_new$last.class[which(tabla_new$last.class=="Saccharibacteria_genera_incert
 tabla_new$last.class[which(tabla_new$last.class=="Subdivision33")] <- "Verrucomicrobia"
 tabla_new$last.class[which(tabla_new$last.class=="WPS-1_genera_incertae_sedis")] <- "Bacteria"
 tabla_new$last.class[which(tabla_new$last.class=="WPS-2_genera_incertae_sedis")] <- "Bacteria"
-
 tabla_new$last.class[which(tabla_new$last.class=="Armatimonadetes_gp5")] <- "Armatimonadetes"
 tabla_new$last.class[which(tabla_new$last.class=="Clostridium XII")] <- "Clostridium"
 tabla_new$last.class[which(tabla_new$last.class=="Clostridium XlVb")] <- "Clostridium"
-
 tabla_new$last.class[which(tabla_new$last.class=="Candidatus Brocadiaceae Brocadiaceae")] <- "Candidatus Brocadiaceae"
 tabla_new$last.class[which(tabla_new$last.class=="Clostridiales_Incertae Sedis XIII_Incertae Sedis XIII")] <- "Clostridiales"
 tabla_new$last.class[which(tabla_new$last.class=="Thermoactinomycetaceae 1 1")] <- "Thermoactinomycetaceae"
 
 tabla_new2 <- data.frame(tabla_new$reads_id, tabla_new$classification, tabla_new$last.class, tabla_new$score)
 write.table(tabla_new2,"otus_unicos_mod.txt", quote=F, col.names=T, row.names=F, sep="\t")
-
-system(paste("python "), directory_table2, sep="")
+system(paste("python ", directory_table2, sep=""))
 
 tabla<- read.delim("otus_unicos_taxid_mod.txt")
 colnames(tabla)[2]<-"taxid"
