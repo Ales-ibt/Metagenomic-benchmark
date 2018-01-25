@@ -30,6 +30,7 @@ http://etetoolkit.org/download/
 
 Perl v5.x or higher
 Python v2.7.x
+samtools v0.1.19-96b5f2294a or higher
 
 **Patching Parallel-meta v2.4.1 **
 
