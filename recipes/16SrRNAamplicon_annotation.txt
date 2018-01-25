@@ -35,6 +35,54 @@ $ spingo_cleaner.pl spingo_result.txt
 
 # This step, generates the lca_spingo_results_rdp.txt file in tabuklar format with the following information per column: read id, similarity score, taxonomic annotation and AMBIGUOUS/UNAMBIGUOUS label. This file was used to generate the reads_ranking.txt table. Due to each database used had their own partocular format, we used different splingo cleaner scripts depending on the case. For RDP database, we used the spingo_cleaner_RDP.pl; for SILVA database, we used spingo_cleaner_SIL.pl and for GG and Metaxa2 databases, we used the spingo_cleaner_GG_MTX.pl script. All the spingo cleaner scripts are available in the bin/16SrRNAamplicon directory of this repository.
 
+# Get reads_ranking.txt table
+## cut reads_id, score and assigment result
+### GG database
+cut -f 1,2,3 lca_spingo_results.txt > classification_mod.txt
+cut -f3 classification_mod.txt | rev |cut -d ';' -f1 | rev | sed 's/sp\$/sp./;s/_/ /g' > last.class.txt
+paste classification_mod.txt last.class.txt > otus_unicos.txt
+Rscript 0.get_table_spingo_gg_mtx_silva_rdp.R taxid_dobles.txt get_taxid_from_names_spingo.py
+
+### MTX database
+cut -f 1,2,3 lca_spingo_results.txt > classification_mod.txt
+cut -f3 classification_mod.txt | rev |cut -d ';' -f1 | rev | sed s/sp\$/sp./ > last.class.txt
+paste classification_mod.txt last.class.txt > otus_unicos.txt
+Rscript 0.get_table_spingo_gg_mtx_silva_rdp.R taxid_dobles.txt get_taxid_from_names_spingo.py
+
+### SILVA database
+cut -f 1,2,3 lca_spingo_results.txt | grep -v 'Unclassified' > classification_mod.txt
+cut -f3 classification_mod.txt | rev |cut -d ';' -f1 | rev | sed 's/sp\$/sp./;s/_/ /g' > last.class.txt
+paste classification_mod.txt last.class.txt > otus_unicos.txt
+Rscript 0.get_table_spingo_gg_mtx_silva_rdp.R taxid_dobles.txt get_taxid_from_names_spingo.py
+
+### RDP database
+cut -f 1,2,3 lca_spingo_results.txt > classification_mod.txt
+cut -f3 classification_mod.txt| sed 's/sp\$/sp./;s/_/ /g' > last.class.txt
+paste classification_mod.txt last.class.txt > otus_unicos.txt
+Rscript 0.get_table_spingo_gg_mtx_silva_rdp.R taxid_dobles.txt get_taxid_from_names_spingo.py
+
+# Get linage from each read
+python 2.get_linage_rank.py
+
+# Order linage
+3.order_lineage_method.pl taxid_ranking_linage.txt > lineaje_ordenada.tab
+
+# Add original Genome to table with linage
+Rscript 4.tabla_ordenada_conGenoma_amplicon.R
+
+#Get table with FALSE and POSITIVES results for each assigment
+Rscript 5.tabla_new.R
+
+#Substitute NA by 0 and sort table according with the best score
+sed -i '1d' tabla_new.tab
+sed 's/\<NA\>/0/g' tabla_new.tab| sort -nr -k 10 > tabla_sort.tab
+
+# Clean intermediate levels
+7.subtit_TF.pl tabla_sort.tab > tabla_sort2.tab
+
+# Remove intermediate tables
+rm classification_mod.txt otus_unicos_taxid_mod.txt tabla_conGenomas_para_CVE.tab tabla_sort.tab lineaje_ordenada.tab otus_unicos.txt tabla_new.tab taxid_ranking_linage.txt otus_unicos_mod.txt
+
 
 ######################
 ## 4.- QIIME v1.9.1 ##
