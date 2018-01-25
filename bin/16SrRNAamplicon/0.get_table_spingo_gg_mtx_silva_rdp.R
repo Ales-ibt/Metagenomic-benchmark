@@ -1,5 +1,5 @@
 #!/usr/bin/env Rscript
-#  0.get_table_gg_mtx_spingo.R
+#  0.get_table_spingo_gg_mtx_silva_rdp.R
 #  Copyright 2017- E. Ernestina Godoy Lozano (tinagodoy@gmail.com)
 #
 #  This program is free software; you can redistribute it and/or modify
@@ -1010,8 +1010,6 @@ tabla_new$last.class[which(tabla_new$last.class=="[Brevinematales]")] <- "Brevin
 tabla_new$last.class[which(tabla_new$last.class=="GW-22")] <- "Bacteria"
 tabla_new$last.class[which(tabla_new$last.class=="SC3")] <- "Bacteria"
 tabla_new$last.class[which(tabla_new$last.class=="SGUS912")] <- "Amoebophilaceae"
-
-
 write.table(tabla_new,"otus_unicos_mod.txt", quote=F, col.names=T, row.names=F, sep="\t")
 
 system(paste("python ", directory_table2, sep=""))
@@ -1039,4 +1037,3 @@ for (j in 1:dim(dobles)[1]){
 
 new<- data.frame(tabla$reads_id, tabla$taxid_limpio, tabla$score)
 write.table(new, "reads_ranking.txt", sep="\t", quote=F, col.names=F, row.names=F)
-
