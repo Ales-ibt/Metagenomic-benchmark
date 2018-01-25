@@ -71,6 +71,7 @@ This action will create the Metaxa directory with the database properly formatte
 Extra tables:
 - ncbi_plus_unicos.txt     - Relational table containing the reference lineage taxids at the eight main taxonomic levels (superkingdom, phylum, class, order, family, genus, species, subespecies) for all the genomes used to generate the in-silico sequences.
 - taxid_dobles.txt       - NCBI redundant names list. We keept the bacterial taxids when ambiguity exists in prokariontic domain.
+- taxid_metaphlan.txt	- Relational table containing the taxids include in MetaPhlAn2.
 
 **Specifications about the software and parameters used are in the following table:**
 
