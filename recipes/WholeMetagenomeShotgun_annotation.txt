@@ -171,22 +171,22 @@ $ parallel-meta -b B -m file.fastq -d X|R|G|S -n 32
 # Get reads_ranking.txt table
 ## cut reads_id, assigment result and E-value
 ### GG database
-$ Rscript 0.get_table_parallel_gg.R
+$ Rscript 0.get_table_parallel_gg.R taxid_dobles.txt get_taxid_from_names.py
 
 ### MTX database
 $ sed -e 's/^[a-zA-Z0-9]*|//g;s/rev|//g' classification.txt | cut -f1,4,5 | sed 's/;\+\t/\t/'| sed 's/;\+/;/'| sed 's/; /;/g' > classification_mod.txt
 $ sed -i '1d' classification_mod.txt
-$ Rscript 0.get_table_mtx_rdp_silva.R taxid_dobles.txt get_taxid_from_names.py
+$ Rscript 0.get_table_parallel_mtx_rdp_silva.R taxid_dobles.txt get_taxid_from_names.py
 
 ### SILVA database
 $ sed -e 's/^[a-zA-Z0-9]*|//g;s/rev|//g' classification.txt |  cut -f1,4,5 | sed 's/; Unclassified*.*//g; s/;\+\t/\t/;s/; /;/g'| sed 's/;\+/;/' > classification_mod.txt
 $ sed -i '1d' classification_mod.txt
-$ Rscript 0.get_table_mtx_rdp_silva.R taxid_dobles.txt get_taxid_from_names.py
+$ Rscript 0.get_table_parallel_mtx_rdp_silva.R taxid_dobles.txt get_taxid_from_names.py
 
 ### RDP database
 $ sed -e 's/^[a-zA-Z0-9]*|//g;s/rev|//g' classification.txt |  cut -f1,4,5 | sed 's/; Unclassified*.*//g; s/;\+\t/\t/;s/; /;/g'| sed 's/;\+/;/' > classification_mod.txt
 $ sed -i '1d' classification_mod.txt
-$ Rscript 0.get_table_mtx_rdp_silva.R taxid_dobles.txt get_taxid_from_names.py
+$ Rscript 0.get_table_parallel_mtx_rdp_silva.R taxid_dobles.txt get_taxid_from_names.py
 
 # Get linage from each read
 $ python 2.get_linage_rank.py
