@@ -1,5 +1,5 @@
 #!/usr/bin/env Rscript
-#  0.get_table_mtx_rdp_silva.R
+#  0.get_table_parallel_mtx_rdp_silva.R
 #  Copyright 2017- E. Ernestina Godoy Lozano (tinagodoy@gmail.com)
 #
 #  This program is free software; you can redistribute it and/or modify
