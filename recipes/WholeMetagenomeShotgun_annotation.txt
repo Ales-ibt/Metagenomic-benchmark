@@ -91,7 +91,7 @@ $ metaphlan2.py file_1.fq,file_2.fq --mpa_pkl mpa_v20_m200.pkl --bowtie2db mpa_v
 ## cut reads_id, assigment result and Aligment Score
 $ samtools view -b -S file.sam > file.bam
 $ samtools view file.bam | cut -f1,3,12 | sed 's/AS:i://;s/gi|//;s/|ref|*.*\t/\t/;s/|gb|*.*\t/\t/;s/|dbj|*.*\t/\t/' > metaphlan_AS_completa.txt
-$ 1.add_taxid_metaphlan.pl metaphlan_AS_completa.txt ### the script need the path of the taxid.txt table
+$ 1.add_taxid_metaphlan.pl metaphlan_AS_completa.txt ### the script 1.add_taxid_metaphlan.pl need taxid_metaphlan.txt table in the same location where you run the script. You can make a symbolic link. 
 $ mv metaphlan_AS_completa.txt.withTAXID reads_ranking.txt
 
 # Get linage from each read
