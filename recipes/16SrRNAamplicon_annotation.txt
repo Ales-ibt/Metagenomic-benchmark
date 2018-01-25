@@ -71,7 +71,7 @@ python 2.get_linage_rank.py
 Rscript 4.tabla_ordenada_conGenoma_amplicon.R
 
 #Get table with FALSE and POSITIVES results for each assigment
-Rscript 5.tabla_new.R
+Rscript 5.tabla_new.R ncbi_plus_unicos.txt
 
 #Substitute NA by 0 and sort table according with the best score
 sed -i '1d' tabla_new.tab
