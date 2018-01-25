@@ -75,55 +75,66 @@ Extra tables:
 **Specifications about the software and parameters used are in the following table:**
 
 **Metaxa2 v2.2.1**
-$ metaxa2 -1 file_R1.fq -2 file_R2.fq -o metaxa_out -f fastq \
+
+$ metaxa2 -1 file_R1.fq -2 file_R2.fq -o metaxa_out -f fastq \\
 --plus T --fasta F --cpu 32 -d /PATH/database.fasta
 
 **Parallel-meta v2.4.1**
+
 $ parallel-meta -b B -r\|m file.fastq -d database -n 32
 
 **SPINGO v1.3**
+
 $ spingo -p 32 -d /PATH/database.fasta-i file.fasta -a > result.txt
 
 **QIIME v1.9.1**
+
 $ pick_otus.py -i file.fasta -o uclust_picked_otus --threads 16
-$ pick_rep_set.py -i uclust_picked_otus/file_otus.txt \
+$ pick_rep_set.py -i uclust_picked_otus/file_otus.txt \\
 -f file.fasta -l rep_set/file_rep_set.log -o rep_set/file_otus_rep_set.fasta
-$ assign_taxonomy.py -i rep_set/file_otus_rep_set.fasta \
+
+$ assign_taxonomy.py -i rep_set/file_otus_rep_set.fasta \\
 -o uclust_assigned_taxonomy -r db.fasta -t taxonomy.txt
-$ make_otu_table.py -i uclust_picked_otus/file_otus.txt \
--t uclust_assigned_taxonomy/file_otus_rep_set_tax_assignments.txt \
+
+$ make_otu_table.py -i uclust_picked_otus/file_otus.txt \\
+-t uclust_assigned_taxonomy/file_otus_rep_set_tax_assignments.txt \\
 -o otu_table.biom
-$ summarize_taxa.py -i otu_table.biom -o taxa_counts -a --suppress_biom_table_output
+
+$ summarize_taxa.py -i otu_table.biom -o taxa_counts -a \\
+--suppress_biom_table_output
 
 **MetaPhlAn2 v2.2.0**
-metaphlan2.py file_1.fq,file_2.fq --mpa_pkl mpa_v20_m200.pkl \
---bowtie2db mpa_v20_m200 --bt2_ps sensitive-local \
---bowtie2out file.bowtie2.bz2 --samout file.sam --nproc 32 \
+
+metaphlan2.py file_1.fq,file_2.fq --mpa_pkl mpa_v20_m200.pkl \\
+--bowtie2db mpa_v20_m200 --bt2_ps sensitive-local \\
+--bowtie2out file.bowtie2.bz2 --samout file.sam --nproc 32 \\
 --input_type fastq --min_alignment_len 95 > metaphlan_out.txt
 
 **MOCAT v1.3**
+
 $ MOCAT.pl -sf samples.txt -rtf
-$ MOCAT.pl -sf samples.txt -s mOTU.v1.padded \
+$ MOCAT.pl -sf samples.txt -s mOTU.v1.padded \\
 -r reads.processed -identity 97
-$ MOCAT.pl -sf samples.txt -f mOTU.v1.padded \
+$ MOCAT.pl -sf samples.txt -f mOTU.v1.padded \\
 -r reads.processed -identity 97
-$ MOCAT.pl -sf samples.txt -p mOTU.v1.padded \
+$ MOCAT.pl -sf samples.txt -p mOTU.v1.padded \\
 -r reads.processed -identity 97 -mode mOTU -o Results
-$ MOCAT.pl -sf samples.txt -s RefMG.v1.padded \
+$ MOCAT.pl -sf samples.txt -s RefMG.v1.padded \\
 -r mOTU.v1.padded -e -identity 97
-$ MOCAT.pl -sf samples.txt -f RefMG.v1.padded \
+$ MOCAT.pl -sf samples.txt -f RefMG.v1.padded \\
 -r mOTU.v1.padded -e -identity 97
-$ MOCAT.pl -sf samples.txt -p RefMG.v1.padded \
--r mOTU.v1.padded -e -identity 97 -mode RefMG \
+$ MOCAT.pl -sf samples.txt -p RefMG.v1.padded \\
+-r mOTU.v1.padded -e -identity 97 -mode RefMG \\
 -previous_db_calc_tax_stats_file -o Results
 
 **Kraken v0.10.5-beta**
-$ kraken --preload --db /Databases/Kraken/ \
+
+$ kraken --preload --db /Databases/Kraken/ \\
 --threads 16 --output kraken.out file.fastq
 $ kraken-report --db /Databases/Kraken/ kraken.out > kraken.report
 
 **CLARK v1.2.3.1**
-classify_metagenome.sh -k 21 -P file_R1.fq file_R2.fq \
+classify_metagenome.sh -k 21 -P file_R1.fq file_R2.fq \\
 -R /PATH/clark.results -n 32 -m 0
 
 
