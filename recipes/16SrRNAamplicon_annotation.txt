@@ -92,16 +92,39 @@ $ pick_otus.py -i file.fasta -o uclust_picked_otus --threads 16
 $ pick_rep_set.py -i uclust_picked_otus/file_otus.txt -f file.fasta -l rep_set/file_rep_set.log -o rep_set/file_otus_rep_set.fasta
 $ assign_taxonomy.py -i rep_set/file_otus_rep_set.fasta -o uclust_assigned_taxonomy -r db.fasta -t taxonomy.txt
 
-# The assign_taxonomy.py output contain the annotation for each OTU representative sequence. The reads_ranking.txt table was obtained by the following treatment:
+# The assign_taxonomy.py output contain the annotation for each OTU representative sequence. The otu_ranking.txt table was obtained by the following treatment:
 
-==TINA==
+### GG database
+$ cut -f1,2,3 flash_out.extendedFrags_otus_rep_set_tax_assignments.txt | sed 's/k__//;s/ p__//;s/ c__//;s/ o__//;s/ f__//;s/ g__//;s/ s__//; s/;\t/\t/'| sed 's/;\+\t/\t/'| sed 's/;\+/;/' > classification_mod.txt
+$ Rscript 0.get_table_qimme.R taxid_dobles.txt get_taxid_from_names_spingo.py
 
-# We generated an intermediate table containing the annotation for each read using the OTUs table (pick_otus.py script output) and the reads_ranking.txt table. The qiime_transfer.pl script is available in the bin/16SrRNAamplicon directory of this repository.
+# We generated an intermediate table containing the annotation for each read using the OTUs table (pick_otus.py script output) and the otu_ranking.txt table. The qiime_transfer.pl script is available in the bin/16SrRNAamplicon directory of this repository.
 
-$ qiime_transfer.pl PATH/otus/uclust_picked_otus/flash_out.extendedFrags_otus.txt reads_ranking.txt
+$ qiime_transfer.pl PATH/otus/uclust_picked_otus/flash_out.extendedFrags_otus.txt otu_ranking.txt
 
-# This step transforms the reads_ranking.txt into a trans_reads_ranking.txt table whit the following fileds: read id, annotation taxid and score.
+# This step transforms the otu_ranking.txt into a trans_reads_ranking.txt table whit the following fileds: read id, annotation taxid and score.
 
+# Get linage from each read
+python 2.get_linage_rank.py
+
+# Order linage
+3.order_lineage_method.pl taxid_ranking_linage.txt > lineaje_ordenada.tab
+
+# Add original Genome to table with linage
+Rscript 4.tabla_ordenada_conGenoma_amplicon.R
+
+#Get table with FALSE and POSITIVES results for each assigment
+Rscript 5.tabla_new.R
+
+#Substitute NA by 0 and sort table according with the best score
+sed -i '1d' tabla_new.tab
+sed 's/\<NA\>/0/g' tabla_new.tab| sort -nr -k 10 > tabla_sort.tab
+
+# Clean intermediate levels
+7.subtit_TF.pl tabla_sort.tab > tabla_sort2.tab
+
+# Remove intermediate tables
+rm classification_mod.txt otus_unicos_mod.txt otus_unicos_taxid_mod.txt tabla_conGenomas_para_CVE.tab tabla_sort.tab lineaje_ordenada.tab tabla_new.tab taxid_ranking_linage.txt
 
 
 
