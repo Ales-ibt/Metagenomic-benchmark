@@ -12,6 +12,46 @@ $ metaxa2 -1 file_R1.fq -2 file_R2.fq -o metaxa_out -f fastq --plus T --fasta F 
 
 # The output used to generate the reads_ranking.txt table was the metaxa_out.taxonomy.txt file
 
+# Get reads_ranking.txt table
+## cut reads_id, assigment result and %identity
+### GG database
+$ cut -f1,2,5 metaxa_out.taxonomy.txt |sed 's/k__//;s/ p__//;s/ c__//;s/ o__//;s/ f__//;s/ g__//;s/ s__//; s/;\t/\t/'| sed 's/;\+\t/\t/'| sed 's/;\+/;/' > classification_mod.txt
+$ Rscript 0.get_table_metaxa_gg.R taxid_dobles.txt get_taxid_from_names.py
+
+### MTX database
+$ cut -f1,2,5 metaxa_out.taxonomy.txt |sed 's/;\t/\t/'| sed 's/;\+\t/\t/'| sed 's/;\+/;/' > classification_mod.txt
+$ Rscript 0.get_table_metaxa_mtx_rdp.R taxid_dobles.txt get_taxid_from_names.py
+
+### SILVA database
+$ cut -f1,2,5 metaxa_out.taxonomy.txt | sed 's/;\+\t/\t/'| sed 's/;\+/;/' > classification_mod.txt
+$ Rscript 0.get_table_metaxa_silva.R taxid_dobles.txt get_taxid_from_names.py
+
+### RDP database
+$ cut -f1,2,5 metaxa_out.taxonomy.txt |sed 's/;\t/\t/'| sed 's/;\+\t/\t/'| sed 's/;\+/;/' > classification_mod.txt
+$ Rscript 0.get_table_metaxa_mtx_rdp.R taxid_dobles.txt get_taxid_from_names.py
+
+# Get linage from each read
+$ python 2.get_linage_rank.py
+
+# Order linage
+$ 3.order_lineage_method.pl taxid_ranking_linage.txt > lineaje_ordenada.tab
+
+# Add original Genome to table with linage
+$ Rscript 4.tabla_ordenada_conGenoma.R
+
+# Get table with FALSE and POSITIVES results for each assigment
+$ Rscript 5.tabla_new.R ncbi_plus_unicos.txt
+
+# Substitute NA by 0 and sort table according with the best score
+$ sed -i '1d' tabla_new.tab
+$ sed 's/\<NA\>/0/g' tabla_new.tab| sort -nr -k 10 > tabla_sort.tab
+
+# Clean intermediate levels
+$ 7.subtit_TF.pl tabla_sort.tab > tabla_sort2.tab
+
+# Remove intermediate tables
+$ rm last.class_mod2.txt last.class_mod.txt otus_unicos_mod.txt otus_unicos_taxid_mod.txt otus_unicos.txt taxid_ranking_linage.txt lineaje_ordenada.tab tabla_conGenomas_para_CVE.tab tabla_new.tab tabla_sort.tab classification_mod.txt
+
 ########################################
 ## 2.- Parallel-meta v2.4.1 (patched) ##
 ########################################
