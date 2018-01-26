@@ -1,0 +1,10 @@
+denovo448 	2006	1
+denovo449 	34019	0.67
+denovo446 	84107	1
+denovo447 	543	0.67
+denovo444 	972	0.67
+denovo445 	153265	1
+denovo442 	1254	0.67
+denovo443 	2733	0.67
+denovo440 	1263	1
+denovo441 	191494	0.67
