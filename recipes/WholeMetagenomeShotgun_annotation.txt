@@ -222,7 +222,7 @@ $ metaxa2 -1 file_R1.fq -2 file_R2.fq -o metaxa_out -f fastq --plus T --fasta F 
 ## cut reads_id, assigment result and %identity
 ### GG database
 $ cut -f1,2,5 metaxa_out.taxonomy.txt |sed 's/k__//;s/ p__//;s/ c__//;s/ o__//;s/ f__//;s/ g__//;s/ s__//; s/;\t/\t/'| sed 's/;\+\t/\t/'| sed 's/;\+/;/' > classification_mod.txt
-$ Rscript 0.get_table_metaxa_gg.R
+$ Rscript 0.get_table_metaxa_gg.R taxid_dobles.txt get_taxid_from_names.py
 
 ### MTX database
 $ cut -f1,2,5 metaxa_out.taxonomy.txt |sed 's/;\t/\t/'| sed 's/;\+\t/\t/'| sed 's/;\+/;/' > classification_mod.txt
@@ -230,11 +230,11 @@ $ Rscript 0.get_table_metaxa_mtx_rdp.R taxid_dobles.txt get_taxid_from_names.py
 
 ### SILVA database
 $ cut -f1,2,5 metaxa_out.taxonomy.txt | sed 's/;\+\t/\t/'| sed 's/;\+/;/' > classification_mod.txt
-$ Rscript 0.get_table_metaxa_silva.R
+$ Rscript 0.get_table_metaxa_silva.R taxid_dobles.txt get_taxid_from_names.py
 
 ### RDP database
 $ cut -f1,2,5 metaxa_out.taxonomy.txt |sed 's/;\t/\t/'| sed 's/;\+\t/\t/'| sed 's/;\+/;/' > classification_mod.txt
-$ Rscript 0.get_table_metaxa_mtx_rdp.R
+$ Rscript 0.get_table_metaxa_mtx_rdp.R taxid_dobles.txt get_taxid_from_names.py
 
 # Get linage from each read
 $ python 2.get_linage_rank.py
