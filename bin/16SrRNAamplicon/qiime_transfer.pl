@@ -24,7 +24,7 @@ use warnings;
 #  MA 02110-1301, USA.
 #
 
-scalar @ARGV == 2 || die "usage: $0 <otus_list.txt> <reads_ranking.txt>
+scalar @ARGV == 2 || die "usage: $0 <otus_list.txt> <otu_ranking.txt>
 ";
 
 my$otu=$ARGV[0];
