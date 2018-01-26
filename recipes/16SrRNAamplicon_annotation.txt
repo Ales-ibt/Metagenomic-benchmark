@@ -38,50 +38,50 @@ $ spingo_cleaner.pl spingo_result.txt
 # Get reads_ranking.txt table
 ## cut reads_id, score and assigment result
 ### GG database
-cut -f 1,2,3 lca_spingo_results.txt > classification_mod.txt
-cut -f3 classification_mod.txt | rev |cut -d ';' -f1 | rev | sed 's/sp\$/sp./;s/_/ /g' > last.class.txt
-paste classification_mod.txt last.class.txt > otus_unicos.txt
-Rscript 0.get_table_spingo_gg_mtx_silva_rdp.R taxid_dobles.txt get_taxid_from_names_spingo.py
+$ cut -f 1,2,3 lca_spingo_results.txt > classification_mod.txt
+$ cut -f3 classification_mod.txt | rev |cut -d ';' -f1 | rev | sed 's/sp\$/sp./;s/_/ /g' > last.class.txt
+$ paste classification_mod.txt last.class.txt > otus_unicos.txt
+$ Rscript 0.get_table_spingo_gg_mtx_silva_rdp.R taxid_dobles.txt get_taxid_from_names_spingo.py
 
 ### MTX database
-cut -f 1,2,3 lca_spingo_results.txt > classification_mod.txt
-cut -f3 classification_mod.txt | rev |cut -d ';' -f1 | rev | sed s/sp\$/sp./ > last.class.txt
-paste classification_mod.txt last.class.txt > otus_unicos.txt
-Rscript 0.get_table_spingo_gg_mtx_silva_rdp.R taxid_dobles.txt get_taxid_from_names_spingo.py
+$ cut -f 1,2,3 lca_spingo_results.txt > classification_mod.txt
+$ cut -f3 classification_mod.txt | rev |cut -d ';' -f1 | rev | sed s/sp\$/sp./ > last.class.txt
+$ paste classification_mod.txt last.class.txt > otus_unicos.txt
+$ Rscript 0.get_table_spingo_gg_mtx_silva_rdp.R taxid_dobles.txt get_taxid_from_names_spingo.py
 
 ### SILVA database
-cut -f 1,2,3 lca_spingo_results.txt | grep -v 'Unclassified' > classification_mod.txt
-cut -f3 classification_mod.txt | rev |cut -d ';' -f1 | rev | sed 's/sp\$/sp./;s/_/ /g' > last.class.txt
-paste classification_mod.txt last.class.txt > otus_unicos.txt
-Rscript 0.get_table_spingo_gg_mtx_silva_rdp.R taxid_dobles.txt get_taxid_from_names_spingo.py
+$ cut -f 1,2,3 lca_spingo_results.txt | grep -v 'Unclassified' > classification_mod.txt
+$ cut -f3 classification_mod.txt | rev |cut -d ';' -f1 | rev | sed 's/sp\$/sp./;s/_/ /g' > last.class.txt
+$ paste classification_mod.txt last.class.txt > otus_unicos.txt
+$ Rscript 0.get_table_spingo_gg_mtx_silva_rdp.R taxid_dobles.txt get_taxid_from_names_spingo.py
 
 ### RDP database
-cut -f 1,2,3 lca_spingo_results.txt > classification_mod.txt
-cut -f3 classification_mod.txt| sed 's/sp\$/sp./;s/_/ /g' > last.class.txt
-paste classification_mod.txt last.class.txt > otus_unicos.txt
-Rscript 0.get_table_spingo_gg_mtx_silva_rdp.R taxid_dobles.txt get_taxid_from_names_spingo.py
+$ cut -f 1,2,3 lca_spingo_results.txt > classification_mod.txt
+$ cut -f3 classification_mod.txt| sed 's/sp\$/sp./;s/_/ /g' > last.class.txt
+$ paste classification_mod.txt last.class.txt > otus_unicos.txt
+$ Rscript 0.get_table_spingo_gg_mtx_silva_rdp.R taxid_dobles.txt get_taxid_from_names_spingo.py
 
 # Get linage from each read
-python 2.get_linage_rank.py
+$ python 2.get_linage_rank.py
 
 # Order linage
-3.order_lineage_method.pl taxid_ranking_linage.txt > lineaje_ordenada.tab
+$ 3.order_lineage_method.pl taxid_ranking_linage.txt > lineaje_ordenada.tab
 
 # Add original Genome to table with linage
-Rscript 4.tabla_ordenada_conGenoma_amplicon.R
+$ Rscript 4.tabla_ordenada_conGenoma_amplicon.R
 
 #Get table with FALSE and POSITIVES results for each assigment
-Rscript 5.tabla_new.R ncbi_plus_unicos.txt
+$ Rscript 5.tabla_new.R ncbi_plus_unicos.txt
 
 #Substitute NA by 0 and sort table according with the best score
-sed -i '1d' tabla_new.tab
-sed 's/\<NA\>/0/g' tabla_new.tab| sort -nr -k 10 > tabla_sort.tab
+$ sed -i '1d' tabla_new.tab
+$ sed 's/\<NA\>/0/g' tabla_new.tab| sort -nr -k 10 > tabla_sort.tab
 
 # Clean intermediate levels
-7.subtit_TF.pl tabla_sort.tab > tabla_sort2.tab
+$ 7.subtit_TF.pl tabla_sort.tab > tabla_sort2.tab
 
 # Remove intermediate tables
-rm classification_mod.txt otus_unicos_taxid_mod.txt tabla_conGenomas_para_CVE.tab tabla_sort.tab lineaje_ordenada.tab otus_unicos.txt tabla_new.tab taxid_ranking_linage.txt otus_unicos_mod.txt
+$ rm classification_mod.txt otus_unicos_taxid_mod.txt tabla_conGenomas_para_CVE.tab tabla_sort.tab lineaje_ordenada.tab otus_unicos.txt tabla_new.tab taxid_ranking_linage.txt otus_unicos_mod.txt
 
 
 ######################
@@ -98,36 +98,43 @@ $ assign_taxonomy.py -i rep_set/file_otus_rep_set.fasta -o uclust_assigned_taxon
 $ cut -f1,2,3 flash_out.extendedFrags_otus_rep_set_tax_assignments.txt | sed 's/k__//;s/ p__//;s/ c__//;s/ o__//;s/ f__//;s/ g__//;s/ s__//; s/;\t/\t/'| sed 's/;\+\t/\t/'| sed 's/;\+/;/' > classification_mod.txt
 $ Rscript 0.get_table_qimme.R taxid_dobles.txt get_taxid_from_names_spingo.py
 
+### MTX database
+$ grep -w -v 'Unassigned' flash_out.extendedFrags_otus_rep_set_tax_assignments.txt | cut -f1,2,3 | sed 's/;\+\t/\t/;s/; /;/g'| sed 's/;\+/;/' > classification_mod.txt
+$ Rscript 0.get_table_qimme.R taxid_dobles.txt get_taxid_from_names_spingo.py
+
+### SILVA database
+$ cut -f1,2,3 flash_out.extendedFrags_otus_rep_set_tax_assignments.txt | sed 's/;\+\t/\t/;s/_/ /g'| sed 's/;\+/;/' > classification_mod.txt
+$ Rscript 0.get_table_qimme_silva.R taxid_dobles.txt get_taxid_from_names_spingo.py
+
+### RDP database
+$ cut -f1,2,3 flash_out.extendedFrags_otus_rep_set_tax_assignments.txt | sed 's/;\+\t/\t/;s/; /;/g'| sed 's/;\+/;/' > classification_mod.txt
+$ Rscript 0.get_table_qimme.R taxid_dobles.txt get_taxid_from_names_spingo.py
+
 # We generated an intermediate table containing the annotation for each read using the OTUs table (pick_otus.py script output) and the otu_ranking.txt table. The qiime_transfer.pl script is available in the bin/16SrRNAamplicon directory of this repository.
 
 $ qiime_transfer.pl PATH/otus/uclust_picked_otus/flash_out.extendedFrags_otus.txt otu_ranking.txt
 
 # This step transforms the otu_ranking.txt into a trans_reads_ranking.txt table whit the following fileds: read id, annotation taxid and score.
 
+$ mv trans_reads_ranking.txt reads_ranking.txt
 # Get linage from each read
-python 2.get_linage_rank.py
+$ python 2.get_linage_rank.py
 
 # Order linage
-3.order_lineage_method.pl taxid_ranking_linage.txt > lineaje_ordenada.tab
+$ 3.order_lineage_method.pl taxid_ranking_linage.txt > lineaje_ordenada.tab
 
 # Add original Genome to table with linage
-Rscript 4.tabla_ordenada_conGenoma_amplicon.R
+$ Rscript 4.tabla_ordenada_conGenoma_amplicon.R
 
 #Get table with FALSE and POSITIVES results for each assigment
-Rscript 5.tabla_new.R
+$ Rscript 5.tabla_new.R ncbi_plus_unicos.txt
 
 #Substitute NA by 0 and sort table according with the best score
-sed -i '1d' tabla_new.tab
-sed 's/\<NA\>/0/g' tabla_new.tab| sort -nr -k 10 > tabla_sort.tab
+$ sed -i '1d' tabla_new.tab
+$ sed 's/\<NA\>/0/g' tabla_new.tab| sort -nr -k 10 > tabla_sort.tab
 
 # Clean intermediate levels
-7.subtit_TF.pl tabla_sort.tab > tabla_sort2.tab
+$ 7.subtit_TF.pl tabla_sort.tab > tabla_sort2.tab
 
 # Remove intermediate tables
-rm classification_mod.txt otus_unicos_mod.txt otus_unicos_taxid_mod.txt tabla_conGenomas_para_CVE.tab tabla_sort.tab lineaje_ordenada.tab tabla_new.tab taxid_ranking_linage.txt
-
-
-
-
-
-
+$ rm classification_mod.txt otus_unicos_mod.txt otus_unicos_taxid_mod.txt tabla_conGenomas_para_CVE.tab tabla_sort.tab lineaje_ordenada.tab tabla_new.tab taxid_ranking_linage.txt
