@@ -81,25 +81,25 @@ $ spingo_cleaner.pl spingo_result.txt
 $ cut -f 1,2,3 lca_spingo_results.txt > classification_mod.txt
 $ cut -f3 classification_mod.txt | rev |cut -d ';' -f1 | rev | sed 's/sp\$/sp./;s/_/ /g' > last.class.txt
 $ paste classification_mod.txt last.class.txt > otus_unicos.txt
-$ Rscript 0.get_table_spingo_gg_mtx_silva_rdp.R taxid_dobles.txt get_taxid_from_names_spingo.py
+$ Rscript 0.get_table_spingo_gg_mtx_silva_rdp.R taxid_dobles.txt get_taxid_from_names.py
 
 ### MTX database
 $ cut -f 1,2,3 lca_spingo_results.txt > classification_mod.txt
 $ cut -f3 classification_mod.txt | rev |cut -d ';' -f1 | rev | sed s/sp\$/sp./ > last.class.txt
 $ paste classification_mod.txt last.class.txt > otus_unicos.txt
-$ Rscript 0.get_table_spingo_gg_mtx_silva_rdp.R taxid_dobles.txt get_taxid_from_names_spingo.py
+$ Rscript 0.get_table_spingo_gg_mtx_silva_rdp.R taxid_dobles.txt get_taxid_from_names.py
 
 ### SILVA database
 $ cut -f 1,2,3 lca_spingo_results.txt | grep -v 'Unclassified' > classification_mod.txt
 $ cut -f3 classification_mod.txt | rev |cut -d ';' -f1 | rev | sed 's/sp\$/sp./;s/_/ /g' > last.class.txt
 $ paste classification_mod.txt last.class.txt > otus_unicos.txt
-$ Rscript 0.get_table_spingo_gg_mtx_silva_rdp.R taxid_dobles.txt get_taxid_from_names_spingo.py
+$ Rscript 0.get_table_spingo_gg_mtx_silva_rdp.R taxid_dobles.txt get_taxid_from_names.py
 
 ### RDP database
 $ cut -f 1,2,3 lca_spingo_results.txt > classification_mod.txt
 $ cut -f3 classification_mod.txt| sed 's/sp\$/sp./;s/_/ /g' > last.class.txt
 $ paste classification_mod.txt last.class.txt > otus_unicos.txt
-$ Rscript 0.get_table_spingo_gg_mtx_silva_rdp.R taxid_dobles.txt get_taxid_from_names_spingo.py
+$ Rscript 0.get_table_spingo_gg_mtx_silva_rdp.R taxid_dobles.txt get_taxid_from_names.py
 
 # Get linage from each read
 $ python 2.get_linage_rank.py
@@ -136,19 +136,19 @@ $ assign_taxonomy.py -i rep_set/file_otus_rep_set.fasta -o uclust_assigned_taxon
 
 ### GG database
 $ cut -f1,2,3 flash_out.extendedFrags_otus_rep_set_tax_assignments.txt | sed 's/k__//;s/ p__//;s/ c__//;s/ o__//;s/ f__//;s/ g__//;s/ s__//; s/;\t/\t/'| sed 's/;\+\t/\t/'| sed 's/;\+/;/' > classification_mod.txt
-$ Rscript 0.get_table_qimme.R taxid_dobles.txt get_taxid_from_names_spingo.py
+$ Rscript 0.get_table_qimme.R taxid_dobles.txt get_taxid_from_names.py
 
 ### MTX database
 $ grep -w -v 'Unassigned' flash_out.extendedFrags_otus_rep_set_tax_assignments.txt | cut -f1,2,3 | sed 's/;\+\t/\t/;s/; /;/g'| sed 's/;\+/;/' > classification_mod.txt
-$ Rscript 0.get_table_qimme.R taxid_dobles.txt get_taxid_from_names_spingo.py
+$ Rscript 0.get_table_qimme.R taxid_dobles.txt get_taxid_from_names.py
 
 ### SILVA database
 $ cut -f1,2,3 flash_out.extendedFrags_otus_rep_set_tax_assignments.txt | sed 's/;\+\t/\t/;s/_/ /g'| sed 's/;\+/;/' > classification_mod.txt
-$ Rscript 0.get_table_qimme_silva.R taxid_dobles.txt get_taxid_from_names_spingo.py
+$ Rscript 0.get_table_qimme_silva.R taxid_dobles.txt get_taxid_from_names.py
 
 ### RDP database
 $ cut -f1,2,3 flash_out.extendedFrags_otus_rep_set_tax_assignments.txt | sed 's/;\+\t/\t/;s/; /;/g'| sed 's/;\+/;/' > classification_mod.txt
-$ Rscript 0.get_table_qimme.R taxid_dobles.txt get_taxid_from_names_spingo.py
+$ Rscript 0.get_table_qimme.R taxid_dobles.txt get_taxid_from_names.py
 
 # We generated an intermediate table containing the annotation for each read using the OTUs table (pick_otus.py script output) and the otu_ranking.txt table. The qiime_transfer.pl script is available in the bin/16SrRNAamplicon directory of this repository.
 
