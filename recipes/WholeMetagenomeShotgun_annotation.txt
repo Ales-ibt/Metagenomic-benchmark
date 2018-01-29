@@ -38,7 +38,7 @@ $ sed 's/\<NA\>/0/g' tabla_new.tab| sort -nr -k 10 > tabla_sort.tab
 $ 7.subtit_TF.pl tabla_sort.tab > tabla_sort2.tab
 
 # Change name of tabla_sort2.tab
-$ mv tabla_sort2.tab kraken.setA.tab
+$ mv tabla_sort2.tab kraken.WMS.tab
 
 # Remove intermediate tables
 $ rm kraken_mod.out kraken_conteo_kmer.out taxid_ranking_linage.txt lineaje_ordenada.tab tabla_conGenomas_para_CVE.tab tabla_new.tab tabla_sort.tab
@@ -79,7 +79,7 @@ $ sed 's/\<NA\>/0/g' tabla_new.tab| sort -nr -k 10 > tabla_sort.tab
 $ 7.subtit_TF.pl tabla_sort.tab > tabla_sort2.tab
 
 # Change name of tabla_sort2.tab
-$ mv tabla_sort2.tab clark.setA.tab
+$ mv tabla_sort2.tab clark.WMS.tab
 
 # Remove intermediate tables
 $ rm clark_reads.txt reads.txt taxid_ranking_linage.txt lineaje_ordenada.tab tabla_conGenomas_para_CVE.tab tabla_new.tab tabla_sort.tab
@@ -120,7 +120,7 @@ $ sed 's/\<NA\>/0/g' tabla_new.tab| sort -nr -k 10 > tabla_sort.tab
 $ 7.subtit_TF.pl tabla_sort.tab > tabla_sort2.tab
 
 # Change name of tabla_sort2.tab
-$ mv tabla_sort2.tab metaphlan.setA.tab
+$ mv tabla_sort2.tab metaphlan.WMS.tab
 
 # Remove intermediate tables
 $ rm metaphlan_AS_completa.txt.notax  taxid_ranking_linage.txt lineaje_ordenada.tab tabla_conGenomas_para_CVE.tab tabla_new.tab tabla_sort.tab
@@ -166,7 +166,7 @@ $ sed 's/\<NA\>/0/g' tabla_new.tab| sort -nr -k 10 > tabla_sort.tab
 $ 7.subtit_TF.pl tabla_sort.tab > tabla_sort2.tab
 
 # Change name of tabla_sort2.tab
-$ mv tabla_sort2.tab mocat.setA.tab
+$ mv tabla_sort2.tab mocat.WMS.tab
 
 # Remove intermediate tables
 $ rm mocat_reads.txt mocat1.txt mocat2.txt mocat3.txt taxid_ranking_linage.txt lineaje_ordenada.tab tabla_conGenomas_para_CVE.tab tabla_new.tab tabla_sort.tab
@@ -220,10 +220,10 @@ $ sed 's/\<NA\>/0/g' tabla_new.tab| sort -nr -k 10 > tabla_sort.tab
 $ 7.subtit_TF.pl tabla_sort.tab > tabla_sort2.tab
 
 # Change name of tabla_sort2.tab indicate the correct database
-$ mv tabla_sort2.tab parallel-meta_gg.setA.tab
-$ mv tabla_sort2.tab parallel-meta_mtx.setA.tab
-$ mv tabla_sort2.tab parallel-meta_rdp.setA.tab
-$ mv tabla_sort2.tab parallel-meta_silva.setA.tab
+$ mv tabla_sort2.tab parallel-meta_gg.WMS.tab
+$ mv tabla_sort2.tab parallel-meta_mtx.WMS.tab
+$ mv tabla_sort2.tab parallel-meta_rdp.WMS.tab
+$ mv tabla_sort2.tab parallel-meta_silva.WMS.tab
 
 # Remove intermediate tables
 $ rm last.class_mod2.txt last.class_mod.txt otus_unicos_mod.txt otus_unicos_taxid_mod.txt otus_unicos.txt taxid_ranking_linage.txt lineaje_ordenada.tab tabla_conGenomas_para_CVE.tab tabla_new.tab tabla_sort.tab classification_mod.txt
@@ -274,10 +274,10 @@ $ sed 's/\<NA\>/0/g' tabla_new.tab| sort -nr -k 10 > tabla_sort.tab
 $ 7.subtit_TF.pl tabla_sort.tab > tabla_sort2.tab
 
 # Change name of tabla_sort2.tab indicate the correct database
-$ mv tabla_sort2.tab metaxa.gg.setA.tab
-$ mv tabla_sort2.tab metaxa.mtx.setA.tab
-$ mv tabla_sort2.tab metaxa.rdp.setA.tab
-$ mv tabla_sort2.tab metaxa.silva.setA.tab
+$ mv tabla_sort2.tab metaxa.gg.WMS.tab
+$ mv tabla_sort2.tab metaxa.mtx.WMS.tab
+$ mv tabla_sort2.tab metaxa.rdp.WMS.tab
+$ mv tabla_sort2.tab metaxa.silva.WMS.tab
 
 # Remove intermediate tables
 $ rm last.class_mod2.txt last.class_mod.txt otus_unicos_mod.txt otus_unicos_taxid_mod.txt otus_unicos.txt taxid_ranking_linage.txt lineaje_ordenada.tab tabla_conGenomas_para_CVE.tab tabla_new.tab tabla_sort.tab classification_mod.txt
@@ -327,4 +327,4 @@ $ 	$tab.superkindom.bash
 $ done
 
 # Step 5 : Create CVE plot
-Rscript ./CVE_WMS.R
+$ Rscript ./CVE_WMS.R
