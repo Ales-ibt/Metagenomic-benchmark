@@ -218,3 +218,50 @@ $ 7.subtit_TF.pl tabla_sort.tab > tabla_sort2.tab
 
 # Remove intermediate tables
 $ rm classification_mod.txt otus_unicos_mod.txt otus_unicos_taxid_mod.txt tabla_conGenomas_para_CVE.tab tabla_sort.tab lineaje_ordenada.tab tabla_new.tab taxid_ranking_linage.txt
+
+######################################################
+###### Coverage Vs Error per query (CVE) graphs ######
+######################################################
+
+# Once you have all the tabla_sort2.tab for each method, run the following:
+# Step 1 : Create a directory for each taxonomic level.
+# Step 2 : Ceate a soft link of EPQ_COV.pl in each directory.
+# Step 3 : Sort tabla_sort2.tab acoording to best score and FALSE and POSITIVES results for each assigments in each level. Calculate error per query and coverage. For each taxonomic level change "superkindom" and the column to cut for the correct taxonomic level.
+# Column 1: read id
+# Column 2: superkindom
+# Column 3: phylum
+# Column 4: class
+# Column 5: order
+# Column 6: family
+# Column 7: genus
+# Column 8: species
+# Column 9: subspecies
+# Column 10: score
+
+## bash for all methods except Parallel-Meta2
+$ for tab in tabla_sort2.tab.method_1 tabla_sort2.tab.method_2 tabla_sort2.tab.method_3 tabla_sort2.tab.method_n
+$ do
+$ 	echo "cut -f1,2,10 $tab | sort -k3,3nr -k2,2br > /superkindom/$tab.sort && cd /superkindom && ./EPQ_COV.pl $tab.sort > $tab.sort.cve" > $tab.superkindom.bash
+$ 	chmod +x $tab.superkindom.bash
+$ 	$tab.superkindom.bash
+$ done  
+
+##bash for Parallel-Meta2 results
+$ for tab in parallel-meta_1 parallel-meta_2 parallel-meta_3 parallel-meta_n
+$ do
+$ 	echo "cut -f1,2,10 $tab | sort -k3,3g -k2,2br > /superkindom/$tab.sort && cd /superkindom && ./EPQ_COV.pl $tab.sort > $tab.sort.cve" > $tab.superkindom.bash
+$ 	chmod +x $tab.superkindom.bash
+$ 	$tab.superkindom.bash
+$ done
+
+# Step 4 : Cut error per query and coverage columns
+## bash
+$ for tab in tabla_sort2.tab.method_1.sort.cve tabla_sort2.tab.method_2.sort.cve tabla_sort2.tab.method_3.sort.cve tabla_sort2.tab.method_n.sort.cve
+$ do
+$ 	echo "cut -f4,5 $tab > $tab.cut" > $tab.superkindom.bash
+$ 	chmod +x $tab.superkindom.bash
+$ 	$tab.superkindom.bash
+$ done
+
+# Step 5 : Create CVE plot
+$ Rscript ./CVE_amplicon.R
