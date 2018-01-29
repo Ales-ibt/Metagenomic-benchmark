@@ -49,6 +49,12 @@ $ sed 's/\<NA\>/0/g' tabla_new.tab| sort -nr -k 10 > tabla_sort.tab
 # Clean intermediate levels
 $ 7.subtit_TF.pl tabla_sort.tab > tabla_sort2.tab
 
+# Change name of tabla_sort2.tab indicate the correct database
+$ mv tabla_sort2.tab metaxa.gg.amplicon.tab
+$ mv tabla_sort2.tab metaxa.mtx.amplicon.tab
+$ mv tabla_sort2.tab metaxa.rdp.amplicon.tab
+$ mv tabla_sort2.tab metaxa.silva.amplicon.tab
+
 # Remove intermediate tables
 $ rm last.class_mod2.txt last.class_mod.txt otus_unicos_mod.txt otus_unicos_taxid_mod.txt otus_unicos.txt taxid_ranking_linage.txt lineaje_ordenada.tab tabla_conGenomas_para_CVE.tab tabla_new.tab tabla_sort.tab classification_mod.txt
 
@@ -99,6 +105,12 @@ $ sed 's/\<NA\>/0/g' tabla_new.tab| sort -nr -k 10 > tabla_sort.tab
 
 # Clean intermediate levels
 $ 7.subtit_TF.pl tabla_sort.tab > tabla_sort2.tab
+
+# Change name of tabla_sort2.tab indicate the correct database
+$ mv tabla_sort2.tab parallel-meta_gg.amplicon.tab
+$ mv tabla_sort2.tab parallel-meta_mtx.amplicon.tab
+$ mv tabla_sort2.tab parallel-meta_rdp.amplicon.tab
+$ mv tabla_sort2.tab parallel-meta_silva.amplicon.tab
 
 # Remove intermediate tables
 $ rm last.class_mod2.txt last.class_mod.txt otus_unicos_mod.txt otus_unicos_taxid_mod.txt otus_unicos.txt taxid_ranking_linage.txt lineaje_ordenada.tab tabla_conGenomas_para_CVE.tab tabla_new.tab tabla_sort.tab classification_mod.txt
@@ -160,6 +172,12 @@ $ sed 's/\<NA\>/0/g' tabla_new.tab| sort -nr -k 10 > tabla_sort.tab
 # Clean intermediate levels
 $ 7.subtit_TF.pl tabla_sort.tab > tabla_sort2.tab
 
+# Change name of tabla_sort2.tab indicate the correct database
+$ mv tabla_sort2.tab spingo.gg.amplicon.tab
+$ mv tabla_sort2.tab spingo.mtx.amplicon.tab
+$ mv tabla_sort2.tab spingo.rdp.amplicon.tab
+$ mv tabla_sort2.tab spingo.silva.amplicon.tab
+
 # Remove intermediate tables
 $ rm classification_mod.txt otus_unicos_taxid_mod.txt tabla_conGenomas_para_CVE.tab tabla_sort.tab lineaje_ordenada.tab otus_unicos.txt tabla_new.tab taxid_ranking_linage.txt otus_unicos_mod.txt
 
@@ -216,6 +234,12 @@ $ sed 's/\<NA\>/0/g' tabla_new.tab| sort -nr -k 10 > tabla_sort.tab
 # Clean intermediate levels
 $ 7.subtit_TF.pl tabla_sort.tab > tabla_sort2.tab
 
+# Change name of tabla_sort2.tab indicate the correct database
+$ mv tabla_sort2.tab qiime.gg.amplicon.tab
+$ mv tabla_sort2.tab qiime.mtx.amplicon.tab
+$ mv tabla_sort2.tab qiime.rdp.amplicon.tab
+$ mv tabla_sort2.tab qiime.silva.amplicon.tab
+
 # Remove intermediate tables
 $ rm classification_mod.txt otus_unicos_mod.txt otus_unicos_taxid_mod.txt tabla_conGenomas_para_CVE.tab tabla_sort.tab lineaje_ordenada.tab tabla_new.tab taxid_ranking_linage.txt
 
@@ -225,7 +249,7 @@ $ rm classification_mod.txt otus_unicos_mod.txt otus_unicos_taxid_mod.txt tabla_
 
 # Once you have all the tabla_sort2.tab for each method, run the following:
 # Step 1 : Create a directory for each taxonomic level.
-# Step 2 : Ceate a soft link of EPQ_COV.pl in each directory.
+# Step 2 : Ceate a soft link of EPQ_COV.pl in each taxa level directory. 
 # Step 3 : Sort tabla_sort2.tab acoording to best score and FALSE and POSITIVES results for each assigments in each level. Calculate error per query and coverage. For each taxonomic level change "superkindom" and the column to cut for the correct taxonomic level.
 # Column 1: read id
 # Column 2: superkindom
