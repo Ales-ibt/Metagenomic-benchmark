@@ -41,7 +41,7 @@ $ tar -xvf Metaxa_db.tar.gz
 This action will create the Metaxa directory with the database properly formatted inside the Parallel-meta databases path. To modify the parallel-meta v2.4.1 in order to accept the Metaxa2 database follow these instructions:
 
 -Download Parallel-meta 2.4 from here:https://github.com/Comp-Bio-Group/Parallel-META
--Before compiling the software, copy the patch_parallel241.txt file to the parallel-meta v2.4.1 root directory and run the command:
+-Before compiling the software, copy the patch_parallel241.txt file to the parallel-meta v2.4.1 src directory and run the following command:
 
 *patch -p0 < patch_parallel241.txt*
 
