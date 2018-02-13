@@ -11,7 +11,7 @@ Currently, the available scripts were designed to manage the results obtained fr
 - QIIME v1.9.1
 - SPINGO v1.3
 - Metaxa2 v2.1.1
-- Parallel-meta v2.4.1 and v3.3.2
+- Parallel-meta v2.4.1
 
 However, users are free to modify the scripts to include new methods as long as their results have the right format. Please, check this format in the "examples" directory.
 
