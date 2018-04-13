@@ -18,7 +18,7 @@ genus|0.909425|0.602545|0.885172|0.409323|0.909425|0.602529|0.885171|0.409312
 species|0.199642|0.795149|0.235305|-0.003090|0.199642|0.795127|0.235304|-0.003103
 subspecies|0.111160|0.978576|0.153370|0.062514|0.111160|0.978576|0.153370|0.062514
 
-We runned the program in the server of Biotechnology Institute (UNAM) splitting the dataset in 750 chunks of 1,000 sequences. The jobs with Blast v2.6.0+ were performed using 8 threads with 7G each. For megablast v2.2.25 suit, the thread number was 4 and the memory reserved per slot was 7G. 
+We runned the program in the server of Biotechnology Institute (UNAM) splitting the dataset in chunks of 1,000 or 100 sequences. The jobs with Blast v2.6.0+ were performed over chunks of 100 sequences, using 8 threads with 7G each. For megablast v2.2.25, we runned the program over chunks of 1,000 sequences, the thread number was 4 and the memory reserved per slot was 7G. 
 
 
 
