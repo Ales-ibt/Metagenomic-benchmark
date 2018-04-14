@@ -5,13 +5,12 @@ Metaxa2 v2.1.1 is a bioiformatic tool designed to assign 16S rRNA sequences from
 
 <table>
   <tr>
-    <td>One</td>
-    <td>Two</td>
-  </tr>
-  <tr>
-    <td colspan="2">Three</td>
+    <td></td>
+    <td colspan="4">Metaxa2-mtx blastn</td>
+    <td colspan="4">Metaxa2-mtx megablast</td>
   </tr>
 </table>
+
 
 
  |Span <td colspan="4">triple  <td colspan="4">double
