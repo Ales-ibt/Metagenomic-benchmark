@@ -7,9 +7,8 @@ We observed that performance statistical descriptors was almost identical indica
 
 
  |algo | This cell occupies four columns |||| This cell occupies four columns ||||
- | --------------- | ---- | ---- | --- | --- | ---- | ---- | --- |---- |  
+ | ---- | --- |||| --- ||||  
  | Taxonomic level | sens | spec | ACC | MCC | sens | spec | ACC | MCC | 
- | --------------- | ---- | ---- | --- | --- | ---- | ---- | --- |---- | 
  | Domain | 1.000000 | 0.999840 | 0.999992 | 0.999916 | 1.000000 | 0.999867 | 0.999994 | 0.999930 | 
  | Phylum | 1.000000 | 0.999973 | 0.999999 | 0.999986 | 1.000000 | 0.999973 | 0.999999 | 0.999986 | 
  | Class | 1.000000 | 0.904833 | 0.994992 | 0.948723 | 1.000000 | 0.904833 | 0.994992 | 0.948723 | 
