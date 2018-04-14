@@ -31,20 +31,85 @@ Metaxa2 v2.1.1 is a bioiformatic tool designed to assign 16S rRNA sequences from
     <td>0.999994</td>
     <td>0.999930</td>
   </tr>
+
+  <tr>
+    <td>phylum</td>
+    <td>1.000000</td>
+    <td>0.999973</td>
+    <td>0.999999</td>
+    <td>0.999986</td>
+    <td>1.000000</td>
+    <td>0.999973</td>
+    <td>0.999999</td>
+    <td>0.999986</td>
+  </tr>
+  <tr>
+    <td>class</td>
+    <td>1.000000</td>
+    <td>0.904833</td>
+    <td>0.994992</td>
+    <td>0.948723</td>
+    <td>1.000000</td>
+    <td>0.904833</td>
+    <td>0.994992</td>
+    <td>0.948723</td>
+  </tr>
+  <tr>
+    <td>order</td>
+    <td>0.969362</td>
+    <td>0.829477</td>
+    <td>0.961332</td>
+    <td>0.699140</td>
+    <td>0.969362</td>
+    <td>0.829477</td>
+    <td>0.961332</td>
+    <td>0.699140</td>
+  </tr>
+  <tr>
+    <td>family</td>
+    <td>0.967010</td>
+    <td>0.382080</td>
+    <td>0.894109</td>
+    <td>0.433813</td>
+    <td>0.967010</td>
+    <td>0.382070</td>
+    <td>0.894108</td>
+    <td>0.433803</td>
+  </tr>
+  <tr>
+    <td>genus</td>
+    <td>0.909425</td>
+    <td>0.602545</td>
+    <td>0.885172</td>
+    <td>0.409323</td>
+    <td>0.909425</td>
+    <td>0.602529</td>
+    <td>0.885171</td>
+    <td>0.409312</td>
+  </tr>
+  <tr>
+    <td>species</td>
+    <td>0.199642</td>
+    <td>0.795149</td>
+    <td>0.235305</td>
+    <td>-0.003090</td>
+    <td>0.199642</td>
+    <td>0.795127</td>
+    <td>0.235304</td>
+    <td>-0.003103</td>
+  </tr>
+  <tr>
+    <td>subspecies</td>
+    <td>0.111160</td>
+    <td>0.978576</td>
+    <td>0.153370</td>
+    <td>0.062514</td>
+    <td>0.111160</td>
+    <td>0.978576</td>
+    <td>0.153370</td>
+    <td>0.062514</td>
+  </tr>
 </table>
-
-
- |Span <td colspan="4">triple  <td colspan="4">double
- | --------------  | ---- | ---- | --- | --- | ---- | ---- | --- |---- |
- | Taxonomic level | sens | spec | ACC | MCC | sens | spec | ACC | MCC | 
- | Domain | 1.000000 | 0.999840 | 0.999992 | 0.999916 | 1.000000 | 0.999867 | 0.999994 | 0.999930 | 
- | Phylum | 1.000000 | 0.999973 | 0.999999 | 0.999986 | 1.000000 | 0.999973 | 0.999999 | 0.999986 | 
- | Class | 1.000000 | 0.904833 | 0.994992 | 0.948723 | 1.000000 | 0.904833 | 0.994992 | 0.948723 | 
- | Order | 0.969362 | 0.829477 | 0.961332 | 0.699140 | 0.969362 | 0.829477 | 0.961332 | 0.699140 | 
- | Family | 0.967010 | 0.382080 | 0.894109 | 0.433813 | 0.967010 | 0.382070 | 0.894108 | 0.433803 | 
- | Genus | 0.909425 | 0.602545 | 0.885172 | 0.409323 | 0.909425 | 0.602529 | 0.885171 | 0.409312 | 
- | Species | 0.199642 | 0.795149 | 0.235305 | -0.003090 | 0.199642 | 0.795127 | 0.235304 | -0.003103 | 
- | Subspecies | 0.111160 | 0.978576 | 0.153370 | 0.062514 | 0.111160 | 0.978576 | 0.153370 | 0.062514 | 
 
 We observed that performance statistical descriptors was almost identical indicating that blast parameters does not represent a substantial difference in the sensitivity and/or specificity of the Metaxa2 taxonomic assignments.
 
