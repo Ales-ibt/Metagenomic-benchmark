@@ -27,5 +27,4 @@ We runned both programs in the server of Biotechnology Institute (UNAM) splittin
 
 
 
-
 1. Bengtsson-Palme, J. et al. METAXA2: improved identification and taxonomic classification of small and large subunit rRNA in metagenomic data. Mol. Ecol. Resour. 15, 1403–1414 (2015).
