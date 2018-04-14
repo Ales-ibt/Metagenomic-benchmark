@@ -20,8 +20,18 @@ Metaxa2 v2.1.1 is a bioiformatic tool designed to assign 16S rRNA sequences from
     <td>ACC</td>
     <td>MCC</td>
   </tr>
+  <tr>
+    <td>domain</td>
+    <td>1.000000</td>
+    <td>0.999840</td>
+    <td>0.999992</td>
+    <td>0.999916</td>
+    <td>1.000000</td>
+    <td>0.999867</td>
+    <td>0.999994</td>
+    <td>0.999930</td>
+  </tr>
 </table>
-
 
 
  |Span <td colspan="4">triple  <td colspan="4">double
