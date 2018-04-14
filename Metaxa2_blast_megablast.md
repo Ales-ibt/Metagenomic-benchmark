@@ -5,8 +5,8 @@ Metaxa2 v2.1.1 is a bioiformatic tool designed to assign 16S rRNA sequences from
 
 We observed that performance statistical descriptors was almost identical indicating that blast parameters does not represent a substantial difference in the sensitivity and/or specificity of the Metaxa2 taxonomic assignments.
 
- | | <td colspan=4> Metaxa2-mtx blastn <td colspan=4> Metaxa2-mtx megablast 
- | --------------- | ---- | ---- | --- | --- | ---- | ---- | --- |---- | 
+ | | <td colspan=4> Metaxa2-mtx blastn <td colspan=4> Metaxa2-mtx megablast |
+ | ---
  | Taxonomic level | sens | spec | ACC | MCC | sens | spec | ACC | MCC | 
  | --------------- | ---- | ---- | --- | --- | ---- | ---- | --- |---- | 
  | Domain | 1.000000 | 0.999840 | 0.999992 | 0.999916 | 1.000000 | 0.999867 | 0.999994 | 0.999930 | 
