@@ -3,7 +3,7 @@ Results comparison of Metaxa2 using blastn and megablast
 
 Metaxa2 v2.1.1 is a bioiformatic tool designed to assign 16S rRNA sequences from a metagenomic dataset to an archaeal, bacterial, nuclear eukaryote, mitochondrial or chloroplast origin (1). Metaxa2, detect the 16S rRNA candidate sequences from the reads universe using hidden Markov models built from the SILVA database. Ribosomal sequences are compared against the Metaxa2 database by blast and the method takes into account the five best hits to assign the taxonomic identity per sequence. In the case of ambiguity (reliability score < 80), the algorithm align the five best hits using MAFFT and recalculates the reliability score for the next taxonomic level in the lineage until the score be > 80. The method use blastn by default, and have the option of running megablast. We tested the method with the V3V4 lib1 dataset available in the datasets_16SrRNA directory of this repo, using both options.
 
- |   |4+| This cell occupies four columns |4+| This cell occupies four columns |
+ |Span <td colspan=4>triple  <td colspan=4>double
  | --------------  | ---- | ---- | --- | --- | ---- | ---- | --- |---- |
  | Taxonomic level | sens | spec | ACC | MCC | sens | spec | ACC | MCC | 
  | Domain | 1.000000 | 0.999840 | 0.999992 | 0.999916 | 1.000000 | 0.999867 | 0.999994 | 0.999930 | 
