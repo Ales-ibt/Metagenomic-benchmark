@@ -46,7 +46,9 @@ This action will create the Metaxa directory with the database properly formatte
 *patch -p0 < patch_parallel241.txt*
 
 **Scripts included in the bin directory of Metagenomic-benchmark:**
-- patch_parallel241.txt   - Patch for Parallel-meta v2.4.1
+- patch_parallel241.txt		- Patch for Parallel-meta v2.4.1
+- error_types_v4.pl		- Script to calculate the error types and report the performance statistical descriptors.
+- chunkMaker.pl			- The chunk-maker script divide the input fasta in smaller fasta files of the desired size.
 
   16SrRNAamplicon/
       	names2taxid_spingo.py
