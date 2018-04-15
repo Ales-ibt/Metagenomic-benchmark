@@ -168,8 +168,6 @@ We runned both programs in the server of Biotechnology Institute (UNAM) splittin
   </tr>
 </table>
 
-
-
-
+Again, we got highly similar stats in performance for both BLAST-algorithms in terms of memory and time evaluating the method in minisets of 1,000 amplicon sequences. It means that at least for this kind of data, divide the main dataset is a good strategy to improve the use efficiency of computational resources.
 
 1. Bengtsson-Palme, J. et al. METAXA2: improved identification and taxonomic classification of small and large subunit rRNA in metagenomic data. Mol. Ecol. Resour. 15, 1403–1414 (2015).
