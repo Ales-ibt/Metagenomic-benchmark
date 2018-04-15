@@ -32,7 +32,6 @@ Metaxa2 v2.1.1 is a bioiformatic tool designed to assign 16S rRNA sequences from
     <td>0.999994</td>
     <td>0.999930</td>
   </tr>
-
   <tr>
     <td>phylum</td>
     <td>1.000000</td>
@@ -112,11 +111,62 @@ Metaxa2 v2.1.1 is a bioiformatic tool designed to assign 16S rRNA sequences from
   </tr>
 </table>
 
-We observed that performance statistical descriptors was almost identical indicating that blast parameters does not represent a substantial difference in the sensitivity and/or specificity of the Metaxa2 taxonomic assignments.
+We observed that for this datasets, performance statistical descriptors was almost identical indicating that blast parameters does not represent a substantial difference in the sensitivity and/or specificity of the Metaxa2 taxonomic assignments.
 
-We runned both programs in the server of Biotechnology Institute (UNAM) splitting the dataset into chunks of 1,000 sequences. The jobs were performed over each chunk using 4 threads with 7G each. In the following table are the stats of time and memory spent in each case.
+We runned both programs in the server of Biotechnology Institute (UNAM) splitting the dataset into chunks of 1,000 sequences. The jobs were performed over each chunk using 4 threads with 7G each. In the following table are the stats of average and standard-deviation of time and memory spent in each case.
 
-
+<table>
+  <tr>
+    <td>Metaxa2 alignment algorithm</td>
+    <td>wall clock (s)</td>
+    <td>ru_utime</td>
+    <td>ru_stime</td>
+    <td>CPU</td>
+    <td>mem</td>
+    <td>io</td>
+    <td>maxvmem(G)</td>
+  </tr>
+  <tr>
+    <td>Blastn (average)</td>
+    <td>817.833</td>
+    <td>3169.473</td>
+    <td>16.812</td>
+    <td>3191.073</td>
+    <td>2477.961</td>
+    <td>0.096</td>
+    <td>2.456</td>
+  </tr>
+  <tr>
+    <td>Blastn (SD)</td>
+    <td>35.304</td>
+    <td>116.549</td>
+    <td>0.692</td>
+    <td>116.465</td>
+    <td>90.759</td>
+    <td>0.009</td>
+    <td>0.239</td>
+  </tr>
+  <tr>
+    <td>Megablast (average)</td>
+    <td>824.895</td>
+    <td>3166.722</td>
+    <td>16.654</td>
+    <td>3188.276</td>
+    <td>2475.763</td>
+    <td>0.097</td>
+    <td>2.475</td>
+  </tr>
+  <tr>
+    <td>Megablast (SD)</td>
+    <td>33.459</td>
+    <td>114.924</td>
+    <td>1.017</td>
+    <td>115.157</td>
+    <td>89.731</td>
+    <td>0.009</td>
+    <td>0.221</td>
+  </tr>
+</table>
 
 
 
