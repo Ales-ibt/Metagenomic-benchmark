@@ -1,4 +1,4 @@
-| Phylogenetic rank | Dataset 1 = 27.79% (187/673 genomes) | Dataset 2 = 27.73% (188/678 genomes) |Dataset 3 = 29.08% (196/674 genomes) |
+| Phylogenetic rank | Dataset 1 = 27.79%<br>(187/673 genomes) | Dataset 2 = 27.73%<br>(188/678 genomes) |Dataset 3 = 29.08%<br>(196/674 genomes) |
 |-------------------|----------------|----------------------|----------------------|
 | Subespecies | 27 (4.01%) | 24 (3.54%) | 29 (4.30%) |
 | Species | 111 (16.49%) | 109 (16.08%) | 112 (16.62%) |
